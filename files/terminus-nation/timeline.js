@@ -41,7 +41,7 @@ var timelineJSON = [
 
 
     {
-        calendar:"BY", year:-10/**/000/**/000/**/000, month:0, day:0,
+        calendar:"BY", year:-10000000000, month:0, day:0,
         race:"Shaper", faction:"unspecified", context:"main",
         content:"Earliest known evidence of the existence of the Shapers.",
 
@@ -51,7 +51,7 @@ var timelineJSON = [
 
 
     {
-        calendar:"BY", year:-150/**/000/**/000, month:0, day:0,
+        calendar:"BY", year:-150000000, month:0, day:0,
         race:"general", faction:"unspecified", context:"main",
         content:"The cult of Vermyys emerges in Shaper culture."
     },
@@ -59,7 +59,7 @@ var timelineJSON = [
 
 
     {
-        calendar:"BY", year:-1/**/000/**/000/**/000, month:0, day:0,
+        calendar:"BY", year:-1000000000, month:0, day:0,
         race:"general", faction:"unspecified", context:"main",
         content:"Estimated age of the oldest Planet Monument."
     },
@@ -71,7 +71,7 @@ var timelineJSON = [
 
 
     {
-        calendar:"BY", year:-400/**/000/**/000, month:0, day:0,
+        calendar:"BY", year:-400000000, month:0, day:0,
         race:"Shaper", faction:"Kidar Manedorgtem", context:"main",
         content:"Kidar Manedorgtem unifies the Shaper race within the Filament Supercluster.",
 
@@ -86,7 +86,7 @@ var timelineJSON = [
 
 
     {
-        calendar:"BY", year:-100/**/000/**/000, month:0, day:0,
+        calendar:"BY", year:-100000000, month:0, day:0,
         race:"Shaper", faction:"unspecified", context:"main",
         content:"Earliest estimated date of the Shaper Ascension into the Starless Space.",
 
