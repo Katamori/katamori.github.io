@@ -49,7 +49,7 @@ function addBox(){
 		- a column that makes the side strip
 		- a column for the data itself
 		*/
-		$( "#timeline" ).append("<tr id='eventno"+(num+1)+"' style='visibility:hidden;'>"+
+		$( "#timeline" ).append("<tr id='eventno"+(num+1)+"' style='display:none;'>"+
 						"<td class='stripe "+selectColor(num)+"' id='stripe"+(num+1)+"'></td>"+
 						"<td class='eventbox' style='padding-bottom: "+((diff-1)*80)+"px;'>"+
 							"<p class='tag'>"+header+"</p>"+
