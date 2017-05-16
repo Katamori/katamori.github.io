@@ -1,13 +1,26 @@
+/* MAIN PROCESS FLOW */
+
 //defined in create_timeline.js
 addBox();
+
 createCheckboxList(["race", "faction", "context"]);
+
+
+
+
+
+
+
+
+
+
+/* FUNCTIONS TO IMPLEMENT IT */
+
 
 //4: select all/none
 function setCheckboxes(selfdiv, value){
     $(selfdiv).find("input[type=checkbox]").prop('checked', value);
 }
-
-
 
 //3: hide and show appropriate elements
 function filterAll(){
@@ -30,10 +43,8 @@ function filterAll(){
                 $("#"+event.context.replace(/\s/g, '')).is(':checked')
         ){
             $("#eventno"+(num+1)).show();
-            //document.getElementById("eventno"+(num+1)).style.visibility = "visible";
         }else {
-            $("#eventno"+(num+1)).hide();
-             //document.getElementById("eventno"+(num+1)).style.visibility = "collapse";           
+            $("#eventno"+(num+1)).hide();          
         }
 
 
@@ -51,7 +62,7 @@ function createCheckboxList(categories){
         var tempCh = "";
 
         createList(category).forEach(function(item){
-            tempCh+="<input type='checkbox' id='"+item.replace(/\s/g, '')+"'>"+item+"<br>"
+            tempCh+="<input type='checkbox' id='"+item.replace(/\s/g, '')+"' checked>"+item+"<br>"
         })
      
         $("#select_"+category).append(

@@ -49,7 +49,7 @@ function addBox(){
 		- a column that makes the side strip
 		- a column for the data itself
 		*/
-		$( "#timeline" ).append("<tr id='eventno"+(num+1)+"'>"+
+		$( "#timeline" ).append("<tr id='eventno"+(num+1)+"' style='visibility:hidden;'>"+
 						"<td class='stripe "+selectColor(num)+"' id='stripe"+(num+1)+"'></td>"+
 						"<td class='eventbox' style='padding-bottom: "+((diff-1)*80)+"px;'>"+
 							"<p class='tag'>"+header+"</p>"+
@@ -88,7 +88,6 @@ function FormattedDate(eventid){
 			default:   output = -2; window.alert(string + " is not a valid calendar!")
 		};
 
-	//document.getElementById("stripe"+(eventid+1)).innerHTML = string;
 	$("#content"+(eventid+1)).html(string+": "+timelineJSON[eventid].content);
 
 }
