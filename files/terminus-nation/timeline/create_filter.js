@@ -51,7 +51,7 @@ function createCheckboxList(categories){
         var tempCh = "";
 
         createList(category).forEach(function(item){
-            tempCh+="<input type='checkbox' id='"+item.replace(/\s/g, '')+"' checked>"+item+"<br>"
+            tempCh+="<input type='checkbox' id='"+item.replace(/\s/g, '')+"'>"+item+"<br>"
         })
      
         $("#select_"+category).append(
