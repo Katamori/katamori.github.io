@@ -1,58 +1,68 @@
-createCheckboxList("race");
-createCheckboxList("faction");
-createCheckboxList("context");
-
+//defined in create_timeline.js
+addBox();
+createCheckboxList(["race", "faction", "context"]);
 
 //4: select all/none
-function setCheckboxes(categ, value){
-    console.log("i work at all");
-    //$(categ).find('input[type=checkbox],select').each(function() { console.log(checked) })
+function setCheckboxes(selfdiv, value){
+    $(selfdiv).find("input[type=checkbox]").prop('checked', value);
 }
+
+
 
 //3: hide and show appropriate elements
 function filterAll(){
 
-    for(m=0;m<timelineJSON.length;m++){
+    for(
+    num=0, event=timelineJSON[0];
+    num<timelineJSON.length;
+    num++, event=timelineJSON[num]){
 
-        var dateBY = convertDate(timelineJSON[m].calendar, timelineJSON[m].year, "BY");
-        //console.log(timelineJSON[m].calendar+", "+timelineJSON[m].date);
+        $("#eventno"+(num+1)).show();
 
+        var dateBY = convertDate(event.calendar, event.year, "BY");
+
+        //first condition: no negative values are sorted out - sorry, it's for simplicity        
         if(
-            dateBY >= Number(document.getElementById("age_min").value) &&
-            dateBY <= Number(document.getElementById("age_max").value) &&
-            $("#"+timelineJSON[m].race.replace(/\s/g, '')).is(':checked') &&
-            $("#"+timelineJSON[m].faction.replace(/\s/g, '')).is(':checked') &&
-            $("#"+timelineJSON[m].context.replace(/\s/g, '')).is(':checked')
+                dateBY >= Number($("#age_min").val()) &&
+                dateBY <= Number($("#age_max").val()) &&
+                $("#"+event.race.replace(/\s/g, '')).is(':checked') &&
+                $("#"+event.faction.replace(/\s/g, '')).is(':checked') &&
+                $("#"+event.context.replace(/\s/g, '')).is(':checked')
         ){
-            $("#eventno"+(m+1)).show();
+            $("#eventno"+(num+1)).show();
+            //document.getElementById("eventno"+(num+1)).style.visibility = "visible";
         }else {
-            $("#eventno"+(m+1)).hide();
+            $("#eventno"+(num+1)).hide();
+             //document.getElementById("eventno"+(num+1)).style.visibility = "collapse";           
         }
 
 
+
     }
+
 
 }
 
 //2: create a list of checkboxes for a div
-function createCheckboxList(category){
+function createCheckboxList(categories){
 
-    //append selector buttons
-    $("#select_"+category).append(
-        "<button type='button' onclick='setCheckboxes(#select_"+category+", true)'>Select all</button><br>"+
-        "<button type='button' onclick='setCheckboxes(#select_"+category+", false)'>Select none</button><br>"+
-        "<button type='button' onclick='setCheckboxes("+$("#select_"+category)+", false)'>i'm a toaster</button><br>"
-    )
+    categories.forEach(function(category) {
 
-    //and the important part
-    var tempList = createList(category);
+        var tempCh = "";
 
-    for(l=0;l<tempList.length;l++){
-        var noSpace = tempList[l].replace(/\s/g, '');
-        $("#select_"+category).append("<input type='checkbox' id='"+noSpace+"' checked>"+tempList[l]+"<br>")
-    }
+        createList(category).forEach(function(item){
+            tempCh+="<input type='checkbox' id='"+item.replace(/\s/g, '')+"' checked>"+item+"<br>"
+        })
+     
+        $("#select_"+category).append(
+            //append selector buttons
+            "<button type='button' onclick='setCheckboxes(select_"+category+", true)'>Select all</button><br>"+
+            "<button type='button' onclick='setCheckboxes(select_"+category+", false)'>Select none</button><br>"+
+            //and the important part            
+            tempCh+"<br><br>"
+        )  
 
-    $("#select_"+category).append("<br><br>");
+    });
 
 }
 
@@ -61,25 +71,26 @@ function createCheckboxList(category){
 //(note: itemname must be a string, with "" signs)
 function createList(itemname){
 
-    var interntalList = [];
+    var internalList = [];
 
-    //do the first step, whatever is the case
-    interntalList.push(timelineJSON[0][itemname]);
+    //do the first step, whatever occurs
+    internalList.push(timelineJSON[0][itemname]);
 
     //do for the rest
     for(m=1;m<timelineJSON.length;m++){
 
         var isUnique = true;
 
-        for(z=0; (z<interntalList.length && isUnique); z++){
-            isUnique = isUnique && (timelineJSON[m][itemname] != interntalList[z]);
+        for(z=0; (z<internalList.length && isUnique); z++){
+            isUnique = isUnique && (timelineJSON[m][itemname] != internalList[z]);
         }
 
-        if (isUnique){ interntalList.push(timelineJSON[m][itemname]) };
+        if (isUnique){ internalList.push(timelineJSON[m][itemname]) };
 
 
     }
 
-    return interntalList;
-
+    //case-sensitive ABC sort for usability
+    return internalList.sort(function(a, b){return a.localeCompare(b)});
 }
+    

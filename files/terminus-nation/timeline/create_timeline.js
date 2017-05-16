@@ -17,31 +17,31 @@ Other things from outer source:
 
 faction coloring - faction-colors.css
 
+
+
+adding the divs themselves (with proper coloring)
 */
-
- addBox();
-
-
-//this one adds the divs themselves (with proper coloring)
 function addBox(){
 
 
-	for(num=0;num<timelineJSON.length-1;num++){
+	for(num=0;num<timelineJSON.length;num++){
 
 		var header = timelineJSON[num].context;
 
 		if(timelineJSON[num].faction==""){ header = "general event, "+timelineJSON[num].context;
 					    }else{ header = timelineJSON[num].faction+", "+timelineJSON[num].context;}
 
-
+		
 		//time-scaled sizes
-		var diff =  	convertDate(timelineJSON[num+1].calendar, timelineJSON[num+1].year, "RD") -
-						convertDate(timelineJSON[num+1].calendar, timelineJSON[num  ].year, "RD");
+		var diff = 
+			2;	//turned-off function so far
+			//convertDate(timelineJSON[num+1].calendar, timelineJSON[num+1].year, "RD") -
+			//convertDate(timelineJSON[num+1].calendar, timelineJSON[num  ].year, "RD");
 
 		var threshold = 10;
 
 		//for making CSS nice and cute even in case of event within the same year
-		if(diff==0){diff=1;};
+		if(diff==0){diff=1};
 		if(diff>threshold){diff=threshold;};
 
 		/*
@@ -49,7 +49,7 @@ function addBox(){
 		- a column that makes the side strip
 		- a column for the data itself
 		*/
-		$( ".timeline" ).append("<tr id='eventno"+(num+1)+"'>"+
+		$( "#timeline" ).append("<tr id='eventno"+(num+1)+"'>"+
 						"<td class='stripe "+selectColor(num)+"' id='stripe"+(num+1)+"'></td>"+
 						"<td class='eventbox' style='padding-bottom: "+((diff-1)*80)+"px;'>"+
 							"<p class='tag'>"+header+"</p>"+
@@ -89,7 +89,7 @@ function FormattedDate(eventid){
 		};
 
 	//document.getElementById("stripe"+(eventid+1)).innerHTML = string;
-	document.getElementById("content"+(eventid+1)).innerHTML = string+": "+timelineJSON[eventid].content;
+	$("#content"+(eventid+1)).html(string+": "+timelineJSON[eventid].content);
 
 }
 

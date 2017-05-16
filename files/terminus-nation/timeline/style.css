@@ -46,13 +46,15 @@ div {
 
 #select_race, #select_faction, #select_context {
     width: 256px;
+	height: 224px;
+	overflow-y: scroll;
 
 }
 
 
 /* TIMELINE ITSELF */
 
-.timeline {
+#timeline {
 
 	background-color: #f7f7f7;
 	border-collapse: collapse;
@@ -61,7 +63,7 @@ div {
 
 }
 
-.timeline td {
+#timeline td {
 
 	border-bottom: 1px solid #bbb;
 	overflow: hidden;
@@ -72,7 +74,7 @@ div {
 }
 
 
-.timeline h1 {
+#timeline h1 {
 
 	font-family: verdana;
 	text-align: center;

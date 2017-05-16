@@ -33,9 +33,9 @@
 			<!-- 	given their vague variety,
 					I generate these input fields
 					dynamically. I hope it's OK. 	-->
-				<td id='select_race'><a>Filter by race:</a><br><br></td>
-				<td id='select_faction'><a>Filter by faction:</a><br><br></td>
-				<td id='select_context'><a>Filter by context:</a><br><br></td>
+				<td><a>Filter by race:</a><br><br><div id='select_race'></div></td>
+				<td><a>Filter by faction:</a><br><br><div id='select_faction'></div></td>
+				<td><a>Filter by context:</a><br><br><div id='select_context'></div></td>
 
 			</tr>
 
@@ -43,10 +43,11 @@
 				<td id="select_age">
 					<a>Filter by age</a><br><br>
 
-					<a>Min: </a>
-						<input type="number" id="age_min" value="0" style="width: 72px;"><br>
-					<a>Max: </a>
-						<input type="number" id="age_max" value="671386" style="width: 72px;">
+					<a>Min: BY</a>
+						<input type="number" id="age_min" style="width: 96px;" value="-100000000000">
+					<br>
+					<a>Max: BY</a>
+						<input type="number" id="age_max" style="width: 96px;" value="671386">
 				</td>
 
 				<td>
@@ -66,7 +67,7 @@
 		<br><br>
 
 		<!-- THE SYSTEM ITSELF -->
-		<table class = "timeline">
+		<table id="timeline">
 
 
 

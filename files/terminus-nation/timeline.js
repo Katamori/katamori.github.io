@@ -47,17 +47,6 @@ var timelineJSON = [
 
     },
 
-
-
-
-    {
-        calendar:"BY", year:-150000000, month:0, day:0,
-        race:"general", faction:"unspecified", context:"main",
-        content:"The cult of Vermyys emerges in Shaper culture."
-    },
-
-
-
     {
         calendar:"BY", year:-1000000000, month:0, day:0,
         race:"general", faction:"unspecified", context:"main",
@@ -66,9 +55,7 @@ var timelineJSON = [
 
 
 
-
-
-
+/* 900 to 100 million years ago */
 
     {
         calendar:"BY", year:-400000000, month:0, day:0,
@@ -77,13 +64,11 @@ var timelineJSON = [
 
     },
 
-
-
-
-
-
-
-
+    {
+        calendar:"BY", year:-150000000, month:0, day:0,
+        race:"general", faction:"unspecified", context:"main",
+        content:"The cult of Vermyys emerges in Shaper culture."
+    },
 
     {
         calendar:"BY", year:-100000000, month:0, day:0,
@@ -93,10 +78,7 @@ var timelineJSON = [
     },
 
 
-
-
-
-
+/* 100 to 10 million years ago */
 
     {
         calendar:"BY", year:-72000000, month:0, day:0,
