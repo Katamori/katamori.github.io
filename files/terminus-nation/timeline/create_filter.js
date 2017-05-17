@@ -61,6 +61,7 @@ function createCheckboxList(categories){
 
         var tempCh = "";
 
+
         createList(category).forEach(function(item){
             tempCh+="<input type='checkbox' id='"+item.replace(/\s/g, '')+"' checked>"+item+"<br>"
         })
@@ -103,5 +104,6 @@ function createList(itemname){
 
     //case-sensitive ABC sort for usability
     return internalList.sort(function(a, b){return a.localeCompare(b)});
+
 }
     
