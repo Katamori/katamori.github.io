@@ -342,12 +342,13 @@ var timelineJSON = [
 
 
     {
-        calendar:"RD", year:691, month:0, day:0,
+        calendar:"RD", year:2691, month:0, day:0,
         race:"human", faction:"Republic", context:"conflict",
         content:"Forces of the Cloudan Confederacy take control over Republic Haven."+
                 "The First Democratic Union is considered fallen; survivors retreat to "+
                 "the Main Ring to stabilize the region and rebuild what they can from "+
-                "the old Republic.",
+                "the old Republic.<br><br>"+
+                "Beginning of the Age of Exile of the FDU.",
     },
 
 
@@ -364,26 +365,45 @@ var timelineJSON = [
     },
 
 
+    {
+        calendar:"RD", year:2902, month:0, day:0,
+        race:"human", faction:"unspecified", context:"colonization",
+        content:"Planet Spire is colonized.",
+    },
+
+
+    {
+        calendar:"RD", year:3047, month:0, day:0,
+        race:"human", faction:"Republic", context:"conflict",
+        content:"United forces of FDU and other factions invade "+
+                "Republic Haven, in order to take it back from the Cloudan.",
+    },
+
+    {
+        calendar:"RD", year:3053, month:0, day:0,
+        race:"human", faction:"Republic", context:"conflict",
+        content:"FDU forces, after six years of storm, take Republic Haven "+
+                "back from the forces of the Cloudan Condeferacy. As a result, "+
+                "the Dark Campaingn ends and the FDU is reformed under tha name"+
+                "'Union Republic'. <br><br>"+
+                "End of the Age of Exile of the FDU.",
+    },
 
 
 
-
-
+    {
+        calendar:"RD", year:3171, month:0, day:0,
+        race:"human", faction:"Free Heaven Movement", context:"foundation",
+        content:"Groups of rebelling non-temporal people unite their forces on "+
+                "Borderrealm colony Spire, to form their neo-Christian sect, named "+
+                "'Rest in Peace Movement', in order to oppose the anti-non-temporal "+
+                "attitude of the Union Republic and to provide a homeland for every "+
+                "non-temporal in the galaxy.",
+    },
 
 
 
 /* Resistance Rise */
-
-
-
-
-
-
-
-
-
-
-
 
     {
         calendar:"RD", year:3426, month:0, day:0,
@@ -422,6 +442,21 @@ var timelineJSON = [
         race:"human", faction:"unspecified", context:"colonization",
         content:"The first colonists settle down on Neocairo.	",
     },
+
+    {
+        calendar:"RD", year:4476, month:0, day:0,
+        race:"general", faction:"unspecified", context:"Planet Monument gate event",
+        content:"Planet Monument gates on Anberoi close for an unsecified time.",
+    },
+
+
+    {
+        calendar:"RD", year:4476, month:0, day:0,
+        race:"Cloudan", faction:"Cloudan Confederacy", context:"abandonment",
+        content:"The last of the Cloudan inhabitants leave Anberoi through space "+
+                "due to a reassignment program of the Overtribe.",
+    },
+
     {
         calendar:"RD", year:4485, month:0, day:0,
         race:"human", faction:"Starcloud Nation", context:"foundation",
@@ -521,7 +556,7 @@ var timelineJSON = [
 
     {
         calendar:"RD", year:6691, month:0, day:0,
-        race:"general", faction:"unspecified", context:"foundation",
+        race:"general", faction:"Boson Conundrum", context:"foundation",
         content:"Adao Beran founds the Boson Conundrum.",
     },
 
@@ -530,6 +565,15 @@ var timelineJSON = [
         race:"human", faction:"Free Heaven Movement", context:"alliance",
         content:"The Old Kingdom of Neocairo becomes a member of the Free Heaven Movement.",
     },
+    {
+        calendar:"RD", year:6709, month:0, day:0,
+        race:"human", faction:"Boson Conundrum", context:"alliance",
+        content:"In exchange of planet Vekka itself, Adao Beran offers military defense for "+
+                "its former owners: beginning of the alliance between the Möebius and the "+
+                "Boson Conundrum.",
+    },
+
+
     {
         calendar:"RD", year:6721, month:0, day:0,
         race:"human", faction:"Justice Empire", context:"culture",
@@ -655,7 +699,20 @@ var timelineJSON = [
     },
 
 
-
+    {
+        calendar:"RD", year:6967, month:0, day:0,
+        race:"human", faction:"Möebius", context:"conflict",
+        content:"Anubis contacts the Möebius and offers them its power, in exchange of serving as "+
+                "a military unit directly under it. The Möebius refuses this offer, causing a minor "+
+                "conflict between the two.",
+    },
+    {
+        calendar:"RD", year:6968, month:0, day:0,
+        race:"human", faction:"Möebius", context:"alliance",
+        content:"The Möebius breaks arms with Anubis, and makes an agreement with it. Rather than directly "+
+                "serving it, the Möebius keeps autonomus, in exchange of offering peace and alliance for "+
+                "the Church of the Cybergod - indirectly contacting the Future Empire with the same offering.",
+    },
 
 
 
@@ -678,12 +735,17 @@ var timelineJSON = [
 
 
 
-
+    {
+        calendar:"RD", year:7102, month:0, day:0,
+        race:"human", faction:"Möebius", context:"abandonment",
+        content:"The Möebius ultimately gives up planet Xyneoda to the Justice Empire "+
+                "by retreating and escaping through space.",
+    },
 
     {
         calendar:"RD", year:7103, month:0, day:0,
         race:"human", faction:"People of Anberoi", context:"colonization",
-        content:"Anberoi is colonized.",
+        content:"Anberoi is colonized after several thousand years of silence.",
     },
 
 

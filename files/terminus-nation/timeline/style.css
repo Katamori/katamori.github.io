@@ -48,7 +48,6 @@ div {
     width: 256px;
 	height: 224px;
 	overflow-y: scroll;
-
 }
 
 
@@ -96,7 +95,7 @@ div {
 
 .eventbox {
 
-
+/*display: inline-block;*/
 }
 
 .content {
