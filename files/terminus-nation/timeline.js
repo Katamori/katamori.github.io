@@ -307,14 +307,18 @@ var timelineJSON = [
 
 
 
-
+    {
+        calendar:"KW", year:100226, month:0, day:0,
+        race:"human", faction:"unspecified", context:"colonization",
+        content:"The initial colonization of the later Republic Haven.",
+    },
 
 
     /* 1RD = 100325KW */
     {
         calendar:"RD", year:1, month:0, day:0,
         race:"human", faction:"Republic", context:"foundation",
-        content:"The declaration of the First Democratic Union on Republic Haven, the earliest lawful ancestor of the Republic.",
+        content:"The declaration of the First Democratic Union, the earliest lawful ancestor of the Republic, on Republic Haven.",
     },
 
 
@@ -424,6 +428,13 @@ var timelineJSON = [
         content:"Foundation of the Free Heaven Movement.",
     },
 
+    {
+        calendar:"RD", year:3692, month:0, day:0,
+        race:"human", faction:"Sons of the Ring", context:"foundation",
+        content:"A branch of the Free Heaven Movement, after fierce confrontations, declare "+
+                "indepence, and founds the church 'Sons of the Ring', on their own interpretation "+
+                "of neo-Christianity.",
+    },
 
     {
         calendar:"RD", year:3722, month:0, day:0,
