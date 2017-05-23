@@ -68,7 +68,7 @@ var timelineJSON = [
                 "According to historical records, the war mutated several members of "+
                 "the race, indirectly forcing them for a much slower civilizational progress.",
     },
-    
+
 
     {
         calendar:"BY", year:-4000000000, month:0, day:0,
@@ -135,6 +135,13 @@ var timelineJSON = [
     },
 
     {
+        calendar:"BY", year:-370000000, month:0, day:0,
+        race:"Aurost", faction:"unspecified", context:"main",
+        content:"Shaper scientists start experimenting with artificial life forms on planet Regh.",
+
+    },    
+
+    {
         calendar:"BY", year:-150000000, month:0, day:0,
         race:"Shaper", faction:"unspecified", context:"cultural",
         content:"The cult of Vermyys emerges in Shaper culture."
@@ -154,8 +161,8 @@ var timelineJSON = [
     {
         calendar:"BY", year:-72000000, month:0, day:0,
         race:"Cloudan", faction:"unspecified", context:"main",
-        content:"Cloudan race evolves from an ancient metal-silicon hybrid based "+
-                "avian predator species, by accomodating to a pseudo-ground lifeform.",
+        content:"Cloudan race evolves from an ancient metal-based avian predator "+
+                "species, by accomodating to a pseudo-ground lifeform.",
 
     },
 
@@ -171,7 +178,7 @@ var timelineJSON = [
         calendar:"BY", year:-68000000, month:0, day:0,
         race:"Cloudan", faction:"unspecified", context:"main",
         content:"A Planet Monument Core hits Sme, the Cloudan homeworld. The resulting "+
-                "ecological disaster almost exterminates the Cloudan race, with only the "+
+                "ecological disaster nearly exterminates the Cloudan race, with only the "+
                 "toughest and solely the flightless members have survived.\n\n "+
                 "This event has defined both the cultural and the genetic traits of the "+
                 "race for the rest of their history.",
@@ -245,12 +252,25 @@ var timelineJSON = [
 
 
     {
-        calendar:"BY", year:1, month:0, day:0,
+        calendar:"BY", year:1, month:1, day:1,
         race:"general", faction:"unspecified", context:"main",
         content:"The most recent Beacon World Activation Event. Ezbekuar's Gate is activated by Cloudan forces, "+
 		"teleporting them to Regh. Majority of Cloudan, Sun Serpent and minor beings are destroyed.\n\n"+
         "With the last surviving Shaper beings leaving the Cosmic Disk, every active evidence of the Shaper "+
         "influence disappears from the galaxy.",
+    },
+    {
+        calendar:"BY", year:1, month:2, day:0,
+        race:"Aurost", faction:"unspecified", context:"main",
+        content:"Savage units of the Cloudan Condeferacy starts hunting and chasing Aurosts on Zychton "+
+                "after finding them hiding in the underground catacombs. As a result, the survivors "+
+                "scatter around the galaxy via the Planet Monuments.",
+    },    
+    {
+        calendar:"BY", year:349, month:0, day:0,
+        race:"Aurost", faction:"Aurost Fatherland of Embebea", context:"foundation",
+        content:"Scattered colonies of the Aurost race unifies under a nation nowadays referred as "+
+                "'Core Empire', a foundation of the later Fatherland of Embembea.",
     },
 
     {
@@ -353,6 +373,60 @@ var timelineJSON = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
         calendar:"KW", year:84661, month:0, day:0,
         race:"Sun Serpent", faction:"Ontenedian tribes", context:"main",
@@ -444,6 +518,29 @@ var timelineJSON = [
         race:"Cloudan", faction:"Cloudan Confederacy", context:"main",
         content:"End of the Second Immortal War.",
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -868,6 +965,12 @@ var timelineJSON = [
     },
 
 
+
+
+
+
+
+
     {
         calendar:"RD", year:7414, month:5, day:15,
         race:"human", faction:"Justice Empire", context:"celebration",
@@ -976,7 +1079,7 @@ var timelineJSON = [
 
     {
         calendar:"RD", year:7709, month:0, day:0,
-        race:"human", faction:"unspecified", context:"main",
+        race:"human", faction:"unspecified", context:"nontemps",
         content:"Red dies within the galaxy; he resurrects on Mieivo. ",
     },
     {
@@ -1062,10 +1165,48 @@ var timelineJSON = [
 /* Terminus Nation Invasion */
 
     {
-        calendar:"RD", year:7901, month:0, day:0,
+        calendar:"RD", year:7901, month:3, day:20,
         race:"human", faction:"unspecified", context:"nontemps",
         content:"Drifter (Drake Ian Daviau) dies, he resurrects on Vel.",
     },
+    {
+        calendar:"RD", year:7901, month:7, day:20,
+        race:"human", faction:"unspecified", context:"nontemps",
+        content:"Amazon (Shiori Zaian) dies within the galaxy; she resurrects on Vel.",
+    },    
+    {
+        calendar:"RD", year:7901, month:7, day:29,
+        race:"human", faction:"Gate Hunter Division", context:"main",
+        content:"Amazon escapes from mafia custody on Vel after defeating Drifter, "+
+                "a former body guard of them.",
+    },  
+    {
+        calendar:"RD", year:7901, month:7, day:30,
+        race:"human", faction:"Gate Hunter Division", context:"expansion",
+        content:"Drifter is forgotten by his employers on Vel, after which he decides "+
+                "to form a temporary alliance with Amazon to leave the planet",
+    },  
+
+
+    {
+        calendar:"RD", year:7902, month:2, day:23,
+        race:"human", faction:"Gate Hunter Division", context:"Great Campaign",
+        content:"Drifter, Jumper, and a handful of outlaw militarists from Epte Merinos "+
+                "lands on planet Hahva, ultimate encountering the forces of the Scarab Node. "+
+                "This marks the beginning of Drifter's 'Great Campaign', which aims to release "+
+                "Amazon from Scarab Node custody and escape.",
+    },  
+
+
+    
+    {
+        calendar:"RD", year:7902, month:3, day:3,
+        race:"human", faction:"Gate Hunter Division", context:"Great Campaign",
+        content:"Drifter, Amazon, Jumper, and the last twenty remainins Epte Merinos militarists "+
+                "reach planet Senzaka",
+    }, 
+
+
 
     {
         calendar:"RD", year:7904, month:0, day:0,
@@ -1073,5 +1214,15 @@ var timelineJSON = [
         content:"Hackerboy leaves Beacon World - only to arrive into the middle of "+
                 "the Obelisk Incident. [WIP and spoiler anyways]",
     },
+
+
+
+
+
+    {
+        calendar:"RD", year:7910, month:10, day:22,
+        race:"human", faction:"unspecified", context:"main",
+        content:"The Gate Incident; end of the Terminus Naton Invasion Era, and beginning of the Aftermath.",
+    },     
 
 ];
