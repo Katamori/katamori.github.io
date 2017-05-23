@@ -40,11 +40,64 @@ content: description of the event
 var timelineJSON = [
 
 
+/* The most ancient times */
+
     {
         calendar:"BY", year:-10000000000, month:0, day:0,
         race:"Shaper", faction:"unspecified", context:"main",
         content:"Earliest known evidence of the existence of the Shapers.",
 
+    },
+
+    {
+        calendar:"BY", year:-8000000000, month:0, day:0,
+        race:"Shaper", faction:"unspecified", context:"main",
+        content:"Presumed end of the Shaper 'stone age' and emergence of their "+
+                "first societies.",
+
+    },
+
+    {
+        calendar:"BY", year:-7950000000, month:0, day:0,
+        race:"Shaper", faction:"unspecified", context:"main",
+        content:"First extinction period.<br><br>"+
+                "Shaper artifacts indicate that at some point near this "+
+                "time interval, the Shapers went through an extinction period; "+
+                "the most plausible theory implies that a large-scale war "+
+                "involving mass-destruction weapons destroyed 99% of the race.<br><br>"+
+                "According to historical records, the war mutated several members of "+
+                "the race, indirectly forcing them for a much slower civilizational progress.",
+    },
+    
+
+    {
+        calendar:"BY", year:-4000000000, month:0, day:0,
+        race:"Shaper", faction:"unspecified", context:"main",
+        content:"Second extinction period begins.<br><br>"+
+                "Presumably, an evolutional change, spreading through the race unintentionally, "+
+                "cause a sharp drop in population increase, as it rendered most of the members "+
+                "sterile. While being moderately advanced, society is unable to halt the progress "+
+                "and extremely long years of strugge and decay comes for the Shapers.",
+
+    },
+
+    {
+        calendar:"BY", year:-3250000000, month:0, day:0,
+        race:"Shaper", faction:"unspecified", context:"main",
+        content:"Second extinction period ends.<br><br>"+
+                "At this point, the Shapers has gone through an immense amount of biological "+
+                "changes, with their sharp eyes and scaled skin staying the only unchanged "+
+                "features.<br><br>"+
+                "The estimated age of the appearance of a new Shaper phenotype, which later "+
+                "became the ancestors of the Sun Serpents.",
+    },
+
+
+    {
+        calendar:"BY", year:-2000000000, month:0, day:0,
+        race:"general", faction:"unspecified", context:"technology",
+        content:"Judging from Planet Monuments, the earliest estimated time "+
+                "of the emergence of the Shaper space technology."
     },
 
     {
@@ -54,21 +107,39 @@ var timelineJSON = [
     },
 
 
+/* 1 billion to 100 million years ago */
 
-/* 900 to 100 million years ago */
+    {
+        calendar:"BY", year:-900000000, month:0, day:0,
+        race:"Shaper", faction:"unspecified", context:"main",
+        content:"Empire Era of the Shapers. After conquering the entirety of "+
+                "the Filament Supercluster, a very sophisticated and unstable "+
+                "relationship network between the existing nations emerged.",
+
+    },
+
+    {
+        calendar:"BY", year:-815000000, month:0, day:0,
+        race:"Shaper", faction:"unspecified", context:"main",
+        content:"Around a young supermassive black hole, Shapers start build the core of "+
+                "a galaxy-sized energy collection device, later known as Beacon World.",
+
+    },
 
     {
         calendar:"BY", year:-400000000, month:0, day:0,
         race:"Shaper", faction:"Kidar Manedorgtem", context:"main",
-        content:"Kidar Manedorgtem unifies the Shaper race within the Filament Supercluster.",
+        content:"Kidar Manedorgtem unifies the Shaper race within the Filament Supercluster. "+
+                "End of the Empire Era",
 
     },
 
     {
         calendar:"BY", year:-150000000, month:0, day:0,
-        race:"general", faction:"unspecified", context:"main",
+        race:"Shaper", faction:"unspecified", context:"cultural",
         content:"The cult of Vermyys emerges in Shaper culture."
     },
+
 
     {
         calendar:"BY", year:-100000000, month:0, day:0,
@@ -110,7 +181,44 @@ var timelineJSON = [
 
 
 
+    {
+        calendar:"BY", year:-10000000, month:0, day:0,
+        race:"general", faction:"unspecified", context:"readability",
+        content:"10 million year mark, for readability."
+    },
 
+
+/* 10 to 1 million years ago */
+
+
+
+
+
+
+
+
+    {
+        calendar:"BY", year:-1000000, month:0, day:0,
+        race:"general", faction:"unspecified", context:"readability",
+        content:"1 million year mark, for readability."
+    },
+
+
+/* Intermission: between 100 thousand years ago and Beacon World Era */
+
+
+
+
+
+
+
+    {
+        calendar:"BY", year:-100000, month:0, day:0,
+        race:"general", faction:"unspecified", context:"readability",
+        content:"100 thousand year mark, for readability."
+    },
+
+/* Intermission: last 70k years before BWE */
 
 
 
