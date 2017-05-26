@@ -74,10 +74,11 @@ var timelineJSON = [
         calendar:"BY", year:-4000000000, month:0, day:0,
         race:"Shaper", faction:"unspecified", context:"main",
         content:"Second extinction period begins.<br><br>"+
-                "Presumably, an evolutional change, spreading through the race unintentionally, "+
-                "cause a sharp drop in population increase, as it rendered most of the members "+
-                "sterile. While being moderately advanced, society is unable to halt the progress "+
-                "and extremely long years of strugge and decay comes for the Shapers.",
+                "Presumably, an evolutional change, spreading through the race "+
+		"unintentionally, cause a sharp drop in population increase, as "+
+		"it rendered most of the members sterile. While being moderately "+
+		"advanced, society is unable to halt the progress and extremely "+
+		"long years of strugge and decay comes for the Shapers.",
 
     },
 
@@ -121,8 +122,9 @@ var timelineJSON = [
     {
         calendar:"BY", year:-815000000, month:0, day:0,
         race:"Shaper", faction:"unspecified", context:"main",
-        content:"Around a young supermassive black hole, Shapers start build the core of "+
-                "a galaxy-sized energy collection device, later known as Beacon World.",
+        content:"Around a young supermassive black hole, Shapers start build "+
+		"the core of a galaxy-sized energy collection device, later "+
+		"known as Beacon World.",
 
     },
 

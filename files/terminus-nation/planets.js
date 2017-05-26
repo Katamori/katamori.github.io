@@ -60,15 +60,17 @@ function Planet(){
 
     var self = this;
 
-    this.name = "";
-    this.type = "";
-    this.planetMonument = { size: 0, gates: {} };
+    //properties
+    this.name;
+    this.type;
+    this.planetMonument;
 
-    this.inhabited = false;
-    this.race = "";
-    this.faction = "";
-    this.colonizedOn = "";
+    this.inhabited;
+    this.race;
+    this.faction;
+    this.colonizedOn;
 
+    //methods
     this.fillData = function(dataset){
 
         if (typeof dataset.name !== "undefined"){ self.name = dataset.name }else self.name = "undefined";
