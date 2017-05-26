@@ -14,27 +14,20 @@ function generatePlanet(){
 
     for(a=0; a<document.getElementById("max").value; a++){
 
+        /*
+        KEPT FOR HISTORICAL PURPOSES
+
         var raceID = Math.floor(Math.random()*Object.keys(racesFactionsTN).length);
-
-
-
         var factionID = Math.floor(Math.random()*Object.keys(racesFactionsTN[Object.keys(racesFactionsTN)[raceID]]).length)
+        */
 
-
-
-
-
-
-        //var e = Object.keys(racesFactionsTN[raceID]);
-
-        console.log();
+        var occupants = generateFaction();
 
         var params = {
             name: generateName(),
             type: generateType(),
-            race: Object.keys(racesFactionsTN)[raceID],
-            faction: racesFactionsTN[Object.keys(racesFactionsTN)[raceID]][factionID]
-            //faction: Math.ceil(Math.random()*racesFactionsTN[racenum].length)
+            race: occupants[0],
+            faction: occupants[1]
 
         }
 
@@ -99,4 +92,50 @@ function generateType(){
     if(line[2] >= ret && ret > line [1]){ ret = 3 }  
 
     return ret;  
+}
+
+
+
+function generateFaction(){
+
+    var line = [ { faction:"nothing", value:0 } ];
+
+    //creating "ratio line" for randomgen via recursive depth search on the faction number list
+    function fillLine(obj){
+
+        obj.forEach(function(e) {
+            if(typeof e.subsets === "undefined"){
+                line.push( { faction:e.meaning, value:e.value+line[line.length-1].value } )              
+            }else{               
+                fillLine(e.subsets)
+            }  
+        }, this);
+
+    }
+
+    fillLine(numbersTN[1].subsets["faction affiliation"]);
+    //console.log(line);
+
+    //generate the number
+    var ret= [];
+    var n = Math.ceil(Math.random()*line[line.length-1].value);
+    var found = false;
+
+    for(m=1; !found && m<line.length-1; m++){
+        if((n>=line[m-1].value) && (n<line[m].value)){ found = true }
+    }
+         
+
+    //find the race and return with the values
+    Object.keys(racesFactionsTN).forEach(function(e) {
+        racesFactionsTN[e].forEach(function(inner_e) {
+            if ( inner_e === line[m].faction ){ 
+                ret[0]=e;
+                ret[1]=line[m].faction;
+            }       
+        }, this);
+    }, this);
+
+    return ret;
+
 }
