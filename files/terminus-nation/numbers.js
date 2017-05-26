@@ -7,10 +7,9 @@ var numbersTN = [
 
     {   meaning:"Planet Monuments",
         value:15720000,
-        [
+        subsets: {
             //first subset: gas giant, rocky planet and moon distribution
-            [
-                "celestial body type",
+            "celestial body type": [
 
                 {   meaning:"gas giants",
                     value:1217000   },
@@ -21,18 +20,16 @@ var numbersTN = [
             ],
 
             //second subset: faction division
-            [
-                "faction affiliation",
+            "faction affiliation": [
 
                 {   meaning:"Republic colonies",
                     value:3000000   },
                 {   meaning:"Free Haven Movement colonies",
                     value:2640000   },
                 {   meaning:"Technological Warzone colonies",
-                    value:1558000
-
+                    value:1558000,
+                    subsets: [
                     //distribution within the TWZ
-                    [
                         {   meaning:"Red Fist colonies",
                             value:392000   },
                         {   meaning:"Justice Empire colonies",
@@ -54,12 +51,17 @@ var numbersTN = [
                     value:157000   },
 
                 {   meaning:"everything else",
-                    value:4025000   }
+                    value:4025000,   
+                    subsets: [
+                        {   meaning:"Khali kolonies",
+                            value:105000  },                        
+                    ]
+                }
                 //so far, 4,025,000 are the rest
                 //these are autonomous, uninhabitable, undiscovered or otherwise outsider.
 
             ]
-        ]
+        }
 
     }
 
