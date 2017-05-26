@@ -60,7 +60,9 @@ function Planet(){
 
     var self = this;
 
-    //properties
+    /*
+        PROPERTIES
+    */
     this.name;
     this.type;
     this.planetMonument;
@@ -70,17 +72,31 @@ function Planet(){
     this.faction;
     this.colonizedOn;
 
-    //methods
+
+
+    /*
+        METHODS
+    */
+
+    //getters
+    this.getName = function(){ return self.name };
+    this.getType = function(){ return self.type };
+
+    this.getOccupants = function(){
+        return [self.race, self.faction ];
+    }
+
+    //setters
     this.fillData = function(dataset){
 
         if (typeof dataset.name !== "undefined"){ self.name = dataset.name }else self.name = "undefined";
 
 
         switch(dataset.type){
-            case 1: self.name = "moon"; break;
-            case 2: self.name = "planet"; break;
-            case 3: self.name = "gas giant"; break;
-            default: self.name = "undefined";
+            case 1: self.type = "moon"; break;
+            case 2: self.type = "planet"; break;
+            case 3: self.type = "gas giant"; break;
+            default: self.type = "undefined";
         }
 
 
@@ -98,10 +114,12 @@ function Planet(){
             self.colonized = true;
             self.race = dataset.race;
             self.faction = dataset.faction;
-            self.colonizedOn = convertDate(dataset.since[1], dataset.since[0], "BY");
+            //self.colonizedOn = convertDate(dataset.since[1], dataset.since[0], "BY");
         }
 
 
     }
+
+
 
 }
