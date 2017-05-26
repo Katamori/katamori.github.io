@@ -7,10 +7,10 @@ var numbersTN = [
 
     {   meaning:"Planet Monuments",
         value:15720000,
-        {
+        [
             //first subset: gas giant, rocky planet and moon distribution
-            {
-                subset:"celestial body type",
+            [
+                "celestial body type",
 
                 {   meaning:"gas giants",
                     value:1217000   },
@@ -18,21 +18,21 @@ var numbersTN = [
                     value:4822000   },
                 {   meaning:"moons",
                     value:9681000   }
-            },
+            ],
 
             //second subset: faction division
-            {
-                subset:"faction affiliation",
+            [
+                "faction affiliation",
 
                 {   meaning:"Republic colonies",
                     value:3000000   },
                 {   meaning:"Free Haven Movement colonies",
                     value:2640000   },
                 {   meaning:"Technological Warzone colonies",
-                    value:1558000,
+                    value:1558000
 
                     //distribution within the TWZ
-                    {
+                    [
                         {   meaning:"Red Fist colonies",
                             value:392000   },
                         {   meaning:"Justice Empire colonies",
@@ -40,8 +40,8 @@ var numbersTN = [
                         {   meaning:"Church of the Cybergod colonies",
                             value:256000   },
                         {   meaning:"Future Empire colonies",
-                            value:372000   },
-                    }
+                            value:372000   }
+                    ]
                 },
 
                 {   meaning:"Aurost Fatherland colonies",
@@ -51,16 +51,16 @@ var numbersTN = [
                 {   meaning:"Anubis colonies (non-COTC)",
                     value:156000   },
                 {   meaning:"colonies under Dark Machine occupation",
-                    value:157000   }
+                    value:157000   },
 
                 {   meaning:"everything else",
                     value:4025000   }
                 //so far, 4,025,000 are the rest
                 //these are autonomous, uninhabitable, undiscovered or otherwise outsider.
 
-            }
-        }
+            ]
+        ]
 
-
+    }
 
 ]
