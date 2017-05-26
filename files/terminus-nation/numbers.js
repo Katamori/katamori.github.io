@@ -8,7 +8,8 @@ var numbersTN = [
     {   meaning:"Planet Monuments",
         value:15720000,
         subsets: {
-            //first subset: gas giant, rocky planet and moon distribution
+
+            //gas giant, rocky planet and moon distribution
             "celestial body type": [
 
                 {   meaning:"gas giants",
@@ -19,7 +20,18 @@ var numbersTN = [
                     value:9681000   }
             ],
 
-            //second subset: faction division
+            //how many uninhabited planets exist per planet category? (2 755 000 overall)
+            "uninhability distribution": [
+
+                {   meaning:"gas giants",
+                    value:1215000   },          
+                {   meaning:"rocky planets",
+                    value:420000   },
+                {   meaning:"moons",
+                    value:1130000   }                
+            ],
+
+            //faction division
             "faction affiliation": [
 
                 {   meaning:"Republic colonies",
@@ -138,8 +150,8 @@ var numbersTN = [
                             value:35        },                              
                         {   meaning:"Union Fort",
                             value:1         },     
-                        {   meaning:"uninhabited",
-                            value:2755000   },                                                                           
+                        //{   meaning:"uninhabited",
+                        //    value:2755000   },                                                                           
                     ]
                 }
                 //so far, 4,024,000 are the rest

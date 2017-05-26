@@ -21,11 +21,14 @@ function generatePlanet(){
         var factionID = Math.floor(Math.random()*Object.keys(racesFactionsTN[Object.keys(racesFactionsTN)[raceID]]).length)
         */
 
-        var occupants = generateFaction();
+        var type = generateType();
+        var occupants = generateFaction(type);
+
+        //console.log(occupants);
 
         var params = {
             name: generateName(),
-            type: generateType(),
+            type: type,
             race: occupants[0],
             faction: occupants[1]
 
@@ -96,46 +99,61 @@ function generateType(){
 
 
 
-function generateFaction(){
+function generateFaction(ptype){
 
-    var line = [ { faction:"nothing", value:0 } ];
-
-    //creating "ratio line" for randomgen via recursive depth search on the faction number list
-    function fillLine(obj){
-
-        obj.forEach(function(e) {
-            if(typeof e.subsets === "undefined"){
-                line.push( { faction:e.meaning, value:e.value+line[line.length-1].value } )              
-            }else{               
-                fillLine(e.subsets)
-            }  
-        }, this);
-
-    }
-
-    fillLine(numbersTN[1].subsets["faction affiliation"]);
-    //console.log(line);
-
-    //generate the number
     var ret= [];
-    var n = Math.ceil(Math.random()*line[line.length-1].value);
-    var found = false;
 
-    for(m=1; !found && m<line.length-1; m++){
-        if((n>=line[m-1].value) && (n<line[m].value)){ found = true }
-    }
-         
+    //decide if it's inhabited or not
+    var inhChance = Math.ceil(Math.random()*numbersTN[1].subsets["celestial body type"][ptype-1].value);
 
-    //find the race and return with the values
-    Object.keys(racesFactionsTN).forEach(function(e) {
-        racesFactionsTN[e].forEach(function(inner_e) {
-            if ( inner_e === line[m].faction ){ 
-                ret[0]=e;
-                ret[1]=line[m].faction;
-            }       
+    if(inhChance < numbersTN[1].subsets["uninhability distribution"][ptype-1].value){
+        ret[0]="uninhabited";
+        ret[1]="uninhabited";      
+        return ret;
+
+    }else{
+
+        //if it can be inhabited:
+        var line = [ { faction:"nothing", value:0 } ];
+
+        //creating "ratio line" for randomgen via recursive depth search on the faction number list
+        function fillLine(obj){
+
+            obj.forEach(function(e) {
+                if(typeof e.subsets === "undefined"){
+                    line.push( { faction:e.meaning, value:e.value+line[line.length-1].value } )              
+                }else{               
+                    fillLine(e.subsets)
+                }  
+            }, this);
+
+        }
+
+        fillLine(numbersTN[1].subsets["faction affiliation"]);
+        //console.log(line);
+
+        //generate the number
+        var n = Math.ceil(Math.random()*line[line.length-1].value);
+        var found = false;
+
+        for(m=1; !found && m<line.length-1; m++){
+            found = found || ((n>=line[m-1].value) && (n<line[m].value))
+        }
+
+        //console.log(line[m-2].value+" < "+n+" < "+line[m-1].value+
+        //            " meaning that this planet belongs to "+line[m-1].faction)
+            
+
+        //find the race and return with the values
+        Object.keys(racesFactionsTN).forEach(function(e) {
+            racesFactionsTN[e].forEach(function(inner_e) {
+                if ( inner_e === line[m-1].faction ){ 
+                    ret[0]=e;
+                    ret[1]=line[m-1].faction;
+                }       
+            }, this);
         }, this);
-    }, this);
 
-    return ret;
-
+        return ret;
+    }
 }

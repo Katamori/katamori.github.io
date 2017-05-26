@@ -55,6 +55,6 @@ var racesFactionsTN = {
         "Dark Machine"
     ],
 
-    "uninhabited": [ "uninhabited" ]
+    //"uninhabited": [ "uninhabited" ]
 
 }

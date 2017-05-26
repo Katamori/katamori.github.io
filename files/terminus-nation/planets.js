@@ -93,9 +93,9 @@ function Planet(){
 
 
         switch(dataset.type){
-            case 1: self.type = "moon"; break;
+            case 1: self.type = "gas giant"; break;
             case 2: self.type = "planet"; break;
-            case 3: self.type = "gas giant"; break;
+            case 3: self.type = "moon"; break;
             default: self.type = "undefined";
         }
 
