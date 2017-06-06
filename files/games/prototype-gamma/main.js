@@ -17,21 +17,6 @@ var mouse = {
 
 var texts = [];
 
-//key bindings
-var customKeys = { "scrollUp": "a", "scrollDown": "b", "scrollLeft": "c", "scrollRight": "d" }
-
-var keyTable = [
-    ["scrollUp", "W"],
-    ["scrollDown", "S"],   
-    ["scrollLeft", "A"],
-    ["scrollRight", "D"]
-
-]
-
-
-
-
-
 //the matter itself
 var game = new Phaser.Game(gameX, gameY, Phaser.CANVAS, '',
     { preload: preload, create: create, update: update, render: render });
@@ -52,6 +37,15 @@ function preload(){
     game.time.advancedTiming = true;
 }
 
+
+
+var sprites = {
+    "colonists": [],
+    "katamoriballs": []
+};
+
+var colonists = [];
+var katamoriballs = [];
 
 
 
@@ -79,50 +73,34 @@ function create(){
 
 
     //the map
-    map = game.add.tilemap();
-
-    map.addTilesetImage('tileset');
-
-    map.setCollision([1,3]);
-
-    layer = map.create('level', mapsizeX, mapsizeY, tilesize, tilesize);
-    drawable.add(layer);
-    layer.resizeWorld();
-
-    //performance improvement theoretically
-    layer.renderSettings.enableScrollDelta = false;
+    map = new ConfiguredMap(mapsizeX, mapsizeY, tilesize);
 
 
-    for(i=0;i<map.width;i++){
-        for(j=0;j<map.height;j++){
 
-          map.putTile(0, i, j, layer)
+    //the objects
+    for(d=0;d<50;d++){
+     
+        sprites.katamoriballs.push(game.add.sprite(d*48, d*32, 'katamori'));
+        drawable.add(sprites.katamoriballs[d])
 
-          if(j>25){
-              if(i%10 == 0){ map.putTile(3, i, j, layer) }else{ map.putTile(1, i, j, layer) }
+        var temp = new KatamoriBall(d, sprites.katamoriballs);
+        katamoriballs.push(temp);
+        delete temp;
+    }
 
-          }
 
-        };
-    };
-
-    map.putTile(1, 5,5, layer);
-    map.putTile(2, 1,2, layer);
-    map.putTile(3, 3,4, layer);
-
+    //other shit
     cursors = game.input.keyboard.createCursorKeys();
-
-    drawable.sort();
-
-    //game.camera.setSize(gameX*0.875, gameY*0.875);
-
-
-
 
 
 }
 
 function update(){
+
+
+    game.physics.arcade.collide(sprites.katamoriballs, map.layer);
+
+    sortedCollide(game, sprites.katamoriballs)
 
     mouse.X = game.input.mousePointer.x;
     mouse.Y = game.input.mousePointer.y;
@@ -130,7 +108,15 @@ function update(){
     mouse.tileY = Math.floor(game.input.mousePointer.y/tilesize);
 
 
-    //game.physics.arcade.collide(player, layer);
+    if(game.input.keyboard.isDown(Phaser.Keyboard["W"])){ game.camera.y-=tilesize/4 };
+    if(game.input.keyboard.isDown(Phaser.Keyboard["S"])){ game.camera.y+=tilesize/4 };
+
+    if(game.input.keyboard.isDown(Phaser.Keyboard["A"])){ game.camera.x-=tilesize/4 };
+    if(game.input.keyboard.isDown(Phaser.Keyboard["D"])){ game.camera.x+=tilesize/4 }; 
+
+
+
+
 
 
 }
@@ -141,6 +127,6 @@ function render(){
     game.debug.text("mouse: "+mouse.X+","+mouse.Y+"|"+mouse.tileX+","+mouse.tileY, gameX - 216, 96);
     game.debug.text("camera: "+game.camera.x+","+game.camera.y, gameX - 160, 128);
 
-    //game.debug.body(player);
+    //for(d=0;d<20;d++){ game.debug.body(sprites.colonists[d]) };
 
 }

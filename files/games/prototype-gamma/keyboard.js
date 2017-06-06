@@ -33,3 +33,15 @@ var keyAction = {
     }
 
 }
+
+
+//key bindings
+var customKeys = { "scrollUp": "a", "scrollDown": "b", "scrollLeft": "c", "scrollRight": "d" }
+
+var keyTable = [
+    ["scrollUp", "W"],
+    ["scrollDown", "S"],   
+    ["scrollLeft", "A"],
+    ["scrollRight", "D"]
+
+]

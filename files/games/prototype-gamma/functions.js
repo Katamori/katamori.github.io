@@ -104,3 +104,39 @@ Phaser.Tilemap.prototype.setCollisionBetween = function (start, stop, collides, 
 	return layer;
 
 };
+
+/*
+
+	ANOTHER REPLACEMENT-ESQUE ADDITION
+	FOR MORE OPTIMAL IN-GROUP COLLISIONS
+
+	SOURCE: https://ra3s.com/wordpress/dysfunctional-programming/2015/01/29/pruning-collision-detection-with-a-1d-sort/
+
+*/
+
+function leftOfBody(b) {
+    return b.x - b.halfWidth
+}
+function rightOfBody(b) {
+    return b.x + b.halfWidth
+}
+
+function sortedCollide(g, arr) {
+
+
+
+    arr.sort(function(a,b) { 
+        return leftOfBody(a.body) - leftOfBody(b.body);
+    })
+    for (var i = 0; i < arr.length; ++i){
+        var elem_i = arr[i]
+
+        for (var j = i + 1; j < arr.length; ++j) {
+            var elem_j = arr[j]
+            if (rightOfBody(elem_i.body) < leftOfBody(elem_j.body)) { 
+                break; 
+            }
+            g.physics.arcade.collide(elem_i, elem_j)
+        }
+    }
+}
