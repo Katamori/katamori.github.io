@@ -2,26 +2,37 @@
 <html>
 
 	<head>
+		<!-- CDN -->		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+		<!-- my files -->
+		<script src="./common.js"></script>
+		<link rel="stylesheet" type="text/css" href="common.css">	
+
+		<!-- custom supplementary data -->
+		<script>
+			var prefix = "./games/";
+			var list = [ 
+				{ref: prefix+"3d-experiment.html", content:"Timeline"},
+				{ref: prefix+"hackfield-2013.html", content:"A PhaserJS port of my LD#27 game - the first truly finished one"},
+				{ref: prefix+"prototype-alpha.html", content:"Game Prototype Alpha"},
+				{ref: prefix+"prototype-beta.html", content:"Game Prototype Beta"},
+				{ref: prefix+"prototype-gamma.html", content:"Game Prototype Gamma"},
+			];
+		</script>	
 	</head>
 
 	<body>
     <h1>MY GAMES (made with PhaserJS)</h1>
 
 		<br><br><br>
-
-    <ol>
-		    <li><a href="./games/hackfield-2013.html">A PhaserJS port of my LD#27 game</a> - the first truly finished one.</li>
-			<li><a href="./games/prototype-alpha.html">"Prototype Alpha"</li>
-			<li><a href="./games/prototype-beta.html">"Prototype Beta"</li>
-			<li><a href="./games/prototype-gamma.html">"Prototype Gamma"</li>			
-    </ol>
-
-		<!--
-
-
-
-  -->
-
+		<p>(mostly not more than some buggy experimental rambles, though)</p>
+		<br><br><br>
+		<div id="angularContainer" ng-app="" ng-init="">
+		<ol>
+			<li ng-repeat="x in links"><a href=' {{ x.ref }} '> {{ x.content }} </a> </li>
+		</ol>
 	</body>
+	<script> angularCreateMenu("angularContainer", list) </script>
 </html>

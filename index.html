@@ -6,38 +6,39 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-		<!-- mah files -->
-		<script src="./files/index.js"></script>	
+		<!-- my files -->
+		<script src="./common.js"></script>
+		<link rel="stylesheet" type="text/css" href="common.css">		
 
-		<link rel="stylesheet" type="text/css" href="common.css">
+		<!-- custom supplementary data -->
+		<script>
+			var list = [ 
+				{ref:"./terminus-nation.html", content:"Terminus Nation related stuff"},
+				{ref:"./games.html", content:"My games, all ported to web utilizing PhaserJS."},
+				{ref:"./code-golf.html", content:"My JS/HTML contributions to codegolf.stackexchange.com"},
+				//{ref:"", content:""},
+			];
+		</script>
 	</head>
 
 	<body>
-
 		
-    <h1>Katamori's frontend projects</h1>
+    	<h1>Katamori's frontend projects</h1>
 		<br><br><br>
 
-		
 		<a href="https://github.com/Katamori/katamori.github.io">
 			<img id="fork" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">		
 		</a>
 
+		<div id="angularContainer" ng-app="" ng-init="">
+
 		<ol>
-			<li>
-				<a href="./terminus-nation.html">Terminus Nation related stuff</a>
-				- anything related to <a href="http://www.terminusnation.com">my worldbuilding project.</a><br>
-			</li>
-
-			<li>
-				<a href="./games.html">My games, all ported to web utilizing PhaserJS.</a><br>
-			</li>
-
-			<li>
-				<a href="./code-golf.html">My JS/HTML contributions to codegolf.stackexchange.com</a><br>
-			</li>			
+			<li ng-repeat="x in links"><a href=' {{ x.ref }} '> {{ x.content }} </a> </li>
 		</ol>
+		
+		<br><br><br>
 
-
+		<p>Powered (partially) by Angular and jQuery</p>
 	</body>
+	<script> angularCreateMenu("angularContainer", list) </script>
 </html>
