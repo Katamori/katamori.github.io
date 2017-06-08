@@ -57,7 +57,39 @@ function ConfiguredMap(x, y, tilesize){
 
 }
 
-//game objects
+
+
+/*
+
+    GAME OBJECTS
+
+*/
+function PhysicalThing(x, y, id, arr){
+
+    var self = this;
+
+    //properties
+    this.spriteID = id;
+
+    this.x = x;
+    this.y = y;
+
+    this.sizeX = 32*2;
+    this.sizeY = 32*2;
+    this.motion = [(Math.random()-0.5)*1000, (Math.random()-0.5)*1000];
+
+    /*
+    coming soon: object defines a sprite with methods
+    */ 
+
+    this.setInitPost = function(){
+        arr[id].x = self.x;
+        arr[id].y = self.y;        
+    }
+
+}
+
+
 function KatamoriBall(spriteID, spArr){
 
     var self = this;
