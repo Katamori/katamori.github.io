@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+        function angularCreateMenu(appInitDivId, linksJSON){
+
+            document.getElementById(appInitDivId).attributes["ng-init"].value = "links="+JSON.stringify(linksJSON)
+
+        }
+
+		var list = [ 
+			{ref:"./terminus-nation.html", content:"Terminus Nation related stuff"},
+			{ref:"./games.html", content:"My games, all ported to web utilizing PhaserJS."},
+			{ref:"./code-golf.html", content:"My JS/HTML contributions to Code Golf Stack Exchange"},
+			//{ref:"", content:""},
+		];
+	</script>
+</head>
+<body>				
+    <div id="angularContainer" ng-app="" ng-init="">
+        <ol class="list-group" id="list">
+            <li class="list-group-item" style="display: list-item;" ng-repeat="x in links">
+                <a href=' {{ x.ref }} '> {{ x.content }} </a> 
+            </li>
+        </ol>
+    </div>
+</body>
+<script> angularCreateMenu("angularContainer", list) </script>
