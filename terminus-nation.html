@@ -2,7 +2,25 @@
 <html>
 
 	<head>
+		<!-- CDN -->		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+		<!-- my files -->
+		<script src="./common.js"></script>
+		<link rel="stylesheet" type="text/css" href="common.css">	
+
+		<!-- custom supplementary data -->
+		<script>
+			var prefix = "./terminus-nation/";
+			var list = [ 
+				{ref: prefix+"timeline.html", content:"Timeline"},
+				{ref: prefix+"timeline.html", content:"Date calculator"},
+				{ref: prefix+"timeline.html", content:"Planet name generator (by RazorShark)"},
+				{ref: prefix+"timeline.html", content:"Extended version of the previous generator"},
+				{ref: prefix+"timeline.html", content:"Rune generator (early version)"},
+			];
+		</script>		
 	</head>
 
 	<body>
@@ -10,19 +28,11 @@
 
 		<br><br><br>
 
-    <ol>
-		<li><a href="./terminus-nation/timeline.html">Timeline</a></li>
-		<li><a href="./terminus-nation/date-calc.html">Date calculator</a></li>
-        <li><a href="./terminus-nation/planetgen-basic.html">Planet name generator (by RazorShark)</a></li>
-        <li><a href="./terminus-nation/planetgen-extended.html">Extended version of the previous generator</a></li>
-        <li><a href="./terminus-nation/runegen-basic.html">Rune generator (early version)</a></li>
-    </ol>
+		<div id="angularContainer" ng-app="" ng-init="">
 
-		<!--
-
-
-
-  -->
-
+		<ol>
+			<li ng-repeat="x in links"><a href=' {{ x.ref }} '> {{ x.content }} </a> </li>
+		</ol>
 	</body>
+	<script> angularCreateMenu("angularContainer", list) </script>
 </html>
