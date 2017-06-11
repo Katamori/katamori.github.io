@@ -49,13 +49,24 @@ function addBox(){
 		- a column that makes the side strip
 		- a column for the data itself
 		*/
-		$( "#timeline" ).append("<tr id='eventno"+(num+1)+"' style='display:none;'>"+
+
+		$( "#timeline" ).append(
+						"<tr id='eventno"+(num+1)+"' "+
+						//Angular binding
+						"ng-show='(all_race||"+timelineJSON[num].race.replace(/\s/g, '')+")&&"+
+								"(all_faction||"+timelineJSON[num].faction.replace(/\s/g, '').replace(/ö/g, 'o')+")&&"+
+								"(all_context||"+timelineJSON[num].context.replace(/\s/g, '')+")'>"+//+"&&("+
+						//convertDate(timelineJSON[num].calendar, timelineJSON[num].year, "BY")+")>=age_min&&("+
+						//convertDate(timelineJSON[num].calendar, timelineJSON[num].year, "BY")+")<=age_max'>"+
+
 						"<td class='stripe "+selectColor(num)+"' id='stripe"+(num+1)+"'></td>"+
 						"<td class='eventbox' style='padding-bottom: "+((diff-1)*80)+"px;'>"+
 							"<p class='tag'>"+header+"</p>"+
 							"<p class='content' id='content"+(num+1)+"'>Szoveg ide</p>"+
 				 		"</td>"+
 					"</tr>" );
+
+
 
 
 		FormattedDate(num);

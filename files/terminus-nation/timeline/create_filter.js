@@ -15,14 +15,19 @@ createCheckboxList(["race", "faction", "context"]);
 
 
 /* FUNCTIONS TO IMPLEMENT IT */
+/*
 
+NOTE: AS OF 2017/06/09, THESE FUNCTIONS HAVE BEEN DEPRECATED DUE TO THE USE OF ANGULAR.
 
 //4: select all/none
 function setCheckboxes(selfdiv, value){
     $(selfdiv).find("input[type=checkbox]").prop('checked', value);
 }
 
+
 //3: hide and show appropriate elements
+
+
 function filterAll(){
 
     for(
@@ -53,6 +58,7 @@ function filterAll(){
 
 
 }
+*/
 
 //2: create a list of checkboxes for a div
 function createCheckboxList(categories){
@@ -63,13 +69,17 @@ function createCheckboxList(categories){
 
 
         createList(category).forEach(function(item){
-            tempCh+="<input type='checkbox' id='"+item.replace(/\s/g, '')+"' checked>"+item+"<br>"
+            tempCh+=
+                "<input type='checkbox' "+
+                    "ng-model='"+item.replace(/\s/g, '').replace(/ö/g, 'o')+"' "+
+                    "id='"+item.replace(/\s/g, '')+"'>"+item+"<br>"
         })
      
         $("#select_"+category).append(
+            "<input type='checkbox' ng-model='all_"+category+"'>Select all<br>"+
             //append selector buttons
-            "<button type='button' onclick='setCheckboxes(select_"+category+", true)'>Select all</button><br>"+
-            "<button type='button' onclick='setCheckboxes(select_"+category+", false)'>Select none</button><br>"+
+            //"<button type='button' onclick='setCheckboxes(select_"+category+", true)'>Select all</button><br>"+
+            //"<button type='button' onclick='setCheckboxes(select_"+category+", false)'>Select none</button><br>"+
             //and the important part            
             tempCh+"<br><br>"
         )  

@@ -145,7 +145,7 @@ var timelineJSON = [
 
     {
         calendar:"BY", year:-150000000, month:0, day:0,
-        race:"Shaper", faction:"unspecified", context:"cultural",
+        race:"Shaper", faction:"unspecified", context:"culture",
         content:"The cult of Vermyys emerges in Shaper culture."
     },
 
