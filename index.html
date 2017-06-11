@@ -57,7 +57,7 @@
 
 
 			<div class="row" style="width:calc(100% - 128px);">
-				<div class="col-xs-10" id="descContainer">
+				<div class="col-xs-12" id="descContainer">
 
 
 
@@ -109,23 +109,21 @@
 					</div>
 				</div>
 
-				<div class="col-xs-2" id="siteContent">
+				<div style="width:128px;">
 
+					<div id="angularContainer" ng-app="" ng-init="">
+						<ul class="list-group" id="list" ng-repeat="x in links">
+							<a href=' {{ x.ref }} '>
+								<li class="list-group-item" style="display: list-item;">
+									{{ x.content }} </li>
+							</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 
 
-			<div style="width:128px;">
 
-				<div id="angularContainer" ng-app="" ng-init="">
-					<ul class="list-group" id="list" ng-repeat="x in links">
-						<a href=' {{ x.ref }} '>
-							<li class="list-group-item" style="display: list-item;">
-								{{ x.content }} </li>
-						</a>
-					</ul>
-				</div>
-			</div>
 
 
 
