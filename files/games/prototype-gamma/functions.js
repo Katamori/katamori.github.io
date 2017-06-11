@@ -9,6 +9,7 @@ function print(name, string, x, y) {
 
 
 };
+
 /*
 function destroySprite (sprite) {
 
@@ -16,6 +17,7 @@ function destroySprite (sprite) {
 
 }
 */
+
 function createPlayer(sheet, x, y){
 
     player = game.add.sprite(x, y, sheet);
@@ -34,6 +36,10 @@ function createPlayer(sheet, x, y){
     game.camera.follow(player);
 
 };
+
+
+
+
 
 /*
 

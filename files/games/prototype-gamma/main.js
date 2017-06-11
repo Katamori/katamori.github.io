@@ -38,15 +38,8 @@ function preload(){
 }
 
 
-
-var sprites = {
-    "colonists": [],
-    "katamoriballs": []
-};
-
-var colonists = [];
-var katamoriballs = [];
-
+var sprites = [];
+var objects = [];
 
 
 function create(){
@@ -62,32 +55,22 @@ function create(){
     game.physics.startSystem(Phaser.Physics.ARCADE);
     drawable = game.add.group();
 
-
-
-
     //keyboard control
     addKeys();
-
-
-
-
 
     //the map
     map = new ConfiguredMap(mapsizeX, mapsizeY, tilesize);
 
-
-
     //the objects
-    for(d=0;d<50;d++){
+    for(d=0;d<5;d++){
      
-        sprites.katamoriballs.push(game.add.sprite(d*48, d*32, 'katamori'));
-        drawable.add(sprites.katamoriballs[d])
+        sprites.push(game.add.sprite(d*48, d*32, 'katamori'));
+        drawable.add(sprites[d])
 
-        var temp = new KatamoriBall(d, sprites.katamoriballs);
-        katamoriballs.push(temp);
+        var temp = new KatamoriBall(d, sprites);
+        objects.push(temp);
         delete temp;
     }
-
 
     //other shit
     cursors = game.input.keyboard.createCursorKeys();
@@ -98,9 +81,9 @@ function create(){
 function update(){
 
 
-    game.physics.arcade.collide(sprites.katamoriballs, map.layer);
+    game.physics.arcade.collide(sprites, map.layer);
 
-    sortedCollide(game, sprites.katamoriballs)
+    sortedCollide(game, sprites)
 
     mouse.X = game.input.mousePointer.x;
     mouse.Y = game.input.mousePointer.y;

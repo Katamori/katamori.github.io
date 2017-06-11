@@ -122,6 +122,9 @@ function KatamoriBall(spriteID, spArr){
     player.animations.add('run left', [4, 5], 3, true, true);
     */
     
+    spArr[self.spriteID].bindedObjType = "KatamoriBall";
+
+    //physical properties
     game.physics.arcade.enable(spArr[self.spriteID], Phaser.Physics.ARCADE);
 
     spArr[self.spriteID].body.bounce = new Phaser.Point(1,1)
