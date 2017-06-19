@@ -40,7 +40,9 @@
 			{ref: prefix+".html", content:"Build a JavaScript Calculator"},
 			{ref: prefix+".html", content:"Build a Pomodoro Clock"},
 			{ref: prefix+".html", content:"Build a Tic Tac Toe Game"},
-			{ref: prefix+".html", content:"Build a Simon Game"},            
+			{ref: prefix+".html", content:"Build a Simon Game"},  
+
+            {ref: "./index.html", content:"Return to index"},          
 		];
 	</script>		
 </head>
@@ -51,6 +53,17 @@
             <div class="col-lg-8 col-lg-offset-2" ng-app="" ng-init="" id="angularContainer">
                 <h1>FREECODECAMP FRONTEND CONTRIBUTIONS</h1>
 
+                <p>
+                    These HTML pages are frontend projects I made while ranking up
+                    <a href="https://www.freecodecamp.com/about/"> on FreeCodeCamp.</a> <br><br>
+                    The nature of the site demands a different form of hosting, but
+                    dogin that on CodePen would be superfluous in my opinion. <br><br>
+                    I don't consider myself an absolute beginner, after all... <br> <br>
+                    You can check out the source of these projects 
+                    <a href="https://github.com/Katamori/katamori.github.io/tree/master/freecodecamp-frontend">
+                        here.</a>
+                </p>
+
                 <ul class="list-inline banner-social-buttons" id="list" ng-repeat="x in links">
                     <li>
                         <a href=" {{ x.ref }} " class="btn btn-default btn-lg">
@@ -58,6 +71,10 @@
                     </li>                    
                    
                 </ul>
+
+                <p>
+
+                </p>
             </div>
         </div>
     </section>
