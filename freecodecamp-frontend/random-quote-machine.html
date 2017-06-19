@@ -17,25 +17,44 @@
 </head>
 
 <body class='customColorA'>
-    <div class='panel panel-default' style='width:420px; margin:0 auto; margin-top:20vh'>
+    <div class='panel panel-default' style='width:400px; margin:0 auto; margin-top:20vh'>
         <div class='panel-body customColorB'>
+
             <div style='text-align:left'>
-                <h2 style='margin-left: 2px'>-</h2>
+                   <h2 style='margin-left: 2px' id='quote'>-</h2>
             </div>
+
             <div style='text-align:right'>
-                <p style='margin-right: 2px'>-</p>       
+                <i><h3 style='margin-right: 2px' id='source'>-</h3></i>       
             </div>
+
+            <!-- buttons -->
             <div style='display:flex; justify-content:space-between;'>
-                <button type="button" class="btn btn-info fa fa-twitter fa-fw" style='width:64px'></button>
-             
-                <button type="button" class="btn btn-info customColorA" id='newQuote'>
-                    New quote
-                </button>
+                
+                <button type="button" 
+                        class="btn btn-info fa fa-twitter fa-fw" 
+                        style='width:64px; background-color:#1da1f2'
+                        id='shareTwitter'></button>
+                
+                <button type="button" 
+                        class="btn btn-info btn-lg fa fa-exclamation-circle fa-fw" 
+                        style='width:64px; background-color: #80f21c'
+                        id='info'
+                        data-toggle="modal" 
+                        data-target="#infoContent"></button>
+                
+                <button type="button" 
+                        class="btn btn-info customColorA" 
+                        id='newQuote'>
+                            New quote</button>
+
             </div>
 
         </div>
         <div class='panel-footer' style='background-color:white'>
             <span style="z-index:50; font-size:0.7em; display:flex; justify-content:space-between; text-align: center;">
+
+                <!-- the API provider's access -->
                 <div>
                     <img src="https://theysaidso.com/branding/theysaidso.png" 
                     height="20" width="20" alt="theysaidso.com"/>
@@ -44,10 +63,14 @@
                         Powered by theysaidso.com</a>
                 </div>
 
-                <div style='height: 20px; line-height: 20px;'>
-                    <p style='margin-right: 2px;'>Made by Zoltán 'Katamori' Schmidt</p>
+                <!-- my access, for the flavor of it -->
+                <div>
+                    <a href='https://katamori.github.io' title="The work of Zoltán Schmidt" 
+                    style="margin-right: 6px; vertical-align: middle;">
+                        Made by Zoltán 'Katamori' Schmidt</a>                    
+                    <img src="http://terminusnation.wdfiles.com/local--resized-images/start/wiki-logo-150.png/thumbnail.jpg" 
+                    height="20" width="20" alt="lil' TN logo"/>                    
                 </div>               
-
             </span>
         </div>
     </div>
@@ -57,8 +80,36 @@
 
 </body>
 
-<!-- Angular -->		
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<div id='infoContent' class='modal fade' role='dialog'>
+    <div 
+        class='modal-dialog modal-content modal-body' 
+        style='background-color:#eee; width: 80%; margin:0 auto; margin-top:5vh'>
+        <p>
+            This random quote machine is created for 
+            <a href="https://www.freecodecamp.com/challenges/build-a-random-quote-machine">
+                the corresponding challange </a> 
+            on FreeCodeCamp, powered by Bootstrap, jQuery and the public API functions of 
+            theysaidso.com. It should be noted that the latter needs authentication for 
+            the functionality that provides truly random quotes, for which I considered it 
+            superflouous to register and get an API key that would expire over time anyway.
+        </p> <br> <p>
+            As a result, this site selects a random category only from the "Quote of the day"
+            section - while it changes day by day (I presume), it means a selection of eight
+            quotes only. (btw quote lengths are also not Twitter-friendly, as filtering for
+            that would also need API login and usage - mea culpa)
+        </p> <br> <p>
+            This makes the site itself less interesting, but on a technical level, still
+            fulfills the purpose of the original challange. I focused on it so much that
+            actually the entire source is available 
+            <a href="https://github.com/Katamori/katamori.github.io/blob/master/freecodecamp-frontend/random-quote-machine.html">
+                as one single file on Github.</a>
+        </p> <br> <p>
+            So whatever you think of this little neat site, thanks for checking in!
+        </p> <br>
+            <h3>Click anywhere outside this box to return.</h3>                           
+    </div>
+</div>
+
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -66,11 +117,10 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
 <!-- custom supplementary data -->
 <script>
+
+    var tweet = 'I\'m using a random quote selector by @KatamoriENG but haven\'t selected any quote yet.';
 
     // https://stackoverflow.com/a/5365036/2320153
     const getRandcol = () => '#'+(Math.random()*0xFFFFFF<<0).toString(16);
@@ -88,10 +138,41 @@
 
         $('#newQuote').on('click', ()=>{
 
+            //for callback
+            function getInCallback(d){
+
+                var cats = d.contents.categories;
+                var lgth = Object.keys(cats).length;
+                var id = Math.floor(Math.random()*lgth);
+
+                $.get(
+                    'http://quotes.rest/qod.json?category='+Object.keys(cats)[id],
+                    data=>{
+
+                        var q = "\""+data.contents.quotes[0].quote+"\"";
+                        var a = "~ "+data.contents.quotes[0].author
+
+                        $('#quote').text("\""+data.contents.quotes[0].quote+"\"");
+                        $('#source').text("~ "+data.contents.quotes[0].author);
+
+                        tweet = q+" "+a+" via @KatamoriENG and @theysaidso";
+                    })
+            }
+
+            //get quote
+            $.get('http://quotes.rest/qod/categories.json', function(data){ getInCallback(data) })
+
+            //if successfull, set the new colors
             setNewCol(getRandcol());        
 
-            $('.customColorB:hover').css('transition', 'color 2s');    
-            $('.customColorA:hover').css('transition', 'background-color 2s');             
+            $('.customColorB:hover').css('transition', 'color 1s');    
+            $('.customColorA:hover').css('transition', 'background-color 1s');
+
+            console.log(tweet)             
+        })
+
+        $('#shareTwitter').on('click', ()=>{
+            window.open('https://twitter.com/intent/tweet?text='+tweet.replace(' ', '%20'))
         })
 
         
