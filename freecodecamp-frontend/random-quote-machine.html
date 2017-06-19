@@ -8,31 +8,46 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+    <!-- Custom Fonts -->
+    <link href="../files/startbootstrap-grayscale/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 	<!-- my files -->
 	<link rel="stylesheet" type="text/css" href="../common.css">		
 
-	<!-- custom supplementary data -->
-	<script>
-
-	</script>		
 </head>
 
-<body>
-    <div class='panel panel-default' style='width:100%; margin:0 auto;'>
-        <div class='panel-body'>
+<body class='customColorA'>
+    <div class='panel panel-default' style='width:420px; margin:0 auto; margin-top:20vh'>
+        <div class='panel-body customColorB'>
+            <div style='text-align:left'>
+                <h2 style='margin-left: 2px'>-</h2>
+            </div>
+            <div style='text-align:right'>
+                <p style='margin-right: 2px'>-</p>       
+            </div>
+            <div style='display:flex; justify-content:space-between;'>
+                <button type="button" class="btn btn-info fa fa-twitter fa-fw" style='width:64px'></button>
+             
+                <button type="button" class="btn btn-info customColorA" id='newQuote'>
+                    New quote
+                </button>
+            </div>
 
         </div>
-        <div class='panel-footer'>
-            <span style="z-index:50;font-size:0.9em; display:flex; justify-content:space-between;">
+        <div class='panel-footer' style='background-color:white'>
+            <span style="z-index:50; font-size:0.7em; display:flex; justify-content:space-between; text-align: center;">
                 <div>
                     <img src="https://theysaidso.com/branding/theysaidso.png" 
                     height="20" width="20" alt="theysaidso.com"/>
                     <a href="https://theysaidso.com" title="Powered by quotes from theysaidso.com" 
-                    style="color: #9fcc25; margin-left: 4px; vertical-align: middle;">
+                    style="margin-left: 2px; vertical-align: middle;">
                         Powered by theysaidso.com</a>
                 </div>
 
-                <p>Made by Zoltán 'Katamori' Schmidt</p>
+                <div style='height: 20px; line-height: 20px;'>
+                    <p style='margin-right: 2px;'>Made by Zoltán 'Katamori' Schmidt</p>
+                </div>               
+
             </span>
         </div>
     </div>
@@ -53,5 +68,38 @@
 
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- custom supplementary data -->
+<script>
+
+    // https://stackoverflow.com/a/5365036/2320153
+    const getRandcol = () => '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+
+    const setNewCol = (hexCode) => {
+        $('.customColorA').css('background-color', hexCode);
+        $('.customColorB').css('color', hexCode);
+
+        //$('.customColorB:hover').css('text-decoration', 'none') 
+    }
+
+    $(document).ready( () => { 
+
+        setNewCol(getRandcol());
+
+        $('#newQuote').on('click', ()=>{
+
+            setNewCol(getRandcol());        
+
+            $('.customColorB:hover').css('transition', 'color 2s');    
+            $('.customColorA:hover').css('transition', 'background-color 2s');             
+        })
+
+        
+              
+    })
+
+
+
+</script>	
 
 </html>
