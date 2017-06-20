@@ -39,7 +39,7 @@ p {
   }
 }
 a {
-  color: #42DCA3;
+  color: #6fa0e1;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -47,7 +47,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: #005d97;
 }
 .light {
   font-weight: 400;
@@ -131,7 +131,7 @@ a:focus {
 
 /* end of custom commoner */
 
-.intro {
+.intro {   
   display: table;
   height: auto;
   padding: 100px 0;
@@ -144,10 +144,16 @@ a:focus {
 }
 .intro .intro-body {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: middle;   
+}
+.intro .intro-body .brand-heading,
+.intro .intro-body .intro-text {
+  background-color: rgba(24, 24, 24, 0.55);
+  border: 1px solid #6fa0e1;
+  color: #6fa0e1; 
 }
 .intro .intro-body .brand-heading {
-  font-size: 40px;
+  font-size: 40px;  
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
@@ -266,16 +272,16 @@ a:focus {
   border-radius: 0;
 }
 .btn-default {
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
+  border: 1px solid #6fa0e1;
+  color: #6fa0e1;
   background-color: transparent;
 }
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #42DCA3;
+  border: 1px solid #6fa0e1;
   outline: none;
   color: black;
-  background-color: #42DCA3;
+  background-color: #6fa0e1;
 }
 ul.banner-social-buttons {
   margin-top: 0;
