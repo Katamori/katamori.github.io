@@ -146,12 +146,6 @@ a:focus {
   display: table-cell;
   vertical-align: middle;   
 }
-.intro .intro-body .brand-heading,
-.intro .intro-body .intro-text {
-  background-color: rgba(24, 24, 24, 0.55);
-  border: 1px solid #6fa0e1;
-  color: #6fa0e1; 
-}
 .intro .intro-body .brand-heading {
   font-size: 40px;  
 }
@@ -345,11 +339,35 @@ body {
 }
 
 .reference {
-  /*  
+  padding: 50px 0;  
   background: url(../../common/atispics/electricpattern.jpg) no-repeat center center scroll; 
-  */ 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;     
+}
+
+.fuzzy-background,
+.accordion-header,
+.accordion-content ul li a {
+  background-color: rgba(24, 24, 32, 0.75);  
+  border: 1px solid #6fa0e1;
+  color: #6fa0e1;   
+}
+
+.accordion-header,
+.accordion-content { 
+  border: 1px solid #6fa0e1;
+  color: #6fa0e1;    
+}
+
+.accordion-header {
+  width: 90%;
+  background-color: rgba(24, 24, 32, 0.7);  
+}
+
+.accordion-content {
+  width: 85%;
+  background-color: rgba(24, 24, 24, 0.9);  
+  display:inline-block;
 }
