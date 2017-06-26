@@ -110,7 +110,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-center about" style="background-color:#222">
+    <section id="about" class="container content-section text-center about">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>About section</h1>
@@ -139,19 +139,47 @@
         </div>
     </section>
 
-    <!-- Reference Section -->
-    <section id="reference" class="container content-section text-center reference">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2" ng-app="" ng-init="" id="angularContainer">
-                <h1>Reference</h1>
+    <!-- Separator -->
+    <section class="content-section separator">
 
-                <ul class="list-inline banner-social-buttons" id="list" ng-repeat="x in links">
-                    <li>
-                        <a href=" {{ x.ref }} " class="btn btn-default btn-lg">
-                        <span class="network-name">{{ x.content }}</span></a>
-                    </li>                    
-                   
-                </ul>
+    </section>
+
+    <!-- Reference Section -->
+    <section id="reference" class="content-section text-center reference">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>Reference</h1>
+                
+                <div id="accordion" class="banner-social-buttons">
+
+                    <div class="accordion-header btn btn-default btn-lg">
+                        On this site
+                    </div>
+                    <div class="accordion-content" ng-app="" ng-init="" id="angularContainer">
+                        <ul class="list-inline banner-social-buttons" id="list" ng-repeat="x in links">
+                            <li>
+                                <a href=" {{ x.ref }} " class="btn btn-default btn-lg">
+                                <span class="network-name">{{ x.content }}</span></a>
+                            </li>                    
+                        </ul>
+                    </div>
+
+                    <div class="accordion-header btn btn-default btn-lg">
+                        GitHub (wip)
+                    </div>
+                    <div class="accordion-content">
+                        lorem ipsum
+                    </div>   
+
+                    <div class="accordion-header btn btn-default btn-lg">
+                        Other (wip)
+                    </div>
+                    <div class="accordion-content">
+                        lorem ipsum
+                    </div>                                                                                                  
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -213,10 +241,6 @@
         </div>
     </footer>
 
-    <!-- my JS -->
-    <script src="./common.js"></script>
-    <script> angularCreateMenu("angularContainer", list) </script>
-
 	<!-- Angular -->		
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
@@ -231,6 +255,24 @@
 
     <!-- Theme JavaScript -->
     <script src="./files/startbootstrap-grayscale/js/grayscale.js"></script>
+
+    <!-- my JS -->
+    <script src="./common.js"></script>
+    <script> 
+        angularCreateMenu("angularContainer", list) 
+
+        // Close all panels
+        $('#accordion').find('.accordion-content').hide();
+
+        // Accordion
+        $('#accordion').find('.accordion-header').on('click', function () {
+            var next = $(this).next();
+            next.slideToggle('fast');
+            $('.accordion-content').not(next).slideUp('fast');
+            return false;
+        });    
+
+    </script>
 
 </body>
 
