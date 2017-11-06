@@ -187,7 +187,19 @@ var timelineJSON = [
 
     },
 
+    {
+        calendar:"BY", year:-60000000, month:0, day:0,
+        race:"Cloudan", faction:"unspecified", context:"main",
+        content:"Beginning of the Black Ice Age on planet Sme.",
 
+    },
+
+    {
+        calendar:"BY", year:-50000000, month:0, day:0,
+        race:"Sun Serpent", faction:"unspecified", context:"origin",
+        content:"Earliest discovered use of the word 'Wuewuplec' - a reference to the Sun Serpents.",
+
+    },
 
 
     {
@@ -264,14 +276,14 @@ var timelineJSON = [
     {
         calendar:"BY", year:1, month:2, day:0,
         race:"Aurost", faction:"unspecified", context:"main",
-        content:"Savage units of the Cloudan Condeferacy starts hunting and chasing Aurosts on Zychton "+
+        content:"Savage units of the Cloudan forces start hunting and chasing Aurosts on Zychton "+
                 "after finding them hiding in the underground catacombs. As a result, the survivors "+
                 "scatter around the galaxy via the Planet Monuments.",
     },    
     {
         calendar:"BY", year:349, month:0, day:0,
         race:"Aurost", faction:"Aurost Fatherland of Embebea", context:"foundation",
-        content:"Scattered colonies of the Aurost race unifies under a nation nowadays referred as "+
+        content:"Scattered colonies of the Aurost race unify under a nation nowadays referred as "+
                 "'Core Empire', a foundation of the later Fatherland of Embembea.",
     },
 
@@ -353,18 +365,24 @@ var timelineJSON = [
     },
 
 
+    {
+        calendar:"KW", year:10000, month:0, day:0,
+        race:"human", faction:"unspecified", context:"nontemps",
+        content:"The estimated date of the initial resurrection of Deus (Rez'higg Hellstar) on an unspecified planet.",
+    },
+
 
 
     {
         calendar:"KW", year:32142, month:0, day:0,
         race:"Cloudan", faction:"unspecified", context:"conflict",
         content:"Beginning of the all-out warfare between the Cloudans and the Aurosts and the Sun Serpents, " +
-		"known as the Immortal War.",
+		"known as the Purgatory War.",
     },
     {
         calendar:"KW", year:32908, month:0, day:0,
         race:"Cloudan", faction:"unspecified", context:"conflict",
-        content:"End of the Immortal War.",
+        content:"End of the Purgatory War.",
     },
 
 
@@ -442,21 +460,32 @@ var timelineJSON = [
 
 
 
+    {
+        calendar:"KW", year:95127, month:0, day:0,
+        race:"Cloudan", faction:"Cloudan Confederacy", context:"politics",
+        content:"Kehiku of Dfu Tribe, avid supporter of the Quhma Entanglement, becomes a major military figure.",
+    },
+
+
+
+
+    {
+        calendar:"KW", year:95221, month:9, day:21,
+        race:"Cloudan", faction:"Cloudan Confederacy", context:"foundation",
+        content:"By codifying the Quhma Entaglement, the Overtribe is formally created. <br><br>"+
+		"This marks the official foundation of the Cloudan Confederacy.",
+    },
+
+    {
+        calendar:"KW", year:95235, month:2, day:19,
+        race:"Cloudan", faction:"Cloudan Confederacy", context:"death",
+        content:"Kehiku of Dfu dies of old age.",
+    },
+
 
 
 
 /* Human Dawn */
-
-
-
-
-
-
-
-
-
-
-
 
     {
         calendar:"KW", year:97701, month:0, day:0,
@@ -468,7 +497,7 @@ var timelineJSON = [
     {
         calendar:"KW", year:97853, month:0, day:0,
         race:"Cloudan", faction:"Cloudan Confederacy", context:"conflict",
-        content:"The Cloudan Confederacy launches another war against the rival races.",
+        content:"The Cloudan Confederacy launches another war against the rival races. (Second Purgatory War)",
     },
 
 
@@ -508,7 +537,11 @@ var timelineJSON = [
 
 
 
-
+    {
+        calendar:"RD", year:158, month:0, day:0,
+        race:"human", faction:"Republic", context:"demography",
+        content:"Population of the FDU reaches one billion.",
+    },
 
 
 
@@ -518,7 +551,7 @@ var timelineJSON = [
     {
         calendar:"RD", year:490, month:0, day:0,
         race:"Cloudan", faction:"Cloudan Confederacy", context:"main",
-        content:"End of the Second Immortal War.",
+        content:"End of the Second Purgatory War.",
     },
 
 
@@ -721,13 +754,17 @@ var timelineJSON = [
 
 
     {
-        calendar:"RD", year:5248, month:0, day:0,
+        calendar:"RD", year:5248, month:9, day:19,
         race:"human", faction:"People of Augoma", context:"main",
         content:"The Planet Monument of Augoma closes the connection with Republic planets."
     },
 
 
-
+    {
+        calendar:"RD", year:5309, month:5, day:25,
+        race:"human", faction:"Republic", context:"law",
+        content:"The Economic Class Differentiation Act has declared every individual with at least 50% subspecies ancestry restricted access citizens."
+    },
 
     {
         calendar:"RD", year:5359, month:0, day:0,
@@ -736,7 +773,11 @@ var timelineJSON = [
     },
 
 
-
+    {
+        calendar:"RD", year:5505, month:0, day:0,
+        race:"human", faction:"Republic", context:"wanted",
+        content:"Deus has been added to the SNSH wanted list, after destroying a major Republic colony.",
+    },
 
 
 
@@ -828,10 +869,17 @@ var timelineJSON = [
         content:"End of the Afterwar Age on Augoma.",
     },
     {
+        calendar:"RD", year:6835, month:0, day:0,
+        race:"human", faction:"Republic", context:"war",
+        content:"The Borderrealm Rebellion ends with an autonomy treaty.",
+    },
+
+    {
         calendar:"RD", year:6857, month:0, day:0,
         race:"human", faction:"People of Augoma", context:"main",
         content:"Establishment of the New Age Protocol, a variation of DFTP; complete control over the internet.",
     },
+
     {
         calendar:"RD", year:6861, month:0, day:0,
         race:"human", faction:"People of Augoma", context:"main",
@@ -937,7 +985,12 @@ var timelineJSON = [
 
 
 
-
+    {
+        calendar:"RD", year:7000, month:0, day:0,
+        race:"Cloudan", faction:"Cloudan Confederacy", context:"military",
+        content:"At some point around this time, the Overtribe rolled out their ancient military tactics of "+
+		"focusing on air domination, due to this method becoming increasingly ineffective against humans.",
+    },
 
 
     {
@@ -1017,6 +1070,18 @@ var timelineJSON = [
         race:"human", faction:"Future Empire", context:"individuals",
         content:"Hackerboy is elected to the Hackfield Dev Team Core.",
     },
+
+    {
+        calendar:"RD", year:7482, month:0, day:0,
+        race:"human", faction:"unspecified", context:"nontemps",
+        content:"Paracelsus (Frederic Theodore Bombastus) dies within the galaxy; he resurrects on Arna.",
+    },
+
+
+
+
+
+
 
 
 
@@ -1150,6 +1215,20 @@ var timelineJSON = [
         race:"human", faction:"Scarab Node", context:"main",
         content:"Kebechet takes control over the Scarab Node, after the death of her mother.",
     },
+
+    {
+        calendar:"RD", year:7896, month:0, day:0,
+        race:"human", faction:"unspecified", context:"obliteration",
+        content:"Deus and his army goes on traveling after destroying the capital city of an unspecified queendom.",
+    },
+
+    {
+        calendar:"RD", year:7896, month:0, day:0,
+        race:"human", faction:"Cloudan Screwer Militia", context:"alliance",
+        content:"Deus and his surviving soldiers join the Cloudan Screwer Militia",
+    },
+
+
     {
         calendar:"RD", year:7898, month:0, day:0,
         race:"human", faction:"Jade Legion", context:"main",
@@ -1161,29 +1240,35 @@ var timelineJSON = [
         content:"Split of the Insect Tamer Tribe on Ontenedis.",
     },
 
-
+    {
+        calendar:"RD", year:7901, month:0, day:0,
+        race:"human", faction:"Republic", context:"celebration",
+        content:"8000th year anniversary of the colonization of Republic Haven.<br><br>"+
+		"The Republic responses with a series of celebrations in the empire throughout "+
+		"the year; increased security in the Main Ring.",
+    },
 
 
 /* Terminus Nation Invasion */
 
     {
-        calendar:"RD", year:7901, month:3, day:20,
+        calendar:"RD", year:7901, month:1, day:20,
         race:"human", faction:"unspecified", context:"nontemps",
         content:"Drifter (Drake Ian Daviau) dies, he resurrects on Vel.",
     },
     {
-        calendar:"RD", year:7901, month:7, day:20,
+        calendar:"RD", year:7901, month:5, day:20,
         race:"human", faction:"unspecified", context:"nontemps",
         content:"Amazon (Shiori Zaian) dies within the galaxy; she resurrects on Vel.",
     },    
     {
-        calendar:"RD", year:7901, month:7, day:29,
+        calendar:"RD", year:7901, month:5, day:29,
         race:"human", faction:"Gate Hunter Division", context:"main",
         content:"Amazon escapes from mafia custody on Vel after defeating Drifter, "+
                 "a former body guard of them.",
     },  
     {
-        calendar:"RD", year:7901, month:7, day:30,
+        calendar:"RD", year:7901, month:5, day:30,
         race:"human", faction:"Gate Hunter Division", context:"expansion",
         content:"Drifter is forgotten by his employers on Vel, after which he decides "+
                 "to form a temporary alliance with Amazon to leave the planet",
@@ -1191,7 +1276,7 @@ var timelineJSON = [
 
 
     {
-        calendar:"RD", year:7902, month:2, day:23,
+        calendar:"RD", year:7901, month:12, day:10,
         race:"human", faction:"Gate Hunter Division", context:"Great Campaign",
         content:"Drifter, Jumper, and a handful of outlaw militarists from Epte Merinos "+
                 "lands on planet Hahva, ultimate encountering the forces of the Scarab Node. "+
@@ -1202,7 +1287,7 @@ var timelineJSON = [
 
     
     {
-        calendar:"RD", year:7902, month:3, day:3,
+        calendar:"RD", year:7902, month:1, day:3,
         race:"human", faction:"Gate Hunter Division", context:"Great Campaign",
         content:"Drifter, Amazon, Jumper, and the last twenty remainins Epte Merinos militarists "+
                 "reach planet Senzaka",
@@ -1222,7 +1307,7 @@ var timelineJSON = [
 
 
     {
-        calendar:"RD", year:7910, month:10, day:22,
+        calendar:"RD", year:7914, month:10, day:22,
         race:"human", faction:"unspecified", context:"main",
         content:"The Gate Incident; end of the Terminus Naton Invasion Era, and beginning of the Aftermath.",
     },     
