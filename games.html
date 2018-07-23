@@ -16,13 +16,6 @@
     <!-- Theme CSS -->
     <link href="./files/startbootstrap-grayscale/css/grayscale.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 	<!-- my files -->
 	<link rel="stylesheet" type="text/css" href="common.css">		
 
@@ -59,23 +52,8 @@
     </section>
 </body>
 
-<!-- my JS -->
-<script src="./common.js"></script>
-<script> angularCreateMenu("angularContainer", list) </script>
-
 <!-- Angular -->		
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="./files/startbootstrap-grayscale/js/grayscale.js"></script>
-
+<!-- my JS -->
+<script> document.getElementById("angularContainer").attributes["ng-init"].value = "links="+JSON.stringify(list)</script>
 </html>
