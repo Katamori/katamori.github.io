@@ -371,7 +371,7 @@ body {
 }
 
 .accordion-content {
-  width: 85%;
+  width: 80%;
   background-color: rgba(24, 24, 24, 0.9);
   display:inline-block;
 }
