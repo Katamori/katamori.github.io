@@ -36,4 +36,16 @@
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
+   <url>
+      <loc>https://katamori.github.io/terminus-nation/date-calc.html</loc>
+      <lastmod>2018-03-11</lastmod>
+      <changefreq>never</changefreq>
+      <priority>0.1</priority>
+   </url>
+   <url>
+      <loc>https://katamori.github.io/terminus-nation/timeline.html</loc>
+      <lastmod>2018-03-11</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
 </urlset>
