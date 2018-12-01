@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /code-golf.html
+Disallow: /code-golf/
+Disallow: /freecodecamp-frontend.html
+Disallow: /freecodecamp-frontend/
+Disallow: /terminus-nation/panetgen-basic.html
+Disallow: /terminus-nation/panetgen-extended.html
+Disallow: /terminus-nation/runegen-basic.html

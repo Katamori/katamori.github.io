@@ -1,0 +1,39 @@
+<?xml version=”1.0” encoding=”UTF-8”>
+<urlset xmlns=”http://www.sitemaps.org/schemas/sitemap/0.9” xmlns:xhtml=”http:www.w3.org/1999/xhtml”>
+   <url>
+      <loc>https://katamori.github.io</loc>
+      <lastmod>2018-12-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+        <loc>https://katamori.github.io/mori-NN/</loc>
+        <lastmod>2017-09-06</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+   </url>
+   <url>
+      <loc>https://katamori.github.io/hackfield-su/</loc>
+      <lastmod>2018-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://katamori.github.io/starless-outpost/</loc>
+      <lastmod>2017-07-07</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.4</priority>
+   </url>
+   <url>
+      <loc>https://katamori.github.io/taggregator/</loc>
+      <lastmod>2018-09-02</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://katamori.github.io/terminus-nation/</loc>
+      <lastmod>2018-03-11</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
+</urlset>
