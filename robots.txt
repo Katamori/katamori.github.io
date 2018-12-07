@@ -1,9 +1,11 @@
 User-agent: *
 
 Disallow: /code-golf.html
-Disallow: /code-golf/
+Disallow: /code-golf
 Disallow: /freecodecamp-frontend.html
-Disallow: /freecodecamp-frontend/
+Disallow: /freecodecamp-frontend
 Disallow: /terminus-nation/planetgen-basic.html
 Disallow: /terminus-nation/planetgen-extended.html
 Disallow: /terminus-nation/runegen-basic.html
+
+Sitemap: https://katamori.github.io/sitemap.xml
