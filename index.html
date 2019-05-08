@@ -9,214 +9,46 @@
     <meta name="author" content="Zoltán Schmidt">
 
     <title>Zoltán Schmidt - personal website</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- Custom Fonts -->
-    <link href="./files/startbootstrap-grayscale/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="./files/startbootstrap-grayscale/css/grayscale.css" rel="stylesheet">
-
-	<!-- my files -->
-	<link rel="stylesheet" type="text/css" href="common.css">
-    <script type="text/javascript">
-    !function(){var e=document,t=e.createElement("script"),s=e.getElementsByTagName("script")[0];t.type="text/javascript",t.async=t.defer=!0,t.src="https://load.jsecoin.com/load/27809/katamori.github.io/optionalSubID/0/",s.parentNode.insertBefore(t,s)}();
-    </script>		
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-male"></i> <span class="light">Zoltán</span> Schmidt
-                </a>
-            </div> 
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <!--
-                        <h1 class="brand-heading">Grayscale</h1>
-                        <p class="intro-text">A free, responsive, one page Bootstrap theme.
-                            <br>Created by Start Bootstrap.</p>
-                            -->
-                            <p style="font-size: 15px;">(this site mines <a href="https://jsecoin.com/">JSECoin</a> 
-                            while you stay here; it's TOTALLY VOLUNTARY and you can opt out - though this miner 
-                            is way not exhausting and is totally unobstrusive)
-                            <hr>
-                            <p>
-                            Welcome!
-
-                            I'm just a random mid-20s guy from Hungary who loves developing stuff 
-                            as well as using the same name literally everywhere on the Internet.
-                            <br><br>
-                            Truth be told, I love the concept of having a portfolio page,
-                            especially on Github but nowadays due to my work <a href="https://w5labs.com/home">at W5labs</a>
-                            (where I'm a backend developer, by the way, working with PHP and Phalcon)
-                            I have way not enough time to build a site like this, properly.
-                            <br><br>
-                            One day, you'll see blog posts and other kind of stuff here, but for
-                            now, it's just a reference for me so that I can link a personal page
-                            anywhere I want - where I can host my js gibberish too.
-                            <br><br>
-                            So for now, please enjoy your stay, check the code I'm hosting through 
-                            this URL or contact me at one of the places listed below.                       
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body class="centerize">
+<div>
+    <header class="slide-top">
+        <h1 class="center-text borderline name-header no-margin name"></h1>
     </header>
-
-
-    <!-- About Section -->
-    <!--
-    <section id="about" class="container content-section text-center about">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                
-                <p>
-                Welcome!
-                <br>
-                </p>
-            </div>
+    <nav class="index-menu center-text borderline slide-top">
+        <div onclick="navigateTo('about')"
+             class="centerize-without-fill">
+            About me
         </div>
-    </section>
-    -->
-
-    <!-- Skills Section -->
-     <!--
-    <section id="skills" class="content-section text-center">
-        <div class="skills">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h1>Skills</h1>
-                    <p>work in progress</p>
-                </div>
-            </div>
+        <div onclick="navigateTo('experience')"
+             class="centerize-without-fill">
+            Experience
         </div>
-    </section>
-    -->
-    <!-- Coding stuffe Section -->
-    <section id="reference" class="content-section text-center reference">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1>Coding stuff</h1>
-                
-                <div id="accordion" class="banner-social-buttons">
-
-                    <div class="accordion-header btn btn-default btn-lg">
-                        On this site
-                    </div>
-                    <div class="accordion-content">
-
-                        <ul class="banner-social-buttons" id="list">
-                            <li><a href="./games.html" class="btn btn-default btn-lg">
-                                Browser games
-                            </a></li>
-                            <li><a href="./code-golf.html" class="btn btn-default btn-lg">
-                                Code golf
-                            </a></li>
-                            <!--
-                            <li><a href="./freecodecamp-frontend.html" class="btn btn-default btn-lg">
-                                FreeCodeCamp projects
-                            </a></li>
-                            -->
-                        </ul>
-                    </div>
-
-                    <div class="accordion-header btn btn-default btn-lg">
-                        Here, but separate GitHub repo:
-                    </div>
-                    <div class="accordion-content">
-                        <ul class="banner-social-buttons" id="list">
-                            <li><a href="./terminus-nation" class="btn btn-default btn-lg">
-                                Terminus Nation supplementary
-                            </a></li>
-                            <li><a href="./mori-NN" class="btn btn-default btn-lg">
-                                [WIP] Mori-NN (neural network editor)
-                            </a></li>
-                            <li><a href="./hackfield-su" class="btn btn-default btn-lg">
-                                [WIP] > hackfield -su (game)
-                            </a></li>
-                            <li><a href="./starless-outpost" class="btn btn-default btn-lg">
-                                [WIP] Starless Outpost (game)
-                            </a></li>
-                            <li><a href="./taggregator" class="btn btn-default btn-lg">
-                                [WIP] tAggregator (Steem tool)
-                            </a></li>
-                        </ul>
-                    </div>   
-<!--
-                    <div class="accordion-header btn btn-default btn-lg">
-                        Other:
-                    </div>
-                    <div class="accordion-content">
-                        lorem ipsum
-                    </div>
-                    -->                                                                                                  
-                </div>
-            </div>
+        <div onclick="navigateTo('projects')"
+             class="centerize-without-fill">
+            Projects
         </div>
-        <br><br><br>
-    </section>
+    </nav>
+    <footer class="links center-text slide-top">
+        <div class="links-grid">
+            <a href="mailto:zol.sch93@gmail.com">
+                <div class="pointer single-link email"></div>
+            </a>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1>Contact</h1>
-                <p><a href="mailto:zol.sch93@gmail.com?Subject=I%20just%20checked%20your%20site...">
-                        zol.sch93@gmail.com
-                    </a> </p>              
-                <ul class="list-inline banner-social-buttons">                   
-                    <li>
-                        <a href="https://github.com/Katamori" class="btn btn-default btn-lg">
-                        <i class="fa fa-github fa-fw"></i> <span class="network-name"></span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/zoltánschmidt/" class="btn btn-default btn-lg">
-                        <i class="fa fa-linkedin fa-fw"></i> <span class="network-name"></span></a>
-                    </li> 
-                    <li>
-                        <a href="https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt" class="btn btn-default btn-lg">
-                        <i class="fa fa-stack-overflow fa-fw"></i> <span class="network-name"></span></a>
-                    </li>                       
-                    <li>
-                        <a href="https://twitter.com/katamoriENG" class="btn btn-default btn-lg">
-                        <i class="fa fa-twitter fa-fw"></i> <span class="network-name"></span></a>
-                    </li>                   
-
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>2017 - 2018 Zoltán Schmidt.<br>
-            <p>Used third-party code. <a href="https://github.com/photonstorm/phaser">PhaserJS</a>.<br>
-            <p>Design is a heavily modified <a href="https://github.com/twbs/bootstrap">Bootstrap</a> template.<br>
-            <p>Unless otherwise stated, the content of this page is licensed  
-            <a rel="license" href="https://opensource.org/licenses/MIT">
-                under the MIT License.</a></p>  
+            <a class="real-tel" href="">
+                <div class="pointer single-link padding-top-quarter tel"></div>
+            </a>
         </div>
     </footer>
-</body>
+</div>
 
+<script src="ts/file-handler.js"></script>
+<script src="ts/social.js"></script>
+<script src="ts/about-me.js"></script>
+<script src="ts/slide.js"></script>
+<script src="ts/navigator.js"></script>
+</body>
 </html>

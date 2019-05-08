@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Junior backend developer",
+    "timeframe": "May 2018 - [current]",
+    "place": "W5labs | Pécs, Hungary",
+    "description": "Developing backend functionality of websites for a creative agency / hosting company. <br><br> Most of my development is based on a custom content management system built on Phalcon (PHP framework) and involves in-house developments and normal projects alike."
+  },
+  {
+    "title": "Junior software developer",
+    "timeframe": "July 2017 - February 2018",
+    "place": "Open Minds Ltd. | Pécs, Hungary",
+    "description": "No official specification for the field, but in practice, I was a frontend developer.<br><br>As a part of Sonrisa Internation Inc., this company has taught me a lot about the everyday practices at a larger firm.<br><br>Aside of the implicit knowledge, I gained significant experience in versioning (Git), issue tracking (Redmine, JIRA), and learned about Scrum.<br><br>Stack-wise, I mostly worked with Angular, and had some involvement with JSP, too."
+  },
+  {
+    "title": "Intern",
+    "timeframe": "June 2016 - July 2016",
+    "place": "HC Linear IT Development Ltd. | Pécs, Hungary",
+    "description": "A very short job period originally intended to be my obligatory internship fulfillment, required by my university.<br><br>My only duty was the testing of a billing machine used in public transport; and the creating of UI mockups for an upcoming project specification.<br><br>As my first job ever, it was a refreshing and exciting experience nonetheless."
+  }
+]

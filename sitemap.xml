@@ -2,10 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http:www.w3.org/1999/xhtml">
    <url>
       <loc>https://katamori.github.io</loc>
-      <lastmod>2018-12-01</lastmod>
+      <lastmod>2019-05-01</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://katamori.github.io/about.html</loc>
+      <lastmod>2019-05-01</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://katamori.github.io/experience.html</loc>
+      <lastmod>2019-05-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
+   <url>
+      <loc>https://katamori.github.io/projects.html</loc>
+      <lastmod>2019-05-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+
    <url>
         <loc>https://katamori.github.io/mori-NN/</loc>
         <lastmod>2017-09-06</lastmod>

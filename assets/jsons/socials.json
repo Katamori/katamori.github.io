@@ -1,0 +1,32 @@
+[
+  {
+    "link": "mailto:zol.sch93@gmail.com",
+    "title": "contact",
+    "service": "telegram"
+  },
+  {
+    "link": "-",
+    "title": "online cv",
+    "service": "cv"
+  },
+  {
+    "link": "https://github.com/Katamori",
+    "title": "github",
+    "service": "github"
+  },
+  {
+    "link": "https://www.linkedin.com/in/zoltanschmidt/",
+    "title": "linkedin",
+    "service": "linkedin"
+  },
+  {
+    "link": "https://www.facebook.com/profile.php?id=100012513526643",
+    "title": "facebook",
+    "service": "facebook"
+  },
+  {
+    "link": "https://twitter.com/katamoriENG",
+    "title": "twitter",
+    "service": "twitter"
+  }
+]
