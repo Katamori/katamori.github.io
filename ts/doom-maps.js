@@ -1,30 +1,61 @@
 "use strict";
-var DoomMaps = /** @class */ (function () {
-    function DoomMaps() {
-        this.maps = [];
-    }
-    DoomMaps.prototype.add = function (project) {
-        this.maps.push(project);
-    };
-    DoomMaps.prototype.generate = function () {
-        var div = document.createElement("div");
-        this.maps.forEach(function (value) {
-            div.appendChild(value.generate());
-        });
-        return div;
-    };
-    return DoomMaps;
-}());
+var DoomMaps = /** @class */ (function() {
+	function DoomMaps() {
+		this.maps = [];
+		this.introduction = "";
+	}
 
-var handler = new XMLHttpReqHandler("doom-maps", makeProjects);
+	DoomMaps.prototype.add = function(item) {
+		this.maps.push(item);
+	};
+	DoomMaps.prototype.generateList = function() {
+		var listDiv = document.createElement("div");
 
-function makeProjects(str) {
-    var maps = JSON.parse(str);
-    var dom = document.getElementById("doom-maps-timeline");
-    var aux = new DoomMaps();
-    maps.forEach(function (value) {
-        aux.add(new Project(value));
-    });
-    dom.appendChild(aux.generate());
-    slideDOM();
+		this.maps.forEach(function(value) {
+			listDiv.appendChild(value.generate());
+		});
+
+		return listDiv;
+	};
+
+	DoomMaps.prototype.generateIntroduction = function() {
+		var introDiv = document.createElement("div");
+
+		introDiv.innerHTML = this.introduction;
+
+		return introDiv;
+	};
+
+	DoomMaps.prototype.setIntroduction = function(str) {
+		this.introduction = str;
+	};
+
+	return DoomMaps;
+})();
+
+var handler = new XMLHttpReqHandler("doom-maps", makeMapList);
+
+function makeMapList(response) {
+	// initialize
+	var doomMaps = new DoomMaps();
+	var jsonData = JSON.parse(response);
+
+	doomMaps.setIntroduction(jsonData.introduction);
+
+	jsonData.items.forEach(function(value) {
+		doomMaps.add(new Project(value));
+	});
+
+	// header
+	var introDOM = document.getElementById("doom-maps-introduction");
+
+	introDOM.appendChild(doomMaps.generateIntroduction());
+
+	// list
+	var mapsDOM = document.getElementById("doom-maps-timeline");
+
+	mapsDOM.appendChild(doomMaps.generateList());
+
+	// misc
+	slideDOM();
 }

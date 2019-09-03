@@ -23,17 +23,20 @@ var getSourceFromService = {
     "vimeo": "assets/icons/nucleo-social-icons/nucleo-social-icons/svg/social-1_round-vimeo.svg",
     "wordpress": "assets/icons/nucleo-social-icons/nucleo-social-icons/svg/social-1_round-wordpress.svg",
 };
+
 var SingleSocial = /** @class */ (function () {
     function SingleSocial(social) {
         this.social = social;
-    }
+	}
+	
     SingleSocial.prototype.generate = function () {
         var a = document.createElement("a");
         a.href = this.social.link;
         a.appendChild(this.generateSocialCell());
         return a;
-    };
-    SingleSocial.prototype.generateSocialCell = function () {
+	};
+	
+	SingleSocial.prototype.generateSocialCell = function () {
         var div = document.createElement("div");
         var img = document.createElement("img");
         var span = document.createElement("span");
@@ -43,16 +46,20 @@ var SingleSocial = /** @class */ (function () {
         div.appendChild(img);
         div.appendChild(span);
         return div;
-    };
+	};
+	
     return SingleSocial;
 }());
+
 var Nav = /** @class */ (function () {
     function Nav() {
         this.cells = [];
-    }
+	}
+	
     Nav.prototype.addSocial = function (social) {
         this.cells.push(social);
-    };
+	};
+	
     Nav.prototype.generate = function () {
         var nav = document.createElement("nav");
         nav.classList.add("social-grid");
@@ -60,22 +67,29 @@ var Nav = /** @class */ (function () {
             var singleCell = _a[_i];
             var newCell = new SingleSocial(singleCell);
             nav.appendChild(newCell.generate());
-        }
+		}
+		
         return nav;
-    };
+	};
+	
     return Nav;
 }());
+
 var handler = new XMLHttpReqHandler("socials", makeJobs);
+
 function makeJobs(str) {
     var socials = JSON.parse(str);
     var body = document.getElementsByTagName("body");
     var newNav = new Nav();
+    
     socials.forEach(function (val) {
         newNav.addSocial(val);
     });
+
     for (var _i = 0, body_1 = body; _i < body_1.length; _i++) {
         var single = body_1[_i];
         single.appendChild(newNav.generate());
     }
+
     slideDOM();
 }

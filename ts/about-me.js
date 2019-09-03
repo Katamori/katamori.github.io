@@ -44,7 +44,9 @@ var PersonalDataUpdater = /** @class */ (function () {
     };
     return PersonalDataUpdater;
 }());
+
 var handler = new XMLHttpReqHandler("about", makeProjects);
+
 function makeProjects(str) {
     var personalData = JSON.parse(str);
     var aux = new PersonalDataUpdater(personalData);

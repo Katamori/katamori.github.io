@@ -17,6 +17,7 @@ var Project = /** @class */ (function () {
         var img = document.createElement("div");
         img.classList.add("img-container");
         img.style.backgroundImage = "url(\"" + this.desc.imgUrl + "\")";
+        img.style.backgroundPositionX = "center";
         return img;
     };
     Project.prototype.generateDesc = function () {
