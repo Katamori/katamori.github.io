@@ -122,7 +122,7 @@ function create(){
 
   game.inputEnabled = true;
   game.input.useHandCursor = true;
-
+  game.input.mouse.capture = true;
 
 }
 
@@ -137,7 +137,7 @@ function update(){
   	//timing
   	timeChecker++;
 /*
-  	if not GameOver and not IntroActive and not MainMenu then
+  	if not GameOver and not introActive and not mainMenu then
   	IngameChecker = IngameChecker+1
   	Seconds = math.floor(IngameChecker/60)
   	else
@@ -146,7 +146,7 @@ function update(){
   	end
 
 
-  	if not MainMenu then
+  	if not mainMenu then
   		--counting field position
   		MeOnField_X = math.floor((Own_X-512)/32)+1
   		MeOnField_Y = math.floor(Own_Y/32)+1
@@ -173,14 +173,14 @@ function render(){
 game.debug.text("FPS: "+game.time.fps, 32, 32);
 game.debug.text("mouse: "+mouseX+"|"+mouseY, 32, 64);
 game.debug.text(timeChecker, 32, 96);
-
+game.debug.text(game.input.activePointer.leftButton.isDown, 32, 128);
 
 /*
 
 
 
 
-	if not MainMenu and not IntroActive then
+	if not mainMenu and not introActive then
 		if not TheEnd then
 			--HUD
 			for k=0,8 do
@@ -232,7 +232,7 @@ function love.keyreleased(key)
 		NextLevel()
 	end
 
-	if not MainMenu then
+	if not mainMenu then
 	--moving
 		if key == 'w' then
 			if Own_Y > 0 and Physics(Map[MeOnField_X][MeOnField_Y-1]) then
