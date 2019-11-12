@@ -1,9 +1,9 @@
 [
   {
-    "title": "?",
-    "timeframe": "October 2019 - ",
-    "place": "?",
-    "description": "TBA"
+    "title": "Software developer",
+    "timeframe": "November 2019 - [current]",
+    "place": "<a href='https://rollet.hu' target='_blank'>Rollet</a> | Budapest, Hungary",
+    "description": "Backend-focused development duties on the major product of the company: an application that makes finding and occupying parking lots easier. The stack consists of Python and Django, with MySQL as database, and intense use of containerization (Docker)."
   },
   {
     "title": "Junior backend developer",
