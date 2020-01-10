@@ -2,17 +2,17 @@
 function ProcGen() {
 
 	//cellularism
-	if (TimeChecker % 60 == 0 && ViralImpact) {
+	if (timeChecker % 60 == 0 && ViralImpact) {
 		GameOfCorruption()
 	}
 
 	//when 10 seconds is over
-	if (Seconds == 10) {
-		Seconds = 0
+	if (seconds == 10) {
+		seconds = 0
 	}
 
-	if ((!MainMenu && !The} && !IntroActive) || IngameChecker == 6000) {
-		IngameChecker = 0
+	if ((!mainMenu && !TheEnd && !introActive) || ingameChecker == 6000) {
+		ingameChecker = 0
 	}
 
 	RoundCounter = RoundCounter + 1
@@ -28,11 +28,11 @@ function ProcGen() {
 	GenerateBrandNewLevel()
 
 	// sound
-	if (IntroActive == false) {
+	if (introActive == false) {
 		//love.audio.play(SoundSet[6])
 		//if (not SoundSet[6]:isStopped())
 		//{
-			//if (TimeChecker%1==0) {
+			//if (timeChecker%1==0) {
 				//SoundSet[6]:rewind()
 			//}
 		//}
@@ -227,7 +227,7 @@ function generateBrandNewLevel() {
 		//viral blocks
 		if (ViralImpact) {
 			for (k = 1; k < 5; k++) {
-				while (Map[randX][randY] != 1 || (randX == MeOnField_X && randY == MeOnField_Y)) {
+				while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
 					randX = Math.floor(Math.random() * 24)
 					randY = Math.floor(Math.random() * 24)
 				}
@@ -238,7 +238,7 @@ function generateBrandNewLevel() {
 
 		// dynamic firewall
 		if (HasDynamic) {
-			while (Map[Dynamic_X][Dynamic_Y] != 1 || (Dynamic_X == MeOnField_X && Dynamic_Y == MeOnField_Y)) {
+			while (Map[Dynamic_X][Dynamic_Y] != 1 || (Dynamic_X == meOnField_X && Dynamic_Y == meOnField_Y)) {
 				Dynamic_X = Math.floor(Math.random() * 24)
 				Dynamic_Y = Math.floor(Math.random() * 24)
 			}
@@ -258,7 +258,7 @@ function generateBrandNewLevel() {
 		// terminals (visit them first to leave)
 		for (k = 1; k < TerminalCondition-TerminalsVisited; k++) {
 
-			while (Map[randX][randY] != 1 || (randX == MeOnField_X && randY == MeOnField_Y)) {
+			while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
 				randX = math.random(24)
 				randY = math.random(24)
 			}
@@ -269,7 +269,7 @@ function generateBrandNewLevel() {
 		//antivirus scanfield
 		for (k = 1; k < LoggedAmount+AntivirusAmount; k++) {
 
-			while (Map[randX][randY] != 1 || (randX == MeOnField_X && randY == MeOnField_Y)) {
+			while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
 				randX = math.random(24)
 				randY = math.random(24)
 			}
@@ -280,7 +280,7 @@ function generateBrandNewLevel() {
 		// firewalls
 		for (k = 1; k < FirewallAmount; k++) {
 
-			while (Map[randX][randY] != 1 || (randX == MeOnField_X && randY == MeOnField_Y)) {
+			while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
 				randX = math.random(24)
 				randY = math.random(24)
 			}
@@ -291,7 +291,7 @@ function generateBrandNewLevel() {
 		// logpoints (the more occasions you have detected, the less they are appearing
 		for (k = 1; k < LogPointAmount-LoggedAmount; k++) {
 
-			while (Map[randX][randY] != 1 || (randX == MeOnField_X && randY == MeOnField_Y)) {
+			while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
 				randX = math.random(24)
 				randY = math.random(24)
 			}

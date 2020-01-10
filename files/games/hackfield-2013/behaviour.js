@@ -1,224 +1,208 @@
-/*
---detecting "system"
+//detecting "system"
+function Physics(x) {
 
-function Physics(x)
+	// todo: sound
+	/*if (x==4 || x==8) {
+		love.audio.play(SoundSet[4])
+		if ( not SoundSet[4]:isStopped()) {
+			if ( timeChecker%1==0 ) {
+				SoundSet[4]:rewind()
+			}
+		}
+	}*/
 
-	if x==4 or x==8 then
-			love.audio.play(SoundSet[4])
-			if not SoundSet[4]:isStopped()
-			then
-				if TimeChecker%1==0 then
-					SoundSet[4]:rewind()
-				end
-			end
-	end
+	return !(x==2 || x==7 || TheEnd || mainMenu)
+}
 
-	if x==2 or x==7 or TheEnd or MainMenu then
-		return false
+//logpoint: increasing antivirus appearance
+function LogPoint_Logging() {
+	if ( Map[meOnField_X][meOnField_Y] == 3 ) {
+		LoggedAmount = LoggedAmount + 1
+		Map[meOnField_X][meOnField_Y] = 1
 
-	else
-		return true
-	end
-end
-
---logpoint: increasing antivirus appearance
-	function LogPoint_Logging()
-		if Map[MeOnField_X][MeOnField_Y] == 3 then
-			LoggedAmount = LoggedAmount + 1
-			Map[MeOnField_X][MeOnField_Y] = 1
-
-			love.audio.play(SoundSet[3])
-			if not SoundSet[3]:isStopped()
-			then
-			if TimeChecker%1==0 then
+		// todo: sound
+		/*love.audio.play(SoundSet[3])
+		if ( not SoundSet[3]:isStopped()) {
+			if ( timeChecker%1==0 ) {
 				SoundSet[3]:rewind()
-			end
-		end
-		end
-	end
+			}
+		}*/
+	}
+}
 
--- deadly antivirus
-	function AntiVirus()
-		if Map[MeOnField_X][MeOnField_Y] == 4
-		or Map[MeOnField_X][MeOnField_Y] == 8
-		then
-			GameOver = true
-		else
-			GameOver = false
-		end
-	end
+// deadly antivirus
+function AntiVirus() {
+	if (Map[meOnField_X][meOnField_Y] == 4 || Map[meOnField_X][meOnField_Y] == 8) {
+		gameOver = true
+	} else {
+		gameOver = false
+	}
+}
 
---next level
-	function NextLevel()
-		if Map[MeOnField_X][MeOnField_Y] == 5 and TerminalsVisited == TerminalCondition then
+//next level
+function NextLevel() {
+	if (Map[meOnField_X][meOnField_Y] == 5 && TerminalsVisited == TerminalCondition ) {
+		seconds = 0
+		ingameChecker = 0
 
-				Seconds = 0
-				IngameChecker = 0
+		Level = Level+1
 
-				Level = Level+1
+		if ( Level%5 == 0 ) {
+			Difficulty = Difficulty+1
+		}
 
-				if Level%5 == 0 then
-					Difficulty = Difficulty+1
-				end
+		test=NameGen()
+		GenerateBrandNewLevel()
 
-				test=NameGen()
-				GenerateBrandNewLevel()
+		// todo: sound
+		/*love.audio.play(SoundSet[2])
+		if ( not SoundSet[2]:isStopped()) {
+			if ( timeChecker%1==0 ) {
+				SoundSet[2]:rewind()
+			}
+		}*/
+	}
+}
 
-			love.audio.play(SoundSet[2])
-			if not SoundSet[2]:isStopped()
-			then
-				if TimeChecker%1==0 then
-					SoundSet[2]:rewind()
-				end
-			end
+//terminal visit
+function VisitTerminal() {
+	if (Map[meOnField_X][meOnField_Y] == 6) {
+		Map[meOnField_X][meOnField_Y] = 1
+		TerminalsVisited = TerminalsVisited +1
 
-		end
-	end
+		// todo: sound
+		/*love.audio.play(SoundSet[5])
+		if ( not SoundSet[5]:isStopped()) {
+			if ( timeChecker%1==0 ) {
+				SoundSet[5]:rewind()
+			}
+		}*/
+	}
+}
 
---terminal visit
-	function VisitTerminal()
-		if Map[MeOnField_X][MeOnField_Y] == 6 then
-			Map[MeOnField_X][MeOnField_Y] = 1
-			TerminalsVisited = TerminalsVisited +1
+//dynamic firewall
+function FirewallFill() {
+	//every possible direction becomes firewall
+	for(j=1;j<24;j++) {
+		for(i=1;ii<24;j++) {
+			if (j == Dynamic_X || i == Dynamic_Y) {
+				Map[j][i] = 2
+			}
+		}
+	}
 
-			love.audio.play(SoundSet[5])
-			if not SoundSet[5]:isStopped()
-			then
-				if TimeChecker%1==0 then
-					SoundSet[5]:rewind()
-				end
-			end
-		end
-	end
+	Map[Dynamic_X][Dynamic_Y] = 7
+}
 
---dynamic firewall
+function FirewallClean() {
+	//every possible direction becomes empty floor
+	for(j=1;j<24;j++) {
+		for(i=1;ii<24;j++) {
+			if (j == Dynamic_X || i == Dynamic_Y) {
+				Map[j][i] = 1
+			}
+		}
+	}
 
-	function FirewallFill() --every possible direction becomes firewall
-		for j=1,24 do
-			for i=1,24 do
-				if (j == Dynamic_X or i == Dynamic_Y) then
-					Map[j][i] = 2
-				end
-			end
-		end
+	Map[Dynamic_X][Dynamic_Y] = 7
+}
 
-		Map[Dynamic_X][Dynamic_Y] = 7
-	end
+function FirewallCharge() { // directon change function (ignores if you are on the way)
 
-	function FirewallClean() --every possible direction becomes empty floor
-		for j=1,24 do
-			for i=1,24 do
-				if (j == Dynamic_X or i == Dynamic_Y) then
-					Map[j][i] = 1
-				end
-			end
-		end
+	FirewallClean() //to avoid cummulation
 
-		Map[Dynamic_X][Dynamic_Y] = 7
-	end
+	Increase, Decrease = 0, 0 //variables to count
 
-	function FirewallCharge() -- directon change function (ignores if you are on the way)
+	// todo
+	DynamicDir = 2
+	/*while((meOnField_X == Dynamic_X && DynamicDir%2==1) || (meOnField_Y == Dynamic_Y && DynamicDir%2==0))
+	{
+		DynamicDir = Math.floor(Math.random()*10)
+	}*/
 
-		 FirewallClean() --to avoid cummulation
+	//preferring longer ways
+	if ( DynamicDir%2==0 ) { //vertical
 
-		Increase, Decrease = 0, 0 --variables to count
+		for (k=Dynamic_Y;k>1;k--) {
+			Decrease=Decrease+1
+		}
 
-		while (MeOnField_X == Dynamic_X and DynamicDir%2==1)
-		or (MeOnField_Y == Dynamic_Y and DynamicDir%2==0)
-		do
-			DynamicDir = math.random(10)
+		for (k=Dynamic_Y;k<24;k++) {
+			Increase=Increase+1
+		}
 
-		end
+		if ( Increase<Decrease ) {
+			DynamicDir = 1
+		} else if ( Increase>Decrease ) {
+			DynamicDir = 2
+		} else if ( Increase==Decrease ) {
+			DynamicDir = 1
+		}
 
-		--preferring longer ways
+	else //horizontal
+		for( k=Dynamic_X;k>1;k--) {
+			Decrease=Decrease+1
+		}
 
-		if DynamicDir%2==0 then --vertical
+		for( k=Dynamic_X;k<24;k++) {
+			Increase=Increase+1
+		}
 
-			for k=Dynamic_Y,1,-1 do
-				Decrease=Decrease+1
-			end
+		if ( Increase<Decrease ) {
+			DynamicDir = 3
+		} else if ( Increase>Decrease ) {
+			DynamicDir = 4
+		} else if ( Increase==Decrease ) {
+			DynamicDir = 3
+		}
+	}
 
-			for k=Dynamic_Y,24 do
-				Increase=Increase+1
-			end
+	if ( DynamicDir == 1 ) { //up
+		for( k=Dynamic_Y;k>1;k--) {
+			Map[Dynamic_X][k] = 2
+		}
+	}
 
-			if Increase<Decrease then
-				DynamicDir = 1
-			elseif Increase>Decrease then
-				DynamicDir = 2
-			elseif Increase==Decrease then
-				DynamicDir = 1
-			end
+	if ( DynamicDir == 2 ) { //down
+		for( k=Dynamic_Y;k<24;k++) {
+			Map[Dynamic_X][k] = 2
+		}
+	}
 
-		else --horizontal
-			for k=Dynamic_X,1,-1 do
-				Decrease=Decrease+1
-			end
+	if ( DynamicDir == 3 ) { //left
+		for( k=Dynamic_X;k>1;k--) {
+			Map[k][Dynamic_Y] = 2
+		}
+	}
 
-			for k=Dynamic_X,24 do
-				Increase=Increase+1
-			end
+	if ( DynamicDir == 4 ) { //right
+		for( k=Dynamic_X;k<24;k++) {
+			Map[k][Dynamic_Y] = 2
+		}
+	}
 
-			if Increase<Decrease then
-				DynamicDir = 3
-			elseif Increase>Decrease then
-				DynamicDir = 4
-			elseif Increase==Decrease then
-				DynamicDir = 3
-			end
-		end
-
-
-
-		if DynamicDir == 1 then --up
-			for k=Dynamic_Y, 1,-1 do
-				Map[Dynamic_X][k] = 2
-			end
-		end
-
-		if DynamicDir == 2 then --down
-			for k=Dynamic_Y, 24 do
-				Map[Dynamic_X][k] = 2
-			end
-		end
-
-		if DynamicDir == 3 then --left
-			for k=Dynamic_X, 1,-1 do
-				Map[k][Dynamic_Y] = 2
-			end
-		end
-
-		if DynamicDir == 4 then --right
-			for k=Dynamic_X, 24 do
-				Map[k][Dynamic_Y] = 2
-			end
-		end
-
-		Map[Dynamic_X][Dynamic_Y] = 7
-
-	end
+	Map[Dynamic_X][Dynamic_Y] = 7
+}
 
 
---infected memory blocks spreading rule (a simple random decider)
-	function GameOfCorruption()
-
+//infected memory blocks spreading rule (a simple random decider)
+// todo: highly unbalanced
+function GameOfCorruption() {
 	N=0
-		for j=2,23 do
-			for i=2,23 do
-				chanceBorn = math.random(100)
-				chanceDie = math.random(100)
+	for (j=2;j<23;j++) {
+		for (i=2;i<23;i++) {
+			chanceBorn = Math.floor(Math.random() * 100)
+			chanceDie = Math.floor(Math.random() * 100)
 
-				if Map[j][i] == 8 and chanceDie <10 and j ~= MeOnField_X and i ~= MeOnField_Y then
-					Map[j][i] = 1
-				end
+			if (Map[j][i] == 8 && chanceDie <10 && j != meOnField_X && i != meOnField_Y) {
+				Map[j][i] = 1
+			}
 
-				if (Map[j][i] == 1 or Map[j][i] == 3) and chanceBorn <4 and j ~= MeOnField_X and i ~= MeOnField_Y then
-					Map[j][i] = 8
-				end
+			if ((Map[j][i] == 1 || Map[j][i] == 3) && chanceB||n <4 && j != meOnField_X && i != meOnField_Y) {
+				Map[j][i] = 8
+			}
 
-			end
-		end
+		}
+	}
+}
 
-
-	end
-*/

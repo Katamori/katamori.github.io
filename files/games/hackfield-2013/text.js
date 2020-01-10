@@ -2,16 +2,32 @@
 
 
 function print(name, string, x, y) {
+    let style = {font: "16px slkscre", fill: "white", align: "left"};
 
-    var style = {font: "16px slkscre", fill: "white", align: "left"};
-
-    if (typeof texts[name] != 'object'){
+    if (typeof texts[name] !== 'object'){
+	  //console.log(string)
       texts[name] = game.add.text(x, y, string, style);
     }
-
-
 };
 
+function removeText(name) {
+	if (typeof texts[name] == 'object') {
+		texts[name].destroy();
+	}
+}
+
+function removeTextGroup(prefix, range, start = 0) {
+	// if the last possible element exists
+	/*if (typeof texts[prefix + range] == 'object') {
+		for (i = start; i <= range; i++) {
+			if (i < 10) {
+				suffix = '0' + i
+			}
+			console.log(prefix + suffix)
+			removeText(prefix + suffix)
+		}
+	}*/
+}
 
 function textWriter(){
 
@@ -62,7 +78,7 @@ function textWriter(){
 		if (mouseX > 672 && mouseX < 672+256 && mouseY > 940 && mouseY < 940+16) {
 			//print('hover2', "start hacking",mouseX,mouseY-24)
 			if (game.input.activePointer.leftButton.isDown) {
-				TimeChecker = 0
+				timeChecker = 0
 				StartGame()
 			}
 		}
@@ -72,6 +88,7 @@ function textWriter(){
   */
 
 		if (about){
+			//removeTextGroup('mainMenuWelcome', 18)
 
      		print('mainMenuAbout00',"History of Hackfield",552,32)
 
@@ -121,7 +138,7 @@ function textWriter(){
 
 		} else {
 
-			print('mainMenuWelcome00', "Welcome, guest! This is hackfield.exe entrance interface.",552,32)
+			/*print('mainMenuWelcome00', "Welcome, guest! This is hackfield.exe entrance interface.",552,32)
 
 			print('mainMenuWelcome01', "To gather further informations about this software, run ",552,128)
 			print('mainMenuWelcome02', "abouthackfield.exe by clicking on the matching menu below.",552,144)
@@ -145,12 +162,12 @@ function textWriter(){
 			print('mainMenuWelcome16', "- Hackfield developement team",552,480)
 
 			print('mainMenuWelcome17', "This file was created at 12:00, 01.01.2030",552,624)
-			print('mainMenuWelcome18', "Last access at "+datum,552,640)
+			print('mainMenuWelcome18', "Last access at "+datum,552,640)*/
 		}
 	}
 
 	// todo
-	if (!mainMenu && !introActive && !TheEnd) {
+	/*if (!mainMenu && !introActive && !TheEnd) {
 		//main state texts
 		print('stateText1', "Connection established!",32,32)
 		print('stateText2', "Current computer:",32,48)
@@ -163,15 +180,15 @@ function textWriter(){
 		print('stateText6', "Your recent activity ",32,176)
 		print('stateText7', "was logged " + LoggedAmount + " times.",32,192)
 
-		print('stateText8', 10-Seconds + " seconds left before",32,224)
+		print('stateText8', 10-seconds + " seconds left before",32,224)
 		print('stateText9', "the " + RoundCounter+1 + "th modification",32,240)
 
 		print('stateText10', TerminalsVisited + " terminals have visited,",32,272)
 		print('stateText11', TerminalCondition-TerminalsVisited + " is necessary to leave",32,288)
 
-		if (Map[MeOnField_X][MeOnField_Y] == 5 && TerminalsVisited == TerminalCondition) {
-			Seconds = 0
-			IngameChecker = 0
+		if (Map[meOnField_X][meOnField_Y] == 5 && TerminalsVisited == TerminalCondition) {
+			seconds = 0
+			ingameChecker = 0
 			RoundCounter = 0
 
 			print('stateText12', "Level " + Level+1 + " access available!",32,320)
@@ -179,7 +196,7 @@ function textWriter(){
 
 		}
 
-		if (Map[MeOnField_X][MeOnField_Y] == 6) {
+		if (Map[meOnField_X][meOnField_Y] == 6) {
 			if (Level == 50) {
 				print('stateFinal1', "ESC to bow down",32,368)
 				print('stateFinal2', "Space to go on",32,384)
@@ -189,12 +206,12 @@ function textWriter(){
 			}
 		}
 
-		if (10 - Seconds < 5) {
+		if (10 - seconds < 5) {
 			print('stateText14', "Security protocol initiali-",32,416)
 			print('stateText15', "zed. Rebuilding protection",32,432)
 		}
 
-		if (GameOver) {
+		if (gameOver) {
 			print('gameOver1', "hackfield.exe has been",32,640)
 			print('gameOver2', "disengaged. Restart appli-",32,656)
 			print('gameOver3', "cation, or take a step",32,688)
@@ -202,23 +219,23 @@ function textWriter(){
 			print('gameOver5', "level1 computer terminal.",32,736)
 		}
 
-	}
+	}*/
 
 	// todo: what to do with it?
 	print('mainMenuExitBtn', "Abort Hackfield.exe",848,980)
 
 	//menu trigger is also put here.
-	if (mouseX > 848 && mouseX < 848+216 && mouseY > 980 && mouseY < 980+16) {
+	/*if (mouseX > 848 && mouseX < 848+216 && mouseY > 980 && mouseY < 980+16) {
 		//print('nameMeProperly', "Exit to Windows",mouseX,mouseY-24)
 		if (game.input.activePointer.leftButton.isDown) {
 
 			//love.event.push('quit')
 		}
-	}
+	}*/
 
 
 	// screen texts for the story
-	if (!mainMenu /* todo: something's missing here */ && TimeChecker >= 2000) {
+	if (!mainMenu /* todo: something's missing here */ && timeChecker >= 2000) {
 
 	/*
 		if Level == 1 then
@@ -697,41 +714,42 @@ function StartGame() {
 	if (introActive) {
 		mainMenu = false
 
-		if (TimeChecker >= 50 && TimeChecker <= 1300) { 
+		// todo: refactor intro
+		/*if (timeChecker >= 50 && timeChecker <= 1300) { 
 			print('intro1', "Logging in securely...",552,32) }
-		if (TimeChecker >= 260 && TimeChecker <= 1350) { 
+		if (timeChecker >= 260 && timeChecker <= 1350) { 
 			print('intro2', "Initializing connection analyzer...",552,64) }
-		if (TimeChecker >= 340 && TimeChecker <= 1400) { 
+		if (timeChecker >= 340 && timeChecker <= 1400) { 
 			print('intro3', "Saving 'NAPdoc.dat' into cache...",552,96) }
-		if (TimeChecker >= 420 && TimeChecker <= 1450) { 
+		if (timeChecker >= 420 && timeChecker <= 1450) { 
 			print('intro4', "Establishing fileseeker...",552,128) }
-		if (TimeChecker >= 500 && TimeChecker <= 1500) { 
+		if (timeChecker >= 500 && timeChecker <= 1500) { 
 			print('intro5', "Loading password Encypter...",552,160) }
-		if (TimeChecker >= 580 && TimeChecker <= 1550) { 
+		if (timeChecker >= 580 && timeChecker <= 1550) { 
 			print('intro6', "Loading file encrypter...",552,192) }
-		if (TimeChecker >= 660 && TimeChecker <= 1600) { 
+		if (timeChecker >= 660 && timeChecker <= 1600) { 
 			print('intro7', "Initializing routetracker...",552,224) }
-		if (TimeChecker >= 740 && TimeChecker <= 1650) { 
+		if (timeChecker >= 740 && timeChecker <= 1650) { 
 			print('intro8', "adding auto-i/o libraries...",552,256) }
-		if (TimeChecker >= 820 && TimeChecker <= 1700) { 
+		if (timeChecker >= 820 && timeChecker <= 1700) { 
 			print('intro9', "Establishing fileseeker...",552,288) }
-		if (TimeChecker >= 900 && TimeChecker <= 1750) { 
+		if (timeChecker >= 900 && timeChecker <= 1750) { 
 			print('intro10', "configurating GUI...",552,320) }
-		if (TimeChecker >= 980 && TimeChecker <= 1800) { 
+		if (timeChecker >= 980 && timeChecker <= 1800) { 
 			print('intro11', "looking for updates...",552,352) }
 
-		if (TimeChecker >= 1100 && TimeChecker <= 1800) { 
+		if (timeChecker >= 1100 && timeChecker <= 1800) { 
 			print('intro12', "No new updates. Welcome to hackfield cyberspace module!\nAccording to 'nap:GlobalTime', time is " + datum,552,416) }
 
-		if (TimeChecker >= 1150 && TimeChecker <= 1800) { 
+		if (timeChecker >= 1150 && timeChecker <= 1800) { 
 			print('intro13', "automaticly redirected to 'nap://GLOBALNODE.GOV.NET/'\nYour last position (" + OwnPlace + ") is saved\nin 'nap://GLOBALNODE.GOV.NET/security/lastentries'",552,700) }
 
-		if (TimeChecker >= 1800 && TimeChecker <= 2000) { 
+		if (timeChecker >= 1800 && timeChecker <= 2000) { 
 			print('intro14', "Connecting to a randomly chosen top-level computer...\n\nPreparing tutorial...",552,480) }
-
-		if (TimeChecker >= 2000) {
+		*/
+		//if (timeChecker >= 2000) {
 			introActive = false
-		}
+		//}
 	}
 }
 
@@ -740,7 +758,7 @@ function Ending() {
 	//love.audio.play(SoundSet[1])
 	//if not SoundSet[1]:isStopped()
 	//then
-	//	if (TimeChecker%1==0 then
+	//	if (timeChecker%1==0 then
 	//		SoundSet[1]:rewind()
 	//	end
 	//end

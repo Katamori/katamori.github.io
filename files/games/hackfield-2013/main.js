@@ -10,7 +10,7 @@ var mouseY = -1;
 var texts = [];
 
 var game = new Phaser.Game(gameX, gameY, Phaser.AUTO, '',
-    { preload: preload, create: create, update: update, render: render });
+	{ preload: preload, create: create, update: update, render: render });
 
 function preload(){
 
@@ -34,19 +34,19 @@ function preload(){
 */
 
 	//uploading some graphics I made
-  var folder = '/files/games/hackfield-2013/';
-  var GFX = folder + 'gfx/';
+  	var folder = '/files/games/hackfield-2013/';
+  	var GFX = folder + 'gfx/';
 
-  game.load.image('titlepic',     GFX + 'LOGOFINAL.png')
-  game.load.image('katamoriBall', GFX + 'KATAMORI.png');
+  	game.load.image('titlepic',  	  	 GFX + 'LOGOFINAL.png')
+  	game.load.image('katamoriBall', GFX + 'KATAMORI.png');
 
-  game.load.image('borderA',      GFX + 'BORDER_VERT.png');
-  game.load.image('borderB',      GFX + 'BORDER_HORI.png');
-  game.load.image('field',        GFX + 'TEXTFIELD.png');
+  	game.load.image('borderA',  	  	  	GFX + 'BORDER_VERT.png');
+  	game.load.image('borderB',  	  	  	GFX + 'BORDER_HORI.png');
+  	game.load.image('field',  	  	  	  	GFX + 'TEXTFIELD.png');
 
-  game.load.spritesheet('tilesetpic', GFX + 'TILESET.png', tilesize, tilesize);
+  	game.load.spritesheet('tilesetpic', GFX + 'TILESET.png', tilesize, tilesize);
 
-  game.time.advancedTiming = true;
+  	game.time.advancedTiming = true;
 }
 
 
@@ -87,9 +87,9 @@ gameOver = false
 
 
 datum = Math.floor((Math.random() * 14)+10) + ":" +
-        Math.floor((Math.random() * 50)+10) + ", " +
-        Math.floor((Math.random() * 18)+10) + ".0" +
-        Math.floor((Math.random() * 10)) + ", 2036";
+		Math.floor((Math.random() * 50)+10) + ", " +
+		Math.floor((Math.random() * 18)+10) + ".0" +
+		Math.floor((Math.random() * 10)) + ", 2036";
 
 
 ownPlace = citySet[Math.floor((Math.random() * citySet.length))];
@@ -99,30 +99,29 @@ ownPlace = citySet[Math.floor((Math.random() * citySet.length))];
 
 function create(){
 
-  var titlepic = game.add.sprite(512,800, 'titlepic');
-  var katamoriBall = game.add.sprite(1080,800, 'katamoriBall');
-
-  game.add.sprite(512,768, 'borderA');
+  	var titlepic = game.add.sprite(512,800, 'titlepic');
+  	var katamoriBall = game.add.sprite(1080,800, 'katamoriBall');
+	game.add.sprite(512,768, 'borderA');
 	game.add.sprite(0,768, 'borderA');
 	game.add.sprite(480,0, 'borderB');
 
-  //initialize PhaserJS arcade engine
-  //game.physics.startSystem(Phaser.Physics.ARCADE);
-  drawable = game.add.group();
+  	//initialize PhaserJS arcade engine
+  	//game.physics.startSystem(Phaser.Physics.ARCADE);
+  	drawable = game.add.group();
 
-  //creating map
-  map = game.add.tilemap();
+  	//creating map
+  	map = game.add.tilemap();
 
-  //uploading tileset - much less complicated here :P
-  map.addTilesetImage('tilesetpic');
+  	//uploading tileset - much less complicated here :P
+  	map.addTilesetImage('tilesetpic');
 
 
 	//loading functions
 	//generateBrandNewLevel();
 
-  game.inputEnabled = true;
-  game.input.useHandCursor = true;
-  game.input.mouse.capture = true;
+  	game.inputEnabled = true;
+  	game.input.useHandCursor = true;
+  	game.input.mouse.capture = true;
 
 }
 
@@ -130,81 +129,76 @@ function create(){
 
 function update(){
 
-    //mouse
-    mouseX = game.input.mousePointer.x;
-    mouseY = game.input.mousePointer.y;
+	//mouse
+	mouseX = game.input.mousePointer.x;
+	mouseY = game.input.mousePointer.y;
 
-  	//timing
-  	timeChecker++;
-/*
-  	if not GameOver and not introActive and not mainMenu then
-  	IngameChecker = IngameChecker+1
-  	Seconds = math.floor(IngameChecker/60)
-  	else
-  	IngameChecker = 0
-  	Seconds = 0
-  	end
+  		//timing
+  		//timeChecker++;
 
+		if (!gameOver && !introActive && !mainMenu) {
+			ingameChecker = ingameChecker+1
+			seconds = Math.floor(ingameChecker/60)
+		} else {
+			if (ingameChecker > 0) {
+				ingameChecker = 0
+			}
 
-  	if not mainMenu then
-  		--counting field position
-  		MeOnField_X = math.floor((Own_X-512)/32)+1
-  		MeOnField_Y = math.floor(Own_Y/32)+1
+			if (seconds > 0) {
+				seconds = 0
+			}
+		}
 
-  		--calling functions that must be active in every frame
-  		if not GameOver and Map[MeOnField_X][MeOnField_Y] ~= 5 then
-  			ProcGen()
-  		end
+		if (!mainMenu){
+			//counting field position
+			meOnField_X = math.floor((Own_X-512)/32)+1
+			meOnField_Y = math.floor(Own_Y/32)+1
 
-  		--behaviours that can be checked on every frame
-  		AntiVirus()
-  	end
+			//calling functions that must be active in every frame
+			//if (!gameOver && Map[meOnField_X][meOnField_Y] != 5) {
+				//ProcGen()
+			//}
 
-  */
-
-
+			//behaviours that can be checked on every frame
+			//AntiVirus()
+		}
 }
 
 
 function render(){
-
-//print('mouse', mouseX+"/"+mouseY, mouseX, mouseY);
-
-game.debug.text("FPS: "+game.time.fps, 32, 32);
-game.debug.text("mouse: "+mouseX+"|"+mouseY, 32, 64);
-game.debug.text(timeChecker, 32, 96);
-game.debug.text(game.input.activePointer.leftButton.isDown, 32, 128);
-
-/*
+	game.debug.text("FPS: "+game.time.fps, 32, 320);
+	game.debug.text("on field: "+meOnField_X+"|"+meOnField_Y+"\n",32,400)
+	game.debug.text("mouse: "+mouseX+"|"+mouseY,32,420)
+	game.debug.text("timechecker: "+timeChecker,32,440)
+	game.debug.text("ingamecheker: "+ingameChecker, 32, 460);
+	game.debug.text("introactive: "+introActive, 32, 480);
+	game.debug.text(game.input.activePointer.leftButton.isDown, 32, 128);
 
 
 
+	if (!mainMenu && !introActive) {
+		if (!TheEnd) {
+			//HUD
+			for (k=0; k<8; k++) {
+				// todo
+				//love.graphics.draw(Field,24,24+k*48)
+			}
 
-	if not mainMenu and not introActive then
-		if not TheEnd then
-			--HUD
-			for k=0,8 do
-				love.graphics.draw(Field,24,24+k*48)
-			end
+			for (k=0; k<2; k++) {
+				// todo
+				//love.graphics.draw(Field,24,632+k*48)
+			}
+		}
 
-			for k=0,2 do
-				love.graphics.draw(Field,24,632+k*48)
-			end
-		end
+		for (j=1; j<24; j++) {
+			for (i=1; i<24; i++) {
+				//love.graphics.drawq(TilesetPic, Tileset[Map[j][i]], 512+(j-1)*32, (i-1)*32)
+				//love.graphics.drawq(TilesetPic, Tileset[9], Own_X, Own_Y)
+			}
+		}
+	}
 
-		for j=1,24 do
-			for i=1, 24 do
-				love.graphics.drawq(TilesetPic, Tileset[Map[j][i]], 512+(j-1)*32, (i-1)*32)
-				love.graphics.drawq(TilesetPic, Tileset[9], Own_X, Own_Y)
-				end
-			end
-	end
-
-*/
 	textWriter();
-
-
-
 }
 
 
@@ -223,7 +217,7 @@ function love.keyreleased(key)
 		LogPoint_Logging()
 		VisitTerminal()
 
-		if GameOver then
+		if gameOver then
 			Restart()
 		end
 	end
@@ -235,13 +229,13 @@ function love.keyreleased(key)
 	if not mainMenu then
 	--moving
 		if key == 'w' then
-			if Own_Y > 0 and Physics(Map[MeOnField_X][MeOnField_Y-1]) then
+			if Own_Y > 0 and Physics(Map[meOnField_X][meOnField_Y-1]) then
 			Own_Y = Own_Y - 32
 
 			love.audio.play(SoundSet[7])
 				if not SoundSet[7]:isStopped()
 				then
-					if TimeChecker%1==0 then
+					if timeChecker%1==0 then
 						SoundSet[7]:rewind()
 					end
 				end
@@ -249,13 +243,13 @@ function love.keyreleased(key)
 		end
 
 		if key == 'a' then
-			if Own_X > 512 and Physics(Map[MeOnField_X-1][MeOnField_Y]) then
+			if Own_X > 512 and Physics(Map[meOnField_X-1][meOnField_Y]) then
 			Own_X = Own_X - 32
 
 			love.audio.play(SoundSet[7])
 				if not SoundSet[7]:isStopped()
 				then
-					if TimeChecker%1==0 then
+					if timeChecker%1==0 then
 						SoundSet[7]:rewind()
 					end
 				end
@@ -263,13 +257,13 @@ function love.keyreleased(key)
 		end
 
 		if key == 's' then
-			if Own_Y < 736 and Physics(Map[MeOnField_X][MeOnField_Y+1]) then
+			if Own_Y < 736 and Physics(Map[meOnField_X][meOnField_Y+1]) then
 			Own_Y = Own_Y + 32
 
 			love.audio.play(SoundSet[7])
 				if not SoundSet[7]:isStopped()
 				then
-					if TimeChecker%1==0 then
+					if timeChecker%1==0 then
 						SoundSet[7]:rewind()
 					end
 				end
@@ -277,13 +271,13 @@ function love.keyreleased(key)
 		end
 
 		if key == 'd' then
-			if Own_X < 1248 and Physics(Map[MeOnField_X+1][MeOnField_Y]) then
+			if Own_X < 1248 and Physics(Map[meOnField_X+1][meOnField_Y]) then
 			Own_X = Own_X + 32
 
 			love.audio.play(SoundSet[7])
 				if not SoundSet[7]:isStopped()
 				then
-					if TimeChecker%1==0 then
+					if timeChecker%1==0 then
 						SoundSet[7]:rewind()
 					end
 				end
@@ -293,7 +287,7 @@ function love.keyreleased(key)
 	-- just a simple exit, to make testing easier
 
 	if key == 'escape' then
-		if Level == 50 and not GameOver then
+		if Level == 50 and not gameOver then
 			TheEnd = true
 		else
 			love.event.push('quit')
@@ -305,40 +299,40 @@ end
 
 function restart(){
 
-  //variable reset (practically resets every variable into the initial state)
-  i = 0;
-  j = 0;
-  k = 0;
-  l = 0;
-  N = 0;
+  	//variable reset (practically resets every variable into the initial state)
+  	i = 0;
+  	j = 0;
+  	k = 0;
+  	l = 0;
+  	N = 0;
 
-  ownX = 544;
-  ownY = 384;
-  meOnField_X = 1;
-  meOnField_Y = 1;
+  	ownX = 544;
+  	ownY = 384;
+  	meOnField_X = 1;
+  	meOnField_Y = 1;
 
-  ingameChecker = 0
-  timeChecker = 0
-  seconds = 0
-  roundCounter = 0
+  	ingameChecker = 0
+  	timeChecker = 0
+  	seconds = 0
+  	roundCounter = 0
 
-  loggedAmount = 0
-  terminalsVisited = 0
-  terminalCondition = 0
-  hasDynamic = false
-  dynamicDir = 1
-  dynamic_X = 0
-  dynamic_Y = 0
-  viralImpact = false
-  mainMenu = true
-  about = false
-  theEnd = false
-  introActive = false
+  	loggedAmount = 0
+  	terminalsVisited = 0
+  	terminalCondition = 0
+  	hasDynamic = false
+  	dynamicDir = 1
+  	dynamic_X = 0
+  	dynamic_Y = 0
+  	viralImpact = false
+  	mainMenu = true
+  	about = false
+  	theEnd = false
+  	introActive = false
 
-  difficulty = 1
-  level = 1
+  	difficulty = 1
+  	level = 1
 
-  gameOver = false
+  	gameOver = false
 
 	//loading functions
 	GenerateBrandNewLevel()
