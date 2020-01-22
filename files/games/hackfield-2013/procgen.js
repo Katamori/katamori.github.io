@@ -64,7 +64,7 @@ function generateBrandNewLevel() {
 	}
 
 	// level generating codes for each difficulty
-
+	// todo: make it config instead of hardcode
 	//1.: firewall, logpoint, no basic antivirus (no terminal, dynamic firewall or virus slots)
 	if (Difficulty == 1) {
 
@@ -215,88 +215,84 @@ function generateBrandNewLevel() {
 		FirewallAmount = 150
 	}
 
+	//exit
+	Dynamic_X = Math.floor(Math.random() * 24)
+	Dynamic_Y = Math.floor(Math.random() * 24)
+	randX = Math.floor(Math.random() * 24)
+	randY = Math.floor(Math.random() * 24)
 
-		//exit
-		Dynamic_X = Math.floor(Math.random() * 24)
-		Dynamic_Y = Math.floor(Math.random() * 24)
-		randX = Math.floor(Math.random() * 24)
-		randY = Math.floor(Math.random() * 24)
+	Map[randX][randY] = 5
 
-		Map[randX][randY] = 5
-
-		//viral blocks
-		if (ViralImpact) {
-			for (k = 1; k < 5; k++) {
-				while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
-					randX = Math.floor(Math.random() * 24)
-					randY = Math.floor(Math.random() * 24)
-				}
-			}
-
-			Map[randX][randY] = 8
-		}
-
-		// dynamic firewall
-		if (HasDynamic) {
-			while (Map[Dynamic_X][Dynamic_Y] != 1 || (Dynamic_X == meOnField_X && Dynamic_Y == meOnField_Y)) {
-				Dynamic_X = Math.floor(Math.random() * 24)
-				Dynamic_Y = Math.floor(Math.random() * 24)
-			}
-
-			FirewallFill()
-			FirewallClean()
-
-			// charge dynamic firewall
-			FirewallCharge()
-
-			Map[Dynamic_X][Dynamic_Y] = 7
-
-		}
-
-
-
-		// terminals (visit them first to leave)
-		for (k = 1; k < TerminalCondition-TerminalsVisited; k++) {
-
+	//viral blocks
+	if (ViralImpact) {
+		for (k = 1; k < 5; k++) {
 			while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
-				randX = math.random(24)
-				randY = math.random(24)
+				randX = Math.floor(Math.random() * 24)
+				randY = Math.floor(Math.random() * 24)
 			}
-
-			Map[randX][randY] = 6
 		}
 
-		//antivirus scanfield
-		for (k = 1; k < LoggedAmount+AntivirusAmount; k++) {
+		Map[randX][randY] = 8
+	}
 
-			while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
-				randX = math.random(24)
-				randY = math.random(24)
-			}
-
-			Map[randX][randY] = 4
+	// dynamic firewall
+	if (HasDynamic) {
+		while (Map[Dynamic_X][Dynamic_Y] != 1 || (Dynamic_X == meOnField_X && Dynamic_Y == meOnField_Y)) {
+			Dynamic_X = Math.floor(Math.random() * 24)
+			Dynamic_Y = Math.floor(Math.random() * 24)
 		}
 
-		// firewalls
-		for (k = 1; k < FirewallAmount; k++) {
+		FirewallFill()
+		FirewallClean()
 
-			while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
-				randX = math.random(24)
-				randY = math.random(24)
-			}
+		// charge dynamic firewall
+		FirewallCharge()
 
-			Map[randX][randY] = 2
+		Map[Dynamic_X][Dynamic_Y] = 7
+
+	}
+
+	// terminals (visit them first to leave)
+	for (k = 1; k < TerminalCondition-TerminalsVisited; k++) {
+
+		while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
+			randX = math.random(24)
+			randY = math.random(24)
 		}
 
-		// logpoints (the more occasions you have detected, the less they are appearing
-		for (k = 1; k < LogPointAmount-LoggedAmount; k++) {
+		Map[randX][randY] = 6
+	}
 
-			while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
-				randX = math.random(24)
-				randY = math.random(24)
-			}
+	//antivirus scanfield
+	for (k = 1; k < LoggedAmount+AntivirusAmount; k++) {
 
-			Map[randX][randY] = 3
+		while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
+			randX = math.random(24)
+			randY = math.random(24)
 		}
 
+		Map[randX][randY] = 4
+	}
+
+	// firewalls
+	for (k = 1; k < FirewallAmount; k++) {
+
+		while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
+			randX = math.random(24)
+			randY = math.random(24)
+		}
+
+		Map[randX][randY] = 2
+	}
+
+	// logpoints (the more occasions you have detected, the less they are appearing
+	for (k = 1; k < LogPointAmount-LoggedAmount; k++) {
+
+		while (Map[randX][randY] != 1 || (randX == meOnField_X && randY == meOnField_Y)) {
+			randX = math.random(24)
+			randY = math.random(24)
+		}
+
+		Map[randX][randY] = 3
+	}
 }

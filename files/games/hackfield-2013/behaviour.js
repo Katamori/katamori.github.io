@@ -32,11 +32,7 @@ function LogPoint_Logging() {
 
 // deadly antivirus
 function AntiVirus() {
-	if (Map[meOnField_X][meOnField_Y] == 4 || Map[meOnField_X][meOnField_Y] == 8) {
-		gameOver = true
-	} else {
-		gameOver = false
-	}
+	gameOver = Map[meOnField_X][meOnField_Y] == 4 || Map[meOnField_X][meOnField_Y] == 8
 }
 
 //next level

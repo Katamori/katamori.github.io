@@ -9,8 +9,35 @@ var mouseY = -1;
 //not defined in the original program, used for PhaserJS
 var texts = [];
 
-var game = new Phaser.Game(gameX, gameY, Phaser.AUTO, '',
-	{ preload: preload, create: create, update: update, render: render });
+// todo: separate states for intro, gameplay and ending
+var states = {
+	'mainMenu': {
+		preload: preload,
+		create: create,
+		update: update,
+		render: render
+	},
+	'intro': {
+		preload: preload,
+		//create: create,
+		//update: update,
+		//render: render
+	},
+	'gameplay': {
+		preload: preload,
+		//create: create,
+		//update: update,
+		//render: render
+	},
+	'ending': {
+		preload: preload,
+		//create: create,
+		//update: update,
+		//render: render
+	},
+}
+
+var game = new Phaser.Game(gameX, gameY, Phaser.AUTO, '', states.mainMenu);
 
 function preload(){
 
@@ -123,59 +150,6 @@ function create(){
   	game.input.useHandCursor = true;
   	game.input.mouse.capture = true;
 
-}
-
-
-
-function update(){
-
-	//mouse
-	mouseX = game.input.mousePointer.x;
-	mouseY = game.input.mousePointer.y;
-
-  		//timing
-  		//timeChecker++;
-
-		if (!gameOver && !introActive && !mainMenu) {
-			ingameChecker = ingameChecker+1
-			seconds = Math.floor(ingameChecker/60)
-		} else {
-			if (ingameChecker > 0) {
-				ingameChecker = 0
-			}
-
-			if (seconds > 0) {
-				seconds = 0
-			}
-		}
-
-		if (!mainMenu){
-			//counting field position
-			meOnField_X = math.floor((Own_X-512)/32)+1
-			meOnField_Y = math.floor(Own_Y/32)+1
-
-			//calling functions that must be active in every frame
-			//if (!gameOver && Map[meOnField_X][meOnField_Y] != 5) {
-				//ProcGen()
-			//}
-
-			//behaviours that can be checked on every frame
-			//AntiVirus()
-		}
-}
-
-
-function render(){
-	game.debug.text("FPS: "+game.time.fps, 32, 320);
-	game.debug.text("on field: "+meOnField_X+"|"+meOnField_Y+"\n",32,400)
-	game.debug.text("mouse: "+mouseX+"|"+mouseY,32,420)
-	game.debug.text("timechecker: "+timeChecker,32,440)
-	game.debug.text("ingamecheker: "+ingameChecker, 32, 460);
-	game.debug.text("introactive: "+introActive, 32, 480);
-	game.debug.text(game.input.activePointer.leftButton.isDown, 32, 128);
-
-
-
 	if (!mainMenu && !introActive) {
 		if (!TheEnd) {
 			//HUD
@@ -199,6 +173,54 @@ function render(){
 	}
 
 	textWriter();
+}
+
+function update(){
+
+	//mouse
+	mouseX = game.input.mousePointer.x;
+	mouseY = game.input.mousePointer.y;
+
+	//timing
+	//timeChecker++;
+
+	if (!gameOver && !introActive && !mainMenu) {
+		ingameChecker = ingameChecker+1
+		seconds = Math.floor(ingameChecker/60)
+	} else {
+		if (ingameChecker > 0) {
+			ingameChecker = 0
+		}
+
+		if (seconds > 0) {
+			seconds = 0
+		}
+	}
+
+	if (!mainMenu) {
+		//counting field position
+		meOnField_X = math.floor((Own_X-512)/32)+1
+		meOnField_Y = math.floor(Own_Y/32)+1
+
+		//calling functions that must be active in every frame
+		//if (!gameOver && Map[meOnField_X][meOnField_Y] != 5) {
+			//ProcGen()
+		//}
+
+		//behaviours that can be checked on every frame
+		//AntiVirus()
+	}
+}
+
+
+function render(){
+	game.debug.text("FPS: "+game.time.fps, 32, 320);
+	game.debug.text("on field: "+meOnField_X+"|"+meOnField_Y+"\n",32,400)
+	game.debug.text("mouse: "+mouseX+"|"+mouseY,32,420)
+	game.debug.text("timechecker: "+timeChecker,32,440)
+	game.debug.text("ingamecheker: "+ingameChecker, 32, 460);
+	game.debug.text("introactive: "+introActive, 32, 480);
+	game.debug.text(game.input.activePointer.leftButton.isDown, 32, 128);
 }
 
 

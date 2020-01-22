@@ -1,7 +1,13 @@
 [
+{
+	"title": "Backend developer",
+	"timeframe": "January 2020 - [current]",
+	"place": "<a href='https://qanplatform.com' target='_blank'>QAN Platform</a> | Budapest, Hungary",
+	"description": "In progress"
+	},
   {
-    "title": "Software developer",
-    "timeframe": "November 2019 - [current]",
+    "title": "Backend developer",
+    "timeframe": "November 2019 - January 2020",
     "place": "<a href='https://rollet.hu' target='_blank'>Rollet</a> | Budapest, Hungary",
     "description": "Backend-focused development duties on the major product of the company: an application that makes finding and occupying parking lots easier. The stack consists of Python and Django, with MySQL as database, and intense use of containerization (Docker)."
   },

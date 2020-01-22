@@ -138,7 +138,7 @@ function textWriter(){
 
 		} else {
 
-			/*print('mainMenuWelcome00', "Welcome, guest! This is hackfield.exe entrance interface.",552,32)
+			print('mainMenuWelcome00', "Welcome, guest! This is hackfield.exe entrance interface.",552,32)
 
 			print('mainMenuWelcome01', "To gather further informations about this software, run ",552,128)
 			print('mainMenuWelcome02', "abouthackfield.exe by clicking on the matching menu below.",552,144)
@@ -162,12 +162,12 @@ function textWriter(){
 			print('mainMenuWelcome16', "- Hackfield developement team",552,480)
 
 			print('mainMenuWelcome17', "This file was created at 12:00, 01.01.2030",552,624)
-			print('mainMenuWelcome18', "Last access at "+datum,552,640)*/
+			print('mainMenuWelcome18', "Last access at "+datum,552,640)
 		}
 	}
 
 	// todo
-	/*if (!mainMenu && !introActive && !TheEnd) {
+	if (!mainMenu && !introActive && !TheEnd) {
 		//main state texts
 		print('stateText1', "Connection established!",32,32)
 		print('stateText2', "Current computer:",32,48)
@@ -219,19 +219,19 @@ function textWriter(){
 			print('gameOver5', "level1 computer terminal.",32,736)
 		}
 
-	}*/
+	}
 
 	// todo: what to do with it?
 	print('mainMenuExitBtn', "Abort Hackfield.exe",848,980)
 
 	//menu trigger is also put here.
-	/*if (mouseX > 848 && mouseX < 848+216 && mouseY > 980 && mouseY < 980+16) {
+	if (mouseX > 848 && mouseX < 848+216 && mouseY > 980 && mouseY < 980+16) {
 		//print('nameMeProperly', "Exit to Windows",mouseX,mouseY-24)
 		if (game.input.activePointer.leftButton.isDown) {
 
 			//love.event.push('quit')
 		}
-	}*/
+	}
 
 
 	// screen texts for the story
@@ -749,6 +749,7 @@ function StartGame() {
 		*/
 		//if (timeChecker >= 2000) {
 			introActive = false
+			game.state.start('gameplay')
 		//}
 	}
 }
