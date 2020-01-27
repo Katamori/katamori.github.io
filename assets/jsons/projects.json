@@ -28,11 +28,5 @@
     "date": "2017",
     "imgUrl": "",
     "description": "An early attempt to create a neural network creation tool in the browser. <br><br> <a href='https://github.com/Katamori/mori-NN'>Repository</a>"
-  },
-  {
-    "title": "Starless Outpost",
-    "date": "2017 -",
-    "imgUrl": "",
-    "description": "A WIP browser game inspired by Rimworld. <br><br> <a href='https://github.com/Katamori/starless-outpost'>Repository</a>"
   }
 ]
