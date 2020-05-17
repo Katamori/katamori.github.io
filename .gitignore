@@ -2,3 +2,5 @@
 /misc
 /.vscode
 /.idea
+
+node_modules/
