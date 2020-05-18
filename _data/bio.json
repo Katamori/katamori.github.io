@@ -1,0 +1,153 @@
+{
+  "basics": {
+    "name": "Zoltán Schmidt",
+    "label": "backend developer",
+    "picture": "/images/my-face.png",
+    "email": "zoltanschmidt@protonmail.com",
+    "phone": "+36 20 993 9186",
+    "website": "https://katamori.github.io",
+    "summary": "<div>I'm just a random mid-20s guy from Hungary <a href='https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt' target='_blank'>who loves developing stuff</a> as well as using the same name literally everywhere on the Internet. <br><br> I use this site both as a semi-formal CV and a place to host various JS gibberish. <br><br>  A lots of things are #TODO here - but for now, please enjoy your stay, check the code I'm hosting through this URL or contact me at one of the places listed on the left.</div><ul><li><a href='./games.html'>Browser games</a></li><li><a href='./code-golf.html'>Code golf</a></li></ul><b>Credits:</b> for the site design, <a href='https://techfolios.github.io/'>Techfolios</a> was used and customized.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Budapest",
+      "countryCode": "Hungary",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "facebook",
+        "username": "zoltanschmidt93",
+        "url": "https://www.facebook.com/zoltanschmidt93"
+      },
+      {
+        "network": "linkedin",
+        "username": "zoltanschmidt",
+        "url": "https://www.linkedin.com/in/zoltanschmidt/"
+      },
+      {
+        "network": "github",
+        "username": "katamori",
+        "url": "http://github.com/Katamori"
+      },
+      {
+        "network": "twitter",
+        "username": "katamorieng",
+        "url": "http://twitter.com/katamorieng"
+      },
+      {
+        "network": "instagram",
+        "username": "katamorihun",
+        "url": "http://instagram.com/katamorihun"
+      },
+      {
+        "network": "spotify",
+        "username": "user:11131410415",
+        "url": "https://open.spotify.com/user/11131410415"
+      }
+    ]
+  },
+  "interests": [
+    {
+      "name": "web development",
+      "keywords": [
+        "Django"
+      ]
+    },
+    {
+      "name": "cryptocurrencies",
+      "keywords": [
+      ]
+    },
+    {
+      "name": "video games",
+      "keywords": [
+      ]
+    },
+    {
+        "name": "synthwave",
+        "keywords": [
+        ]
+      }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "level": "",
+      "keywords": [
+        "todo"
+      ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "level": "",
+      "keywords": [
+        "todo"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Pécs",
+      "area": "Business information technology",
+      "studyType": "",
+      "startDate": "2012",
+      "endDate": "2016",
+      "gpa": "",
+      "courses": [
+      ]
+    }
+  ],
+  "work": [
+    {
+        "company": "QAN Platfor",
+        "position": "Backend developer",
+        "website": "https://qanplatform.com",
+        "startDate": "2020",
+        "endDate": "Present",
+        "summary": "A somewhat loose contracting period during which I developed NodeJS based backend tools supporting the ecosystem of the cryptocurrency the company is developing. Was an interesting insight into the deeper working mechanics of Docker.",
+        "highlights": [
+        ]
+    },
+    {
+        "company": "Rollet",
+        "position": "Backend developer",
+        "website": "https://rollet.hu",
+        "startDate": "2019",
+        "endDate": "2020",
+        "summary": "Backend-focused development duties on the major product of the company: an application that makes finding and occupying parking lots easier. The stack consists of Python and Django, with MySQL as database, and intense use of containerization (Docker).",
+        "highlights": [
+        ]
+    },
+    {
+        "company": "W5labs",
+        "position": "Junior backend developer",
+        "website": "https://w5labs.com",
+        "startDate": "2018",
+        "endDate": "2019",
+        "summary": "Developing backend functionality of websites for a creative agency / hosting company. Most of my development is based on a custom content management system built on Phalcon (PHP framework) and involves in-house developments and normal projects alike.",
+        "highlights": [
+        ]
+    },
+    {
+        "company": "Open Minds Ltd.",
+        "position": "Junior software developer",
+        "website": "http://sonrisa.hu",
+        "startDate": "2017",
+        "endDate": "2018",
+        "summary": "No official specification for the field, but in practice, I was a frontend developer. As a part of Sonrisa Internation Inc., this company has taught me a lot about the everyday practices at a larger firm. Aside of the implicit knowledge, I gained significant experience in versioning (Git), issue tracking (Redmine, JIRA), and learned about Scrum. Stack-wise, I mostly worked with Angular, and had some involvement with JSP, too.",
+        "highlights": [
+        ]
+    },
+    {
+        "company": "HC Linear IT Development Ltd.",
+        "position": "Intern",
+        "website": "https://linear.hu",
+        "startDate": "2016",
+        "endDate": "2016",
+        "summary": "A very short job period originally intended to be my obligatory internship fulfillment, required by my university. My only duty was the testing of a billing machine used in public transport; and the creating of UI mockups for an upcoming project specification. As my first job ever, it was a refreshing and exciting experience nonetheless.",
+        "highlights": [
+        ]
+      }
+  ]
+}

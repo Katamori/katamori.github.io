@@ -7,20 +7,8 @@
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://katamori.github.io/about.html</loc>
-      <lastmod>2019-05-01</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://katamori.github.io/experience.html</loc>
-      <lastmod>2019-09-01</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://katamori.github.io/projects.html</loc>
-      <lastmod>2019-09-01</lastmod>
+      <loc>https://katamori.github.io/projects</loc>
+      <lastmod>2020-09-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
@@ -29,26 +17,6 @@
       <lastmod>2019-09-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
-   </url>
-
-
-   <url>
-        <loc>https://katamori.github.io/mori-NN/</loc>
-        <lastmod>2017-09-06</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.2</priority>
-   </url>
-   <url>
-      <loc>https://katamori.github.io/hackfield-su/</loc>
-      <lastmod>2018-08-24</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.6</priority>
-   </url>
-   <url>
-      <loc>https://katamori.github.io/taggregator/</loc>
-      <lastmod>2018-09-02</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://katamori.github.io/terminus-nation/</loc>

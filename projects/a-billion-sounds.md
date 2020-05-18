@@ -1,0 +1,26 @@
+---
+layout: project
+type: project
+image: images/abs-small.png
+title: A Billion Sounds - A Deep Space Blizzard short story
+permalink: projects/a-billion-sounds
+# All dates must be YYYY-MM-DD format!
+date: 2020-02-16
+labels:
+  - Video game
+  - Godot
+summary: 
+---
+
+<div class="ui small rounded images">
+
+</div>
+
+A Godot-based (originally started in PhaserJS, then the idea scrapped) adventure game about the subcultures in a post-apocalyptic cyberpunk setting. Autobiographic, not even slightly.
+
+(todo more info)
+
+[Repository](https://github.com/Katamori/a-billion-sounds)
+
+
+

@@ -2,4 +2,13 @@
 
 My personal Github site.
 
-Portfolio generated with [Dyfolio](https://github.com/fiffeek/Dyfolio) by [Filip Mikina](http://filipmikina.pl/).
+Portfolio generated with [Techfolios](https://techfolios.github.io/index.html).
+
+## todo
+
+Adjust sitemap
+Add outer links
+Write more about projects
+Link physical CV
+Add games and a list for them later on
+Add "Doom maps"

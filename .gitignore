@@ -4,3 +4,8 @@
 /.idea
 
 node_modules/
+
+*.iml
+_site/
+.sass-cache/
+.jekyll-cache/
