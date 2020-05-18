@@ -6,7 +6,7 @@
     "email": "zoltanschmidt@protonmail.com",
     "phone": "+36 20 993 9186",
     "website": "https://katamori.github.io",
-    "summary": "<div>I'm just a random mid-20s guy from Hungary <a href='https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt' target='_blank'>who loves developing stuff</a> as well as using the same name literally everywhere on the Internet. <br><br> I use this site both as a semi-formal CV and a place to host various JS gibberish. <br><br>  A lots of things are #TODO here - but for now, please enjoy your stay, check the code I'm hosting through this URL or contact me at one of the places listed on the left.</div><ul><li><a href='./terminus-nation.html'>Worldbuilding: Terminus Nation</a></li><li><a href='./deep-space-blizzard'>Worldbuilding: Deep Space Blizzard</a></li><li><a href='./code-golf.html'>Code golf</a></li></ul><b>Credits:</b> for the site design, <a href='https://techfolios.github.io/'>Techfolios</a> was used and customized.",
+    "summary": "<div>I'm just a random mid-20s guy from Hungary <a href='https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt' target='_blank'>who loves developing stuff</a> as well as using the same name literally everywhere on the Internet. <br><br> I use this site both as a semi-formal CV and a place to host various JS gibberish. <br><br>  A lots of things are #TODO here - but for now, please enjoy your stay, check the code I'm hosting through this URL or contact me at one of the places listed on the left.</div><ul><li><a href='./terminus-nation'>Worldbuilding: Terminus Nation</a></li><li><a href='./deep-space-blizzard'>Worldbuilding: Deep Space Blizzard</a></li><li><a href='./code-golf.html'>Code golf</a></li></ul><b>Credits:</b> for the site design, <a href='https://techfolios.github.io/'>Techfolios</a> was used and customized.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -44,6 +44,21 @@
         "network": "spotify",
         "username": "user:11131410415",
         "url": "https://open.spotify.com/user/11131410415"
+      },
+      {
+        "network": "steam",
+        "username": "katamorihun",
+        "url": "https://steamcommunity.com/id/katamorihun/"
+      },
+      {
+        "network": "twitch",
+        "username": "katamorihun",
+        "url": "https://www.twitch.tv/katamorihun"
+      },
+      {
+        "network": "lastfm",
+        "username": "katamorihun",
+        "url": "https://www.last.fm/user/KatamoriHUN"
       }
     ]
   },
