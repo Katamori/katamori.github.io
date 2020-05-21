@@ -4,12 +4,11 @@ type: project
 image: images/tlb-sky.png
 title: The Last Beacon
 permalink: projects/the-last-beacon
-# All dates must be YYYY-MM-DD format!
-date: 2014-04-27
+date: 2014-04-26
 labels:
   - Video game
   - LÖVE
-summary: 
+summary: A game made for Ludum Dare 29.
 ---
 
 <div class="ui small rounded images">

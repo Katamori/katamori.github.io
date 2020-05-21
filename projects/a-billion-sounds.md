@@ -2,14 +2,13 @@
 layout: project
 type: project
 image: images/abs-small.png
-title: A Billion Sounds - A Deep Space Blizzard short story
+title: A Billion Sounds
 permalink: projects/a-billion-sounds
-# All dates must be YYYY-MM-DD format!
 date: 2020-02-16
 labels:
   - Video game
   - Godot
-summary: 
+summary: A Deep Space Blizzard short story.
 ---
 
 <div class="ui small rounded images">

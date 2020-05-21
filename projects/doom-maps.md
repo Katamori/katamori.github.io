@@ -4,7 +4,7 @@ type: project
 image: images/doom-uplink.png
 title: Doom maps
 permalink: projects/doom-maps
-date: 2011-02-01
+date: 2010-09-01
 labels:
   - Modding
   - Doom
