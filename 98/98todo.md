@@ -9,3 +9,4 @@
     * open company pages inside a 98-style div
     * add this: https://www.smore.com/clippy-js
 * integrate with Jekyll
+* hackfield with win98 design

@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #008080;
+}
+
+hr {
+    margin: 0;
+    border: none;
+    width: 400px;
+    height: 1px;
+    opacity: 0.5;
+    background: linear-gradient( to right, red 20%, yellow 20%, yellow 36%, green 36%, green 60%, blue 60%, blue 100% );
+}
+
+blockquote {
+    margin: 0 0 20px;
+    padding: 20px;
+    background: #dfdfdf;
+}
+
+blockquote footer {
+    margin: 12px 0 0 12px;
+}
+
+summary {
+    cursor: pointer;
+    display: inline;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+section {
+    margin: 8px 8px 0 0;
+}
+
+main {
+    max-height: 100vh;
+}
+
+.window * {
+    display: flex;
+}
+
+.window-body {
+    display: block;
+}
+
+/* FAKE START MENU */
+.start-menu {
+    display: block;
+    position: absolute;
+    bottom: 0vh;
+    width: 100vw;
+    max-width: 100vw;
+    /*height: 53px;*/
+}
+
+.start-menu .window-body {
+    margin: 0px;
+    display:flex;
+}
+
+.start-menu .text {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 16px 0 16px;
+}
+
+.start-button {
+    padding: 4px;
+    border: 0;
+    margin: 6px;
+    height: 31px;
+}
+
+.start-button img {
+    height: 20px;
+}
+
+.start-button strong {
+    font-size:16px;
+}
+
+/* SOUNDCLOUD WINDOW */
+.window.soundcloud {
+
+}
+
+.window.soundcloud .window-body {
+
+}
+
+/* WIN98 BORDER */
+.win98-border {
+
+}
+
+/* MISC */
+section.right {
+    margin-left: auto;
+    float:right;
+}
+
+.window-img {
+    max-width: 90vw;
+    max-height: 50vh;
+}
+
+main .window {
+    margin: 8px;
+}
+
+.window.wallpaper {
+
+}
+
+
+@media (max-width: 660px) {
+
+}
