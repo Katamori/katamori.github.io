@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #008080;
+}
+main {
+    /* 100% - marginleft - (aside.width - marginleft) */
+    width: calc(100% - 340px - 40px);
+    margin-left: 340px;
+    margin-bottom: 60px;
+}
+
+aside {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+aside .tree-view {
+    /* Don't even ask...it just "works" */
+    height: calc(100vh - 128px);
+    overflow: auto;
+}
+
+.window {
+    width: 100%;
+}
+
+h1 {
+    margin: 12px 0;
+}
+hr {
+    margin: 0;
+    border: none;
+    width: 400px;
+    height: 1px;
+    opacity: 0.5;
+    background: linear-gradient( to right, red 20%, yellow 20%, yellow 36%, green 36%, green 60%, blue 60%, blue 100% );
+}
+h2 {
+    margin-bottom: 12px;
+}
+h3 {
+    font-size: 1.6rem;
+}
+h3, h4 {
+   /* Swap the margin for a top-padding so linking to this section results in a better scroll position */
+    padding-top: 20px;
+    margin-top: 0;
+    display: block;
+    flex: 0 0 180px;
+}
+p {
+    max-width: 50rem;
+    line-height: 1.5;
+}
+section {
+    display: flex;
+    margin-top: 24px;
+}
+blockquote {
+    margin: 0 0 20px;
+    padding: 20px;
+    background: #dfdfdf;
+}
+blockquote footer {
+    margin: 12px 0 0 12px;
+}
+
+details {
+    margin-top: 12px;
+}
+summary {
+    cursor: pointer;
+    display: inline;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary {
+    margin-bottom: 8px;
+}
+
+/* CUSTOM */
+section div.window-body {
+    display:flex;
+}
+
+.segment {
+    display:inline-block;
+    margin-right: auto;
+}
+
+.stack {
+    display:inline-flex;
+    float: right;
+    margin-left: auto;
+}
+
+.stack .tree-view,
+.stack .tree-view li > ul li::before,
+.stack .tree-view li > ul li::after {
+    background-color: #c0c0c0;
+}
+
+@media (max-width: 480px) {
+    aside {
+        display: none;
+   }
+    main {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding: 16px;
+   }
+    hr {
+        width: 100%;
+   }
+    p {
+        width: 100%;
+   }
+    h3, h4 {
+        flex: 0;
+   }
+    pre {
+        overflow-x: scroll;
+   }
+}
+
+@media (min-width: 1024px) {
+    main {
+        width: 628px;
+    }
+}
