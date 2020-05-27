@@ -1,7 +1,7 @@
 <div style="padding-top: 20px" class="ui container ">
 
   <div class="ui stackable centered four cards">
-    {% assign cg_pages = site.pages | where: "type", "cg" %}
+    {% assign cg_pages = site.pages | where: "type", "cg" | sort:"title" %}
       {% for page in cg_pages %}
         {% unless page.draft %}
           {% include cg-card.html page=page %}
