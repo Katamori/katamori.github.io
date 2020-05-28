@@ -10,20 +10,14 @@ source: https://codegolf.stackexchange.com/a/205322/59058
 Golfed:
 
 ```py
-import math as m
-def a(k):
- r=set()
+def a(k,s=set()):
  for i in range(k):
-  n=(10**(i+3)+666)*10**(i+1)+1
-  p=True
-  for d in range(1,m.ceil((m.sqrt(n))/2)):
-   p=p and n%((d*2)+1)>0
-   if(not p):
-    break
-  if(p):
-   r.add(n)
- return r
-
+  p=1;n=(10**(i+3)+666)*10**-~i+1
+  for d in range(1,int(n**.5//1/2)):
+   p*=n%-~(d*2)>0
+   if~-p:break
+  s.add(p*n)
+ return s
 ```
 
 Ungolfed:
