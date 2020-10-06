@@ -1,8 +1,9 @@
 User-agent: *
 
-Allow: /code-golf/*
+Allow: /code-golf/
 Allow: /deep-space-blizzard/*
-Allow: /terminus-nation/*
+Allow: /deep-space-blizzard/toc.html
+Allow: /terminus-nation/
 
 Disallow: /terminus-nation/planetgen-basic.html
 Disallow: /terminus-nation/planetgen-extended.html
