@@ -6,7 +6,7 @@
     "email": "zoltanschmidt@protonmail.com",
     "phone": "+36 20 993 9186",
     "website": "https://katamori.github.io",
-    "summary": "Welcome! <br><br> This is my personal portfolio, as well as a hosting page for various things I code, write, and imagine. <br><br> About me: I was born in 1993 in Hungary and during the years I have extensive creative endeavours, from creating gameplay-commentary videos on Youtube, to writing, to level design <a href='https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt' target='_blank'>until I settled down with coding.</a> <br><br> Programming is the biggest passion of my life. <br><br> Feel free to look around to get insight about my projects and jobs! <br><br> (For the site design, <a href='https://techfolios.github.io/'>Techfolios</a> was used and customized.) <br><br> <a href='curriculum-vitae.pdf' target='_blank'>Download link to my professional CV</a>",
+    "summary": "Welcome! <br><br> This is my personal portfolio, as well as a hosting page for various things I code, write, and imagine. <br><br> About me: I was born in 1993 in Hungary and during the years I have extensive creative endeavours, from creating gameplay-commentary videos on Youtube, to writing, to level design <a href='https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt' target='_blank'>until I settled down with coding.</a> <br><br> Programming is the biggest passion of my life. <br><br> Feel free to look around to get insight about my projects and jobs! <br><br> <a href='curriculum-vitae.pdf' target='_blank'>Download link to my professional CV</a>",
     "location": {
       "address": "",
       "postalCode": "",
@@ -26,14 +26,19 @@
         "url": "https://www.linkedin.com/in/zoltanschmidt/"
       },
       {
+        "network": "gitlab",
+        "username": "katamori",
+        "url": "http://gitlab.com/Katamori"
+      },
+      {
         "network": "github",
         "username": "katamori",
         "url": "http://github.com/Katamori"
       },
       {
         "network": "twitter",
-        "username": "katamorieng",
-        "url": "http://twitter.com/katamorieng"
+        "username": "mrkatamori",
+        "url": "http://twitter.com/mrkatamori"
       },
       {
         "network": "instagram",

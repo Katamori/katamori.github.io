@@ -19,4 +19,4 @@ A logic platformer game I originally made for Ludum Dare #28 back in 2014 and co
 
 (todo more info)
 
-[Repository](https://github.com/Katamori/the-last-beacon) - there are additional plans [to rebuild the original in TypeScript.](https://github.com/Katamori/phantom-signal)
+[Repository](https://gitlab.com/Katamori/the-last-beacon) - there are additional plans [to rebuild the original in TypeScript.](https://gitlab.com/Katamori/phantom-signal)
