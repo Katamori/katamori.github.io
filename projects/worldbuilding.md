@@ -28,8 +28,8 @@ todo: explain them:
 Related Github-hosted repos:
 
 <ul>
-  <li><a href='https://katamori.github.io/terminus-nation/'>Scripts for Terminus Nation</a></li>
-  <li><a href='https://katamori.github.io/deep-space-blizzard/'>Deep Space Blizzard Wiki</a></li>
+  <li><a href='https://katamori.github.io/terminus-nation/index.html'>Scripts for Terminus Nation</a></li>
+  <li><a href='https://katamori.github.io/deep-space-blizzard/index.html'>Deep Space Blizzard Wiki</a></li>
 </ul>
 
 
