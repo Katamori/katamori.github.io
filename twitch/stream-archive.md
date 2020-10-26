@@ -34,7 +34,7 @@ List of previous streams backed up on Youtube.
 
 ### Newdoom Community Project 2
 
-<img src="https://katamori.github.io/images/doom/ndc2p_title.png" alt="NDCP2 TITLEPIC" width="100%">
+<img src="https://katamori.github.io/images/doom/ndcp2_title.png" alt="NDCP2 TITLEPIC" width="100%">
 
 * [Part 1](https://www.youtube.com/watch?v=ScwT6A54JdI)
 * [Part 2](https://www.youtube.com/watch?v=UD258HW4nTc)
