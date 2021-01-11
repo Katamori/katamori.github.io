@@ -8,7 +8,7 @@ The list of Doom mods I played or want to play.
 
 ## In progress
 
-* [Hocus Pocus Doom]
+* [Hocus Pocus Doom](https://katamori.github.io/twitch/stream-archive#hocus-pocus-doom)
 
 ## Planned
 
@@ -42,16 +42,13 @@ Listed in intended order.
 
 Ordered by newest first.
 
-* Jazz Jackrabbit Doom
+* [Jazz Jackrabbit Doom](https://katamori.github.io/twitch/stream-archive#jazz-jackrabbit-doom)
 
-* Doomer Boards Projects 19: A Doomer Boards Christmas Carol
-    * [as Christmas 2020]
+* [Doomer Boards Projects 19: A Doomer Boards Christmas Carol](todo)
 
-* H2H: Xmas
-    * [as Christmas 2020]
+* [H2H: Xmas](https://katamori.github.io/twitch/stream-archive#nordhell)
 
-* both Nordhell
-    * [as Christmas 2020]
+* [both Nordhell](https://katamori.github.io/twitch/stream-archive#nordhell)
 
 * [**Newdoom Community Project 2**](https://katamori.github.io/twitch/stream-archive#newdoom-community-project-2)
 

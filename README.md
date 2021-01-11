@@ -8,6 +8,8 @@ Portfolio generated with [Techfolios](https://techfolios.github.io/index.html).
 
 `PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"`
 
+`jekyll serve --baseurl ''`
+
 ## todo
 
 Write more about projects

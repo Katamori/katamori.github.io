@@ -48,12 +48,12 @@ Other games played:
 
 * [Among Us](https://katamori.github.io/twitch/stream-archive#among-us)
 * **The Binding of Isaac: Rebirth** (no backup yet)
-* [Broken Reality]
-* [Creeper World 4]
-* [Deus Ex]
-* [NeonCode]
-* [The Red Strings Club]
-* [VA-11 HALL-A: Cyberpunk Bartender Action]
+* [Broken Reality](https://katamori.github.io/twitch/stream-archive#broken-reality)
+* [Creeper World 4](https://katamori.github.io/twitch/stream-archive#creeper-world-4)
+* [Deus Ex](https://katamori.github.io/twitch/stream-archive#redsun-2020)
+* [NeonCode](https://katamori.github.io/twitch/stream-archive#neoncode)
+* [The Red Strings Club](https://katamori.github.io/twitch/stream-archive#the-red-strings-club)
+* [VA-11 HALL-A: Cyberpunk Bartender Action](https://katamori.github.io/twitch/stream-archive#va-11-hall-A-cyberpunk-bartender-action)
 
 Requests are accepted on popular demand, within my possibilities.
 
