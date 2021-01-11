@@ -8,7 +8,7 @@ The list of Doom mods I played or want to play.
 
 ## In progress
 
-* [**Newdoom Community Project 2**](https://katamori.github.io/twitch/stream-archive#newdoom-community-project-2)
+* [Hocus Pocus Doom]
 
 ## Planned
 
@@ -35,10 +35,25 @@ Listed in intended order.
 * all MAYhem
 * Hellbound (maybe with the author)
 * Scythe 1-2-X
+* REKKR
+* Running Late 2
 
 ## Finished
 
 Ordered by newest first.
+
+* Jazz Jackrabbit Doom
+
+* Doomer Boards Projects 19: A Doomer Boards Christmas Carol
+    * [as Christmas 2020]
+
+* H2H: Xmas
+    * [as Christmas 2020]
+
+* both Nordhell
+    * [as Christmas 2020]
+
+* [**Newdoom Community Project 2**](https://katamori.github.io/twitch/stream-archive#newdoom-community-project-2)
 
 * [**Newdoom Community Project**](https://katamori.github.io/twitch/stream-archive#newdoom-community-project)
 
@@ -50,9 +65,11 @@ Mods that can be streamed only on special occasions
 
 ### Winter/Christmas
 
+* Doomer Boards Projects Christmas Editions: 5, 19 (will be recurring?), 31
 * Whitemare 1-2
 * Winter's Fury
-* H2H Xmas
+* H2H Xmas (will be recurring)
+* Nordhell (will be recurring)
 
 ### With bigger audience only
 
