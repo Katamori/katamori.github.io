@@ -76,7 +76,7 @@ I try to focus on small artists for giving them exposue and to avoid muting from
 * [DeviantART](https://www.deviantart.com/atis1)
 * [Instagram](https://www.instagram.com/atis0001/)
 
-As of January 2021, every art used in and around the livestreaming "ecosystem" was made by Atis1.
+As of July 2021, every art used in and around the livestreaming "ecosystem" was made by Atis1.
 
 ## Other links and sources
 

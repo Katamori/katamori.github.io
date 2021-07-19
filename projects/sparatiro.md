@@ -18,6 +18,6 @@ summary: A backendless wiki engine built on minimalism.
 
 A wiki engine / note service intended to have minimalistic pages and no code-specific backend requirements.
 
-(todo more info)
+On hold, indefinitely; usable to some extent.
 
 [Repository](https://github.com/Katamori/sparatiro)

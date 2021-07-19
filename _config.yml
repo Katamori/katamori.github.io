@@ -16,7 +16,6 @@ cg-page-label: Code golf
 # Defining your own custom theme variations is easy. See the documentation.
 theme-home: theme-home-builtin-1.html
 theme-projects: theme-projects-builtin-1.html
-theme-essays: theme-essays-builtin-1.html
 theme-cg: theme-cg-1.html
 theme-bio: theme-bio-builtin-1.html
 # CUSTOM

@@ -15,9 +15,7 @@ summary: A Deep Space Blizzard short story.
 
 </div>
 
-A Godot-based (originally started in PhaserJS, then the idea scrapped) adventure game about the subcultures in a post-apocalyptic cyberpunk setting. Autobiographic, not even slightly.
-
-(todo more info)
+A Godot-based (originally started in PhaserJS, then the idea scrapped) adventure game about the subcultures in a post-apocalyptic cyberpunk setting. On hold, indefinitely.
 
 [Repository](https://github.com/Katamori/a-billion-sounds)
 

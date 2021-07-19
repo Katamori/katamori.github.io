@@ -15,8 +15,8 @@ summary: A game made for Ludum Dare 29.
 
 </div>
 
-A logic platformer game I originally made for Ludum Dare #28 back in 2014 and constantly improve since 2019. Created with Love2D (Lua framework). Currently inactive project.
+A logic platformer game I originally made for Ludum Dare #28 back in 2014 and constantly improve since 2019. Created with Love2D (Lua framework). Currently inactive project, but I do make edits on it every once in a while.
 
 (todo more info)
 
-[Repository](https://gitlab.com/Katamori/the-last-beacon) - there are additional plans [to rebuild the original in TypeScript.](https://gitlab.com/Katamori/phantom-signal)
+[Repository](https://gitlab.com/Katamori/the-last-beacon).

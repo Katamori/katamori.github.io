@@ -37,13 +37,13 @@
       },
       {
         "network": "twitter",
-        "username": "mrkatamori",
-        "url": "http://twitter.com/mrkatamori"
+        "username": "synthwavezoltan",
+        "url": "http://twitter.com/synthwavezoltan"
       },
       {
         "network": "instagram",
-        "username": "katamorihun",
-        "url": "http://instagram.com/katamorihun"
+        "username": "synthwave_zoltan",
+        "url": "http://instagram.com/synthwave_zoltan"
       },
       {
         "network": "spotify",
@@ -52,18 +52,8 @@
       },
       {
         "network": "steam",
-        "username": "katamorihun",
-        "url": "https://steamcommunity.com/id/katamorihun/"
-      },
-      {
-        "network": "twitch",
-        "username": "katamorihun",
-        "url": "https://www.twitch.tv/katamorihun"
-      },
-      {
-        "network": "lastfm",
-        "username": "katamorihun",
-        "url": "https://www.last.fm/user/KatamoriHUN"
+        "username": "synthwave_zoltan",
+        "url": "https://steamcommunity.com/id/synthwave_zoltan/"
       }
     ]
   },
@@ -120,11 +110,21 @@
   ],
   "work": [
     {
-        "company": "QAN Platfor",
+      "company": "Nagy CZ",
+      "position": "Web developer",
+      "website": "-",
+      "startDate": "2020",
+      "endDate": "Present",
+      "summary": "Website maintenance works for a French video streaming company. Involves a lot of SEO.",
+      "highlights": [
+      ]
+  },
+    {
+        "company": "QAN Platform",
         "position": "Backend developer",
         "website": "https://qanplatform.com",
         "startDate": "2020",
-        "endDate": "Present",
+        "endDate": "2020",
         "summary": "A somewhat loose contracting period during which I developed NodeJS based backend tools supporting the ecosystem of the cryptocurrency the company is developing. Was an interesting insight into the deeper working mechanics of Docker.",
         "highlights": [
         ]
