@@ -74,6 +74,8 @@ While far from perfect, it's my biggest map to date - and had an ending that was
 It sure means a lot. 
 <br><br> 
 <a href='https://www.youtube.com/watch?v=RaIq1SOTlOE'>Gameplay footage.</a>
+<br><br>
+<a href='https://www.vice.com/en/article/pgkvzn/doom-christmas-mods'>Apparently it was mentioned in a VICE article, too!</a>
 
 <h2><a href='https://www.doomworld.com/idgames/levels/doom2/Ports/j-l/kat1024' target='_blank'>KATAMORI 1024</a></h2>
 
