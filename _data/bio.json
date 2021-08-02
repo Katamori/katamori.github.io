@@ -1,173 +1,37 @@
 {
   "basics": {
-    "name": "Zoltán Schmidt",
+    "name": "Katamori",
     "label": "backend developer",
-    "picture": "/images/my-face.png",
-    "email": "zoltanschmidt@protonmail.com",
-    "phone": "+36 20 993 9186",
-    "website": "https://katamori.github.io",
-    "summary": "Welcome! <br><br> This is my personal portfolio, as well as a hosting page for various things I code, write, and imagine. <br><br> About me: I was born in 1993 in Hungary and during the years I have extensive creative endeavours, from creating gameplay-commentary videos on Youtube, to writing, to level design <a href='https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt' target='_blank'>until I settled down with coding.</a> <br><br> Programming is the biggest passion of my life. <br><br> Feel free to look around to get insight about my projects and jobs! <br><br> <a href='curriculum-vitae.pdf' target='_blank'>Download link to my professional CV</a>",
+    "picture": "robohash.org/fe112c322d16dffee6135f6f36f1aab3",
+    "email": "katamorihun@protonmail.com",
+    "phone": "",
+    "website": "",
+    "summary": "Welcome! <br><br> This is my personal portfolio, as well as a hosting page for various things I code, write, and imagine. <br><br> About me: I was born in 1993 in Hungary and during the years I have extensive creative endeavours, from creating gameplay-commentary videos on Youtube, to writing, to level design <a href='https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt' target='_blank'>until I settled down with coding.</a> <br><br> Programming is the biggest passion of my life. <br><br></a>",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Budapest",
+      "city": "",
       "countryCode": "Hungary",
       "region": ""
     },
     "profiles": [
       {
-        "network": "facebook",
-        "username": "zoltanschmidt93",
-        "url": "https://www.facebook.com/zoltanschmidt93"
-      },
-      {
-        "network": "linkedin",
-        "username": "zoltanschmidt",
-        "url": "https://www.linkedin.com/in/zoltanschmidt/"
-      },
-      {
-        "network": "gitlab",
-        "username": "katamori",
-        "url": "http://gitlab.com/Katamori"
-      },
-      {
         "network": "github",
         "username": "katamori",
         "url": "http://github.com/Katamori"
-      },
-      {
-        "network": "twitter",
-        "username": "synthwavezoltan",
-        "url": "http://twitter.com/synthwavezoltan"
-      },
-      {
-        "network": "instagram",
-        "username": "synthwave_zoltan",
-        "url": "http://instagram.com/synthwave_zoltan"
-      },
-      {
-        "network": "spotify",
-        "username": "user:11131410415",
-        "url": "https://open.spotify.com/user/11131410415"
-      },
-      {
-        "network": "steam",
-        "username": "synthwave_zoltan",
-        "url": "https://steamcommunity.com/id/synthwave_zoltan/"
       }
     ]
   },
   "interests": [
-    {
-      "name": "web development",
-      "keywords": [
-        "Django"
-      ]
-    },
-    {
-      "name": "cryptocurrencies",
-      "keywords": [
-      ]
-    },
-    {
-      "name": "video games",
-      "keywords": [
-      ]
-    },
-    {
-        "name": "synthwave",
-        "keywords": [
-        ]
-      }
+
   ],
   "skills": [
-    {
-      "name": "Languages and Frameworks",
-      "level": "",
-      "keywords": [
-        "todo"
-      ]
-    },
-    {
-      "name": "Toolsets/OS",
-      "level": "",
-      "keywords": [
-        "todo"
-      ]
-    }
+
   ],
   "education": [
-    {
-      "institution": "University of Pécs",
-      "area": "Business information technology",
-      "studyType": "",
-      "startDate": "2012",
-      "endDate": "2016",
-      "gpa": "",
-      "courses": [
-      ]
-    }
+
   ],
   "work": [
-    {
-      "company": "Nagy CZ",
-      "position": "Web developer",
-      "website": "-",
-      "startDate": "2020",
-      "endDate": "Present",
-      "summary": "Website maintenance works for a French video streaming company. Involves a lot of SEO.",
-      "highlights": [
-      ]
-  },
-    {
-        "company": "QAN Platform",
-        "position": "Backend developer",
-        "website": "https://qanplatform.com",
-        "startDate": "2020",
-        "endDate": "2020",
-        "summary": "A somewhat loose contracting period during which I developed NodeJS based backend tools supporting the ecosystem of the cryptocurrency the company is developing. Was an interesting insight into the deeper working mechanics of Docker.",
-        "highlights": [
-        ]
-    },
-    {
-        "company": "Rollet",
-        "position": "Backend developer",
-        "website": "https://rollet.hu",
-        "startDate": "2019",
-        "endDate": "2020",
-        "summary": "Backend-focused development duties on the major product of the company: an application that makes finding and occupying parking lots easier. The stack consists of Python and Django, with MySQL as database, and intense use of containerization (Docker).",
-        "highlights": [
-        ]
-    },
-    {
-        "company": "W5labs",
-        "position": "Junior backend developer",
-        "website": "https://w5labs.com",
-        "startDate": "2018",
-        "endDate": "2019",
-        "summary": "Developing backend functionality of websites for a creative agency / hosting company. Most of my development is based on a custom content management system built on Phalcon (PHP framework) and involves in-house developments and normal projects alike.",
-        "highlights": [
-        ]
-    },
-    {
-        "company": "Open Minds Ltd.",
-        "position": "Junior software developer",
-        "website": "http://sonrisa.hu",
-        "startDate": "2017",
-        "endDate": "2018",
-        "summary": "No official specification for the field, but in practice, I was a frontend developer. As a part of Sonrisa Internation Inc., this company has taught me a lot about the everyday practices at a larger firm. Aside of the implicit knowledge, I gained significant experience in versioning (Git), issue tracking (Redmine, JIRA), and learned about Scrum. Stack-wise, I mostly worked with Angular, and had some involvement with JSP, too.",
-        "highlights": [
-        ]
-    },
-    {
-        "company": "HC Linear IT Development Ltd.",
-        "position": "Intern",
-        "website": "https://linear.hu",
-        "startDate": "2016",
-        "endDate": "2016",
-        "summary": "A very short job period originally intended to be my obligatory internship fulfillment, required by my university. My only duty was the testing of a billing machine used in public transport; and the creating of UI mockups for an upcoming project specification. As my first job ever, it was a refreshing and exciting experience nonetheless.",
-        "highlights": [
-        ]
-      }
+
   ]
 }
