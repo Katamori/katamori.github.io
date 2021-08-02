@@ -26,34 +26,9 @@
         "url": "https://www.linkedin.com/in/zoltanschmidt/"
       },
       {
-        "network": "gitlab",
-        "username": "katamori",
-        "url": "http://gitlab.com/Katamori"
-      },
-      {
         "network": "github",
         "username": "katamori",
         "url": "http://github.com/Katamori"
-      },
-      {
-        "network": "twitter",
-        "username": "synthwavezoltan",
-        "url": "http://twitter.com/synthwavezoltan"
-      },
-      {
-        "network": "instagram",
-        "username": "synthwave_zoltan",
-        "url": "http://instagram.com/synthwave_zoltan"
-      },
-      {
-        "network": "spotify",
-        "username": "user:11131410415",
-        "url": "https://open.spotify.com/user/11131410415"
-      },
-      {
-        "network": "steam",
-        "username": "synthwave_zoltan",
-        "url": "https://steamcommunity.com/id/synthwave_zoltan/"
       }
     ]
   },
