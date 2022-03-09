@@ -2,7 +2,7 @@
   "basics": {
     "name": "Katamori",
     "label": "",
-    "picture": "robohash.org/fe112c322d16dffee6135f6f36f1aab3",
+    "picture": "https://robohash.org/fe112c322d16dffee6135f6f36f1aab3",
     "email": "katamorihun@protonmail.com",
     "phone": "",
     "website": "",
@@ -11,7 +11,7 @@
       "address": "",
       "postalCode": "",
       "city": "",
-      "countryCode": "Hungary",
+      "countryCode": "",
       "region": ""
     },
     "profiles": [
