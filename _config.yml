@@ -2,23 +2,19 @@
 
 # REQUIRED CHANGES
 # Edit next line, providing your own name.
-title: Zoltán Schmidt - personal website
+title: Katamori's Github Pages
 # Edit next line, replacing 'techfolios' with your github username
 url: "https://katamori.github.io"
 # Edit next line so that baseurl is "" if your repo is <username>.github.io
 baseurl: ""
 
 # OPTIONAL CHANGES
-# You might want to change the bio page label to something else, such as CV
-bio-page-label: Resume
-cg-page-label: Code golf
 # You might want to change the theme associated with one or more sections of the site.
 # Defining your own custom theme variations is easy. See the documentation.
 theme-home: theme-home-builtin-1.html
-theme-bio: theme-bio-builtin-1.html
 # CUSTOM
 # I can't belive they left it out...
-meta-description: Hungarian backend developer, amateur level designer, former content creator, decentralization advocate.
+meta-description: Leaving this world is not as scary as it sounds.
 
 # Specify the rouge syntax highlighter theme. Pick one from css/rouge.
 rouge-theme: igorpro
