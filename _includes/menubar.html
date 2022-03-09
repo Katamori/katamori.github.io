@@ -1,8 +1,3 @@
-<!-- Used by all builtin themes. Now we list number of projects. -->
-
-{% assign project_pages = site.pages | where: "type", "project" | where_exp: "page", "page.draft != true" %}
-{% assign num_projects = project_pages.size %}
-
 <div class="nonprintable">
   <nav class="ui stackable menu">
     <a href="{{ site.baseurl}}/" class="brand item">
