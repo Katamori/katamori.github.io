@@ -9,3 +9,7 @@ This is where I hosted my Github page; now it's left only for stuff I wanted to 
 `PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"`
 
 `jekyll serve --baseurl ''`
+
+## todo
+
+add all the old katamori urls here: Youtube, Facebook Page, Twitch, Twitter...
