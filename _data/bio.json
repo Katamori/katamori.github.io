@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Katamori",
-    "label": "backend developer",
+    "label": "",
     "picture": "robohash.org/fe112c322d16dffee6135f6f36f1aab3",
     "email": "katamorihun@protonmail.com",
     "phone": "",
     "website": "",
-    "summary": "Welcome! <br><br> This is my personal portfolio, as well as a hosting page for various things I code, write, and imagine. <br><br> About me: I was born in 1993 in Hungary and during the years I have extensive creative endeavours, from creating gameplay-commentary videos on Youtube, to writing, to level design <a href='https://stackoverflow.com/users/2320153/zolt%C3%A1n-schmidt' target='_blank'>until I settled down with coding.</a> <br><br> Programming is the biggest passion of my life. <br><br></a>",
+    "summary": "Welcome! <br><br> I am Katamori, though not too active here anymore. All I do here is hosting a bunch of stuff I thought was important. Feel free to take a look around anyways!<br><br><a href='./deep-space-blizzard/index.html' target='_blank'>Deep Space Blizzard Wiki</a><br><br><a href='./voidshard/index.html' target='_blank'>Voidshard Wiki</a><br><br><a href='./terminus-nation' target='_blank'>Very old stuff I/we made for Terminus Nation</a>",
     "location": {
       "address": "",
       "postalCode": "",
