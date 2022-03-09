@@ -31,13 +31,6 @@ For broadcasting I use [**Streamlabs OBS**](https://streamlabs.com/).
 
 It's not a secret I'm a full-time developer and it gets ultimate priority over streaming. As such, I have very little saying in streaming dates: it's sporadic and unpredictable.
 
-Rule-of-thumbs as of January 2021:
-* *Mondays are always non-streaming days.*
-* *Tuesdays are always streaming days.*
-* *There are two fix streams each week.* More, if I'm lucky.
-
-In the #schedule channel of [our Discord server](https://discord.gg/4s3Qhx5) has a constantly updated schedule calendar I use as a reference point for more detailed dates.
-
 ## Games
 
 The central focus is on Doom mods, but on occasion, I do walkthroughs of other games. These subjects vary in quality and genre; most of them are obscure, but even if not, I have an emphasis on cyberpunk-themed games.
